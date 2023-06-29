@@ -1,0 +1,448 @@
+
+.bg-01{
+    position: relative;
+    margin-top:-5rem;
+    width:100%;
+    .wrapper{
+        background:$color-primary;
+        position: relative;
+        padding:2.5rem 1.875rem;
+        display:block;
+        width:100%;
+        box-shadow: 0 16px 28px 0 rgba(0, 0, 0, .15);
+        z-index:9;
+
+        .content{
+            display:block;
+            position: relative;
+            transition:all ease-in-out 0.5s;
+            margin:.625rem 0;
+
+            ol{
+                .dashed{
+                    border-right:1px dashed #ddd;
+                }
+                li{
+                    display:inline-block;
+                    position: relative;
+                    padding:.625rem 0;
+                    i{
+                        display:block;
+                        font-size:2.5rem;
+                        color:$icons-color;
+                    }
+
+                    h3{
+                        font-size:1.25rem;
+                        color:$text-primary;
+                        text-transform:capitalize;
+                        font-weight:600;
+                        display:inline-block;
+                        margin:.625rem 0;
+                    }
+
+                    p{
+                        display:block;
+                        font-size:1rem;
+                        color:$content-color;
+                        line-height:1.5rem;
+                        margin:0 0 .625rem 0;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.bg-02{
+    padding:3.125rem 0;
+    position: relative;
+    overflow: hidden;
+
+    .wrapper{
+        margin:1.25rem 0;
+        position: relative;
+        display:block;
+
+        figure{
+            margin:0;
+        }
+
+        .bs{
+            padding:1.25rem;
+            border:1px dashed #ddd;
+            position: relative;
+            display:inline-block;
+
+            h3{
+                font-size:1.25rem;
+                color:$text-primary;
+                font-weight:600;
+            }
+
+            p{
+                font-size:.9375rem;
+                color:$content-color;
+                line-height:1.5rem;
+                display:inline-block;
+                margin:.625rem 0;
+            }
+
+            ol{
+                li{
+                    display:inline-block;
+                    font-size:.8125rem;
+
+
+                    i{
+                        margin:0 .625rem 0 0;
+                        color:$icons-color;
+                    }
+                }
+            }
+        }
+    }  
+}
+
+.bg-03{
+    position: relative;
+    padding:3.125rem 0;
+    background:#fafafa;
+    overflow: hidden;
+
+    .wrapper{
+        position: relative;
+        display:block;
+        margin:1.25rem 0;
+        padding:1.25rem;
+
+        .content{
+            text-align: center;
+            ol{
+                li{
+                    display:block;
+                    i{
+                        font-size:1.875rem;
+                        color:$icons-color;
+                        margin:.625rem 0;
+                        display:block;
+                    }
+
+                    h3{
+                        font-size:1.25rem;
+                        color:$text-primary;
+                        font-weight:600;
+                    }
+
+                    p{
+                        display: block;
+                        margin:.625rem 0;
+                        color:$content-color;
+                        font-size:1rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.bg-04{
+    padding:3.125rem 0;
+    position: relative;
+    overflow: hidden;
+
+    .main-team-card {
+        flex-wrap: wrap;
+        width: 100%;
+        padding: 10px 15px;
+        margin: 20px 0px;
+        position: relative;
+        transition: 0.5s;
+
+        .team-setup {
+            margin: 0 0 20px 0;
+            padding: 10px;
+            flex: 1 1 25%;
+            width: 25%;
+            max-width: 25%;
+
+            @media screen and (max-width: 375px) {
+                width: 100%;
+                max-width: 100%;
+                flex: 1 1 100%;
+                -webkit-flex-direction: 1 1 100%;
+                -moz-flex-direction: 1 1 100%;
+                -ms-flex-direction: 1 1 100%;
+            }
+
+            @media (min-width: 376px) and (max-width: 767.98px) {
+                width: 50%;
+                max-width: 50%;
+                flex: 1 1 50%;
+                -webkit-flex-direction: 1 1 50%;
+                -moz-flex-direction: 1 1 50%;
+                -ms-flex-direction: 1 1 50%;
+            }
+
+            .team-items {
+                width: 100%;
+                display: block;
+                box-shadow: 0 0 30px rgba(0, 0, 0, 0.07);
+                transition: 0.5s;
+                position: relative;
+
+                &:hover {
+                    .team-user-social {
+                        opacity: 1;
+                        visibility: visible;
+                        left: 0;
+                        display: block;
+                    }
+
+                    .team-user {
+                        &::before {
+                            width: 100%;
+                            opacity: 1;
+                            visibility: visible;
+                            display: block;
+                        }
+                    }
+                }
+
+                .team-name {
+                    padding: 5px 0px;
+                    position: relative;
+                    display: block;
+                    text-align: center;
+                    z-index: 2;
+
+                    &::before {
+                        position: absolute;
+                        content: "";
+                        width: 20px;
+                        height: 20px;
+                        background: #fff;
+                        top: -10px;
+                        -webkit-clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+                        clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+                        left: 47%;
+                        z-index: 1;
+                    }
+
+                    h2 {
+                        font-size: 18px;
+                    }
+
+                    b {
+                        font-size: 15px;
+                        color: #848484;
+                    }
+                }
+
+                .team-user {
+                    overflow: hidden;
+                    position: relative;
+                    transition: 0.5s;
+
+                    &::before {
+                        position: absolute;
+                        content: "";
+                        height: 100%;
+                        left: 0;
+                        top: 0;
+                        width: 0;
+                        opacity: 0;
+                        visibility: hidden;
+                        transition: 0.5s;
+                        background: rgba(0, 0, 0, 0.7);
+                    }
+                }
+
+                .team-user-social {
+                    position: absolute;
+                    height: 45px;
+                    background: rgba(255, 255, 255, 0.1);
+                    width: 100%;
+                    padding: 5px 0px;
+                    top: 50%;
+                    text-align: center;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    left: -100%;
+                    opacity: 0;
+                    visibility: hidden;
+                    transition: 0.5s;
+                    display: none;
+
+                    @media (min-width: 768px) and (max-width: 991.98px) {
+                        top: 40%;
+                    }
+
+                    ol {
+                        li {
+                            display: inline-block;
+                            padding-right: 10px;
+                            color: $color-primary;
+                            transition: 0.6s;
+                            height: 30px;
+                            width: 30px;
+                            background: $icons-color;
+                            line-height: 30px;
+                            text-align: center;
+                            padding: 0px;
+                            border-radius: 50px;
+                            font-size: 16px;
+                            margin-right: 5px;
+
+                            &:hover {
+                                color: $icons-color;
+                                transform: translateX(-5px);
+
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.bg-05{
+    position: relative;
+    padding:3.125rem 0;
+    background:#fafafa;
+    overflow: hidden;
+    .blog-main-card {
+        flex-wrap: wrap;
+        width: 100%;
+        padding: 10px 15px;
+        margin: 20px 0px;
+
+        .blog-sub {
+            width: 33.3%;
+            max-width: 33.3%;
+            flex: 1 1 33.3%;
+            margin: 0 0 20px 0;
+            padding: 0px 10px;
+            position: relative;
+
+            @media (max-width: 575.98px) {
+                width: 100%;
+                max-width: 100%;
+                flex: 1 1 100%;
+            }
+
+            @media (min-width: 576px) and (max-width: 767.98px) {
+                width: 50%;
+                max-width: 50%;
+                flex: 1 1 50%;
+            }
+
+            .blog-content {
+                position: relative;
+                display: block;
+                overflow: hidden;
+            }
+
+            .blog-content-section {
+                padding: 20px 25px;
+                background: #fff;
+                border: solid 1px #eee8e8;
+                border-top: 0;
+                display: block;
+                width: 100%;
+
+                .blog-admin {
+                    margin: 5px 0px;
+
+                    ol {
+                        li {
+                            display: inline-block;
+                            color: $icons-color;
+                            font-size: 15px;
+                            margin: 0 5px 0 0;
+
+                            i {
+                                padding: 0 5px 0 0;
+                            }
+                        }
+                    }
+                }
+
+                .blo-content-title {
+                    h4 {
+                        font-size: 20px;
+                        font-weight: 600;
+                        color: $text-primary;
+                        padding: 3px 0px;
+                    }
+
+                    p {
+                        margin: 0px;
+                        padding: 3px 0px;
+                        line-height: 27px;
+                        color: $content-color;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.about-001 {
+    padding:3.125rem 0;
+    position: relative;
+    overflow: hidden;
+    background:#fafafa;
+
+    .text-part,
+    .image-part {
+        position: relative;
+        margin:1.25rem 0;
+
+        h2{
+            font-weight: 600;
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            color:$text-primary;
+        }
+
+        p{
+            text-indent: 20px;
+            margin-bottom: 15px;
+            line-height: 27px;
+            font-weight: 500;
+            text-align: justify;
+            font-size: .9rem;
+        }
+
+        .about-qcard{
+            padding: 50px 30px;
+            background-color: #FFF;
+            box-shadow: 0 2px 3px 0 rgba(218, 218, 253, 0.35),
+            0 0px 3px 0 rgba(206, 206, 238, 0.35);
+            text-align: center;
+            margin-bottom: 30px;
+
+            i{
+                font-size: 3rem;
+                margin-bottom: 30px;
+                color: $icons-color;
+            }
+
+            p{
+                font-weight: 600;
+                font-size: 1.2rem;
+            }
+        }
+    }
+}
+
+.heading {
+    @include heading-main;
+
+    h2 {
+        @include heading;
+    }
+}

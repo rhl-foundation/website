@@ -1,0 +1,1730 @@
+@import url(https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap);
+/* ================================ Basic CSS =============================== */
+body {
+  margin: 0px;
+  padding: 0px;
+  font-family: "PT Sans", sans-serif;
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0px;
+}
+
+ul,
+ol {
+  margin: 0px;
+  padding: 0px;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+p {
+  margin: 0px;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+.container {
+  max-width: 1170px;
+}
+@media screen and (max-width: 575px) {
+  .container {
+    padding: 0px 15px;
+    max-width: 100%;
+    width: 100%;
+  }
+}
+
+#donate-button {
+  font-size: 1rem;
+  color: white;
+  text-align: center;
+}
+
+/* ================================ Header CSS =============================== */
+header .my-nav {
+  position: relative;
+  width: 100%;
+  left: 0;
+  top: 0;
+  z-index: 999;
+  padding: 15px 0px;
+  padding-left: 15px;
+}
+header .sub-01 {
+  position: relative;
+  background: #e83e8c;
+}
+header .nav-items {
+  display: flex;
+  flex-wrap: wrap;
+  flex: 1 1 100%;
+  max-width: 100%;
+  width: 100%;
+  position: relative;
+  align-items: center;
+}
+header .nav-items .menu-toggle {
+  position: absolute;
+  top: 1.5625rem;
+  right: 0.9375rem;
+  transition: ease-in-out 0.5s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  visibility: hidden;
+  opacity: 0;
+}
+@media screen and (max-width: 767.98px) {
+  header .nav-items .menu-toggle {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+header .nav-items .menu-toggle .menu-hamburger {
+  width: 1.875rem;
+  height: 0.125rem;
+  transition: ease-in-out 0.1s;
+  box-shadow: 0 2px 5px rgba(255, 255, 255, 0.6);
+  background: #e83e8c;
+  position: relative;
+}
+header .nav-items .menu-toggle .menu-hamburger.active {
+  background: rgba(0, 0, 0, 0);
+  box-shadow: none;
+}
+header .nav-items .menu-toggle .menu-hamburger.active::after {
+  transform: rotate(45deg);
+}
+header .nav-items .menu-toggle .menu-hamburger.active::before {
+  transform: rotate(135deg);
+}
+header .nav-items .menu-toggle .menu-hamburger::before {
+  position: absolute;
+  content: "";
+  width: 1.875rem;
+  height: 0.125rem;
+  transition: ease-in-out 0.1s;
+  box-shadow: 0 2px 5px rgba(255, 255, 255, 0.6);
+  background: #e83e8c;
+  transform: translatey(-0.625rem);
+}
+header .nav-items .menu-toggle .menu-hamburger::after {
+  position: absolute;
+  content: "";
+  width: 1.875rem;
+  height: 0.125rem;
+  transition: ease-in-out 0.1s;
+  box-shadow: 0 2px 5px rgba(255, 255, 255, 0.6);
+  background: #e83e8c;
+  transform: translatey(0.625rem);
+}
+header .nav-items .logo {
+  width: 30%;
+  flex: 1 1 30%;
+  max-width: 30%;
+}
+header .nav-items .logo img {
+  max-width: 100px;
+  max-height: 80px;
+}
+@media screen and (max-width: 767.98px) {
+  header .nav-items .logo {
+    width: 80%;
+    flex: 1 1 80%;
+    max-width: 80%;
+  }
+}
+header .nav-items .menu-items {
+  width: 70%;
+  flex: 1 1 70%;
+  max-width: 70%;
+  position: relative;
+  align-items: center;
+  justify-content: flex-end;
+}
+@media screen and (max-width: 767.98px) {
+  header .nav-items .menu-items {
+    width: 100%;
+    flex: 1 1 100%;
+    max-width: 100%;
+    margin-top: 10px;
+  }
+}
+header .nav-items .menu-items .menu {
+  display: block;
+  width: 100%;
+  text-align: right;
+}
+header .nav-items .menu-items .menu.active {
+  opacity: 1;
+  visibility: visible;
+  display: block;
+  transition: ease-in-out 0.9s;
+}
+@media screen and (max-width: 767.98px) {
+  header .nav-items .menu-items .menu {
+    text-align: left;
+    opacity: 0;
+    visibility: hidden;
+    display: none;
+  }
+}
+header .nav-items .menu-items .menu ul li {
+  display: inline-block;
+  padding: 10px;
+}
+header .nav-items .menu-items .menu ul li ul li {
+  display: block;
+  float: none;
+  text-align: left;
+}
+@media screen and (max-width: 767.98px) {
+  header .nav-items .menu-items .menu ul li {
+    display: block;
+  }
+  header .nav-items .menu-items .menu ul li ul li {
+    display: block;
+  }
+}
+header .nav-items .menu-items .menu ul li a {
+  color: #222222;
+  padding: 2px;
+  font-weight: 700;
+}
+header .nav-items .menu-items .menu ul li a:hover {
+  color: #e83e8c;
+}
+@media screen and (max-width: 767.98px) {
+  header .nav-items .menu-items .menu ul li a {
+    padding: 0rem;
+  }
+}
+@media (min-width: 768px) and (max-width: 991.98px) {
+  header .nav-items .menu-items .menu ul li a {
+    padding: 0 0.625rem;
+  }
+}
+
+.og-hf {
+  position: fixed;
+  transition: ease-in-out 0.5s;
+  width: 100%;
+  z-index: 999;
+  left: 0;
+  top: 0;
+}
+.og-hf .my-nav {
+  background: #fff;
+}
+
+/* ================================ Slider CSS =============================== */
+/*.banner {
+  position: relative;
+  height: 37.5rem;
+  overflow: hidden;
+  transition: all ease-in-out 0.5s;
+  background-image: url(../images/slider/1.webp);
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  padding: 3.125rem 0; }*/
+.banner .carousel-inner {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  margin: 1.25rem 0;
+  padding: 6.25rem 0 2.5rem 0;
+}
+.banner .wrapper h1 {
+  font-size: 1.875rem;
+  color: #fff;
+  display: block;
+  margin: 0.625rem 0;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 0.2px;
+}
+.banner .wrapper p {
+  display: block;
+  font-size: 1.25rem;
+  margin: 0.625rem 0;
+  color: #fff;
+}
+.banner .wrapper ol li {
+  display: inline-block;
+  background-color: #e83e8c;
+  font-size: 1rem;
+  color: #fff;
+  padding: 0.625rem;
+  border-radius: 0.3125rem;
+  margin: 0.625rem 0;
+}
+.banner .wrapper ol li:nth-child(2) {
+  margin-left: 1.25rem;
+}
+.banner .wrapper ol li a {
+  color: #fff;
+}
+
+/* Emergency Medical Support */
+
+.ban {
+  position: relative;
+  height: 37.5rem;
+  overflow: hidden;
+  transition: all ease-in-out 0.5s;
+  background-image: url(../images/slider/2.jpg);
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  padding: 3.125rem 0;
+}
+.ban .wrapper {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  margin: 1.25rem 0;
+  padding: 6.25rem 0 2.5rem 0;
+}
+.ban .wrapper h1 {
+  font-size: 1.875rem;
+  color: #fff;
+  display: block;
+  margin: 0.625rem 0;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 0.2px;
+}
+.ban .wrapper p {
+  display: block;
+  font-size: 1.25rem;
+  margin: 0.625rem 0;
+  color: #fff;
+}
+.ban .wrapper ol li {
+  display: inline-block;
+  background-color: #dc3545;
+  font-size: 1rem;
+  color: #fff;
+  padding: 0.625rem;
+  border-radius: 0.3125rem;
+  margin: 0.625rem 0;
+}
+.ban .wrapper ol li:nth-child(2) {
+  margin-left: 1.25rem;
+}
+.ban .wrapper ol li a {
+  color: #fff;
+}
+
+/* Grace Food Bank */
+
+.grace-banner {
+  position: relative;
+  height: 37.5rem;
+  overflow: hidden;
+  transition: all ease-in-out 0.5s;
+  background-image: url(../images/slider/2.jpg);
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  padding: 3.125rem 0;
+}
+.grace-banner .wrapper {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  margin: 1.25rem 0;
+  padding: 6.25rem 0 2.5rem 0;
+}
+.grace-banner .wrapper h1 {
+  font-size: 1.875rem;
+  color: #fff;
+  display: block;
+  margin: 0.625rem 0;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 0.2px;
+}
+.grace-banner .wrapper p {
+  display: block;
+  font-size: 1.25rem;
+  margin: 0.625rem 0;
+  color: #fff;
+}
+.grace-banner .wrapper ol li {
+  display: inline-block;
+  background-color: #dc3545;
+  font-size: 1rem;
+  color: #fff;
+  padding: 0.625rem;
+  border-radius: 0.3125rem;
+  margin: 0.625rem 0;
+}
+.grace-banner .wrapper ol li:nth-child(2) {
+  margin-left: 1.25rem;
+}
+.grace-banner .wrapper ol li a {
+  color: #fff;
+}
+
+/* Mission Education Program */
+
+.education-banner {
+  position: relative;
+  height: 37.5rem;
+  overflow: hidden;
+  transition: all ease-in-out 0.5s;
+  background-image: url(../images/slider/2.jpg);
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  padding: 3.125rem 0;
+}
+.education-banner .wrapper {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  margin: 1.25rem 0;
+  padding: 6.25rem 0 2.5rem 0;
+}
+.education-banner .wrapper h1 {
+  font-size: 1.875rem;
+  color: #fff;
+  display: block;
+  margin: 0.625rem 0;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 0.2px;
+}
+.education-banner .wrapper p {
+  display: block;
+  font-size: 1.25rem;
+  margin: 0.625rem 0;
+  color: #fff;
+}
+.education-banner .wrapper ol li {
+  display: inline-block;
+  background-color: #dc3545;
+  font-size: 1rem;
+  color: #fff;
+  padding: 0.625rem;
+  border-radius: 0.3125rem;
+  margin: 0.625rem 0;
+}
+.education-banner .wrapper ol li:nth-child(2) {
+  margin-left: 1.25rem;
+}
+.education-banner .wrapper ol li a {
+  color: #fff;
+}
+
+/* Home For Homeless Program */
+
+.home-banner {
+  position: relative;
+  height: 37.5rem;
+  overflow: hidden;
+  transition: all ease-in-out 0.5s;
+  background-image: url(../images/slider/2.jpg);
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  padding: 3.125rem 0;
+}
+.home-banner .wrapper {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  margin: 1.25rem 0;
+  padding: 6.25rem 0 2.5rem 0;
+}
+.home-banner .wrapper h1 {
+  font-size: 1.875rem;
+  color: #fff;
+  display: block;
+  margin: 0.625rem 0;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 0.2px;
+}
+.home-banner .wrapper p {
+  display: block;
+  font-size: 1.25rem;
+  margin: 0.625rem 0;
+  color: #fff;
+}
+.home-banner .wrapper ol li {
+  display: inline-block;
+  background-color: #dc3545;
+  font-size: 1rem;
+  color: #fff;
+  padding: 0.625rem;
+  border-radius: 0.3125rem;
+  margin: 0.625rem 0;
+}
+.home-banner .wrapper ol li:nth-child(2) {
+  margin-left: 1.25rem;
+}
+.home-banner .wrapper ol li a {
+  color: #fff;
+}
+
+/* Mission Smile Program */
+
+.smile-banner {
+  position: relative;
+  height: 37.5rem;
+  overflow: hidden;
+  transition: all ease-in-out 0.5s;
+  background-image: url(../images/slider/2.jpg);
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  padding: 3.125rem 0;
+}
+.smile-banner .wrapper {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  margin: 1.25rem 0;
+  padding: 6.25rem 0 2.5rem 0;
+}
+.smile-banner .wrapper h1 {
+  font-size: 1.875rem;
+  color: #fff;
+  display: block;
+  margin: 0.625rem 0;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 0.2px;
+}
+.smile-banner .wrapper p {
+  display: block;
+  font-size: 1.25rem;
+  margin: 0.625rem 0;
+  color: #fff;
+}
+.smile-banner .wrapper ol li {
+  display: inline-block;
+  background-color: #dc3545;
+  font-size: 1rem;
+  color: #fff;
+  padding: 0.625rem;
+  border-radius: 0.3125rem;
+  margin: 0.625rem 0;
+}
+.smile-banner .wrapper ol li:nth-child(2) {
+  margin-left: 1.25rem;
+}
+.smile-banner .wrapper ol li a {
+  color: #fff;
+}
+
+/* Club Foot Free Program */
+
+.club-banner {
+  position: relative;
+  height: 37.5rem;
+  overflow: hidden;
+  transition: all ease-in-out 0.5s;
+  background-image: url(../images/slider/2.jpg);
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  padding: 3.125rem 0;
+}
+.club-banner .wrapper {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  margin: 1.25rem 0;
+  padding: 6.25rem 0 2.5rem 0;
+}
+.club-banner .wrapper h1 {
+  font-size: 1.875rem;
+  color: #fff;
+  display: block;
+  margin: 0.625rem 0;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 0.2px;
+}
+.club-banner .wrapper p {
+  display: block;
+  font-size: 1.25rem;
+  margin: 0.625rem 0;
+  color: #fff;
+}
+.club-banner .wrapper ol li {
+  display: inline-block;
+  background-color: #dc3545;
+  font-size: 1rem;
+  color: #fff;
+  padding: 0.625rem;
+  border-radius: 0.3125rem;
+  margin: 0.625rem 0;
+}
+.club-banner .wrapper ol li:nth-child(2) {
+  margin-left: 1.25rem;
+}
+.club-banner .wrapper ol li a {
+  color: #fff;
+}
+
+/* Maternal & Child Health Program */
+
+.maternal-banner {
+  position: relative;
+  height: 37.5rem;
+  overflow: hidden;
+  transition: all ease-in-out 0.5s;
+  background-image: url(../images/slider/2.jpg);
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  padding: 3.125rem 0;
+}
+.maternal-banner .wrapper {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  margin: 1.25rem 0;
+  padding: 6.25rem 0 2.5rem 0;
+}
+.maternal-banner .wrapper h1 {
+  font-size: 1.875rem;
+  color: #fff;
+  display: block;
+  margin: 0.625rem 0;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 0.2px;
+}
+.maternal-banner .wrapper p {
+  display: block;
+  font-size: 1.25rem;
+  margin: 0.625rem 0;
+  color: #fff;
+}
+.maternal-banner .wrapper ol li {
+  display: inline-block;
+  background-color: #dc3545;
+  font-size: 1rem;
+  color: #fff;
+  padding: 0.625rem;
+  border-radius: 0.3125rem;
+  margin: 0.625rem 0;
+}
+.maternal-banner .wrapper ol li:nth-child(2) {
+  margin-left: 1.25rem;
+}
+.maternal-banner .wrapper ol li a {
+  color: #fff;
+}
+
+/* Health & Nutrition Program */
+
+.health-banner {
+  position: relative;
+  height: 37.5rem;
+  overflow: hidden;
+  transition: all ease-in-out 0.5s;
+  background-image: url(../images/slider/2.jpg);
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  padding: 3.125rem 0;
+}
+.health-banner .wrapper {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  margin: 1.25rem 0;
+  padding: 6.25rem 0 2.5rem 0;
+}
+.health-banner .wrapper h1 {
+  font-size: 1.875rem;
+  color: #fff;
+  display: block;
+  margin: 0.625rem 0;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 0.2px;
+}
+.health-banner .wrapper p {
+  display: block;
+  font-size: 1.25rem;
+  margin: 0.625rem 0;
+  color: #fff;
+}
+.health-banner .wrapper ol li {
+  display: inline-block;
+  background-color: #dc3545;
+  font-size: 1rem;
+  color: #fff;
+  padding: 0.625rem;
+  border-radius: 0.3125rem;
+  margin: 0.625rem 0;
+}
+.health-banner .wrapper ol li:nth-child(2) {
+  margin-left: 1.25rem;
+}
+.health-banner .wrapper ol li a {
+  color: #fff;
+}
+
+/* Children Rehabilitation Program */
+
+.children-banner {
+  position: relative;
+  height: 37.5rem;
+  overflow: hidden;
+  transition: all ease-in-out 0.5s;
+  background-image: url(../images/slider/2.jpg);
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  padding: 3.125rem 0;
+}
+.children-banner .wrapper {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  margin: 1.25rem 0;
+  padding: 6.25rem 0 2.5rem 0;
+}
+.children-banner .wrapper h1 {
+  font-size: 1.875rem;
+  color: #fff;
+  display: block;
+  margin: 0.625rem 0;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 0.2px;
+}
+.children-banner .wrapper p {
+  display: block;
+  font-size: 1.25rem;
+  margin: 0.625rem 0;
+  color: #fff;
+}
+.children-banner .wrapper ol li {
+  display: inline-block;
+  background-color: #dc3545;
+  font-size: 1rem;
+  color: #fff;
+  padding: 0.625rem;
+  border-radius: 0.3125rem;
+  margin: 0.625rem 0;
+}
+.children-banner .wrapper ol li:nth-child(2) {
+  margin-left: 1.25rem;
+}
+.children-banner .wrapper ol li a {
+  color: #fff;
+}
+
+/* WASH */
+
+.wash-banner {
+  position: relative;
+  height: 37.5rem;
+  overflow: hidden;
+  transition: all ease-in-out 0.5s;
+  background-image: url(../images/slider/2.jpg);
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  padding: 3.125rem 0;
+}
+.wash-banner .wrapper {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  margin: 1.25rem 0;
+  padding: 6.25rem 0 2.5rem 0;
+}
+.wash-banner .wrapper h1 {
+  font-size: 1.875rem;
+  color: #fff;
+  display: block;
+  margin: 0.625rem 0;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 0.2px;
+}
+.wash-banner .wrapper p {
+  display: block;
+  font-size: 1.25rem;
+  margin: 0.625rem 0;
+  color: #fff;
+}
+.wash-banner .wrapper ol li {
+  display: inline-block;
+  background-color: #dc3545;
+  font-size: 1rem;
+  color: #fff;
+  padding: 0.625rem;
+  border-radius: 0.3125rem;
+  margin: 0.625rem 0;
+}
+.wash-banner .wrapper ol li:nth-child(2) {
+  margin-left: 1.25rem;
+}
+.wash-banner .wrapper ol li a {
+  color: #fff;
+}
+
+/* Animal Welfare Program */
+
+.animal-banner {
+  position: relative;
+  height: 37.5rem;
+  overflow: hidden;
+  transition: all ease-in-out 0.5s;
+  background-image: url(../images/slider/2.jpg);
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  padding: 3.125rem 0;
+}
+.animal-banner .wrapper {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  margin: 1.25rem 0;
+  padding: 6.25rem 0 2.5rem 0;
+}
+.animal-banner .wrapper h1 {
+  font-size: 1.875rem;
+  color: #fff;
+  display: block;
+  margin: 0.625rem 0;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 0.2px;
+}
+.animal-banner .wrapper p {
+  display: block;
+  font-size: 1.25rem;
+  margin: 0.625rem 0;
+  color: #fff;
+}
+.animal-banner .wrapper ol li {
+  display: inline-block;
+  background-color: #dc3545;
+  font-size: 1rem;
+  color: #fff;
+  padding: 0.625rem;
+  border-radius: 0.3125rem;
+  margin: 0.625rem 0;
+}
+.animal-banner .wrapper ol li:nth-child(2) {
+  margin-left: 1.25rem;
+}
+.animal-banner .wrapper ol li a {
+  color: #fff;
+}
+
+/* ================================ Section CSS =============================== */
+.bg-01 {
+  position: relative;
+  margin-top: -5rem;
+  width: 100%;
+}
+.bg-01 .wrapper {
+  background: #fff;
+  position: relative;
+  padding: 2.5rem 1.875rem;
+  display: block;
+  width: 100%;
+  box-shadow: 0 16px 28px 0 rgba(0, 0, 0, 0.15);
+  z-index: 9;
+}
+.bg-01 .wrapper .content {
+  display: block;
+  position: relative;
+  transition: all ease-in-out 0.5s;
+  margin: 0.625rem 0;
+}
+.bg-01 .wrapper .content ol .dashed {
+  border-right: 1px dashed #ddd;
+}
+.bg-01 .wrapper .content ol li {
+  display: inline-block;
+  position: relative;
+  padding: 0.625rem 0;
+}
+.bg-01 .wrapper .content ol li i {
+  display: block;
+  font-size: 2.5rem;
+  color: #dc3545;
+}
+.bg-01 .wrapper .content ol li h3 {
+  font-size: 1.25rem;
+  color: #222222;
+  text-transform: capitalize;
+  font-weight: 600;
+  display: inline-block;
+  margin: 0.625rem 0;
+}
+.bg-01 .wrapper .content ol li p {
+  display: block;
+  font-size: 1rem;
+  color: #373738;
+  line-height: 1.5rem;
+  margin: 0 0 0.625rem 0;
+}
+
+.bg-02 {
+  position: relative;
+  overflow: hidden;
+}
+.bg-02 .wrapper {
+  margin: 1.25rem 0;
+  position: relative;
+  display: block;
+}
+.bg-02 .wrapper figure {
+  margin: 0;
+}
+.bg-02 .wrapper .bs {
+  padding: 1.25rem;
+  border: 1px dashed #ddd;
+  position: relative;
+  display: inline-block;
+}
+.bg-02 .wrapper .bs h3 {
+  font-size: 1.25rem;
+  color: #222222;
+  font-weight: 600;
+}
+.bg-02 .wrapper .bs p {
+  font-size: 0.9375rem;
+  color: #373738;
+  line-height: 1.5rem;
+  display: inline-block;
+  margin: 0.625rem 0;
+}
+.bg-02 .wrapper .bs ol li {
+  display: inline-block;
+  font-size: 0.8125rem;
+}
+.bg-02 .wrapper .bs ol li i {
+  margin: 0 0.625rem 0 0;
+  color: #dc3545;
+}
+
+.bg-02 .wrap figure {
+  margin: 0;
+}
+.bg-02 .wrap .bbs {
+  padding: 1.25rem;
+  position: relative;
+  display: inline-block;
+}
+.bg-02 .wrap .bbs h3 {
+  font-size: 1.25rem;
+  color: #222222;
+  font-weight: 600;
+}
+.bg-02 .wrap .bbs p {
+  font-size: 0.9375rem;
+  color: #373738;
+  line-height: 1.5rem;
+  display: inline-block;
+  margin: 0.625rem 0;
+}
+.bg-02 .wrap .bbs ol li {
+  display: inline-block;
+  font-size: 0.8125rem;
+}
+.bg-02 .wrap .bbs ol li i {
+  margin: 0 0.625rem 0 0;
+  color: #dc3545;
+}
+
+.bg-03 {
+  position: relative;
+  padding: 3.125rem 0;
+  background: #fafafa;
+  overflow: hidden;
+}
+.bg-03 .wrapper {
+  position: relative;
+  display: block;
+  margin: 1.25rem 0;
+  padding: 1.25rem;
+}
+.bg-03 .wrapper .content {
+  text-align: center;
+}
+.bg-03 .wrapper .content ol li {
+  display: block;
+}
+
+.bg-03 .wrapper .content ol li h3 {
+  font-size: 1.25rem;
+  color: #222222;
+  font-weight: 600;
+}
+.bg-03 .wrapper .content ol li p {
+  display: block;
+  margin: 0.625rem 0;
+  color: #373738;
+  font-size: 1rem;
+}
+
+.bg-04 {
+  padding: 3.125rem 0;
+  position: relative;
+  overflow: hidden;
+}
+.bg-04 .main-team-card {
+  flex-wrap: wrap;
+  width: 100%;
+  padding: 10px 15px;
+  margin: 20px 0px;
+  position: relative;
+  transition: 0.5s;
+}
+.bg-04 .main-team-card .team-setup {
+  margin: 0 0 20px 0;
+  padding: 10px;
+  flex: 1 1 25%;
+  width: 25%;
+  max-width: 25%;
+}
+@media screen and (max-width: 375px) {
+  .bg-04 .main-team-card .team-setup {
+    width: 100%;
+    max-width: 100%;
+    flex: 1 1 100%;
+    -webkit-flex-direction: 1 1 100%;
+    -moz-flex-direction: 1 1 100%;
+    -ms-flex-direction: 1 1 100%;
+  }
+}
+@media (min-width: 376px) and (max-width: 767.98px) {
+  .bg-04 .main-team-card .team-setup {
+    width: 50%;
+    max-width: 50%;
+    flex: 1 1 50%;
+    -webkit-flex-direction: 1 1 50%;
+    -moz-flex-direction: 1 1 50%;
+    -ms-flex-direction: 1 1 50%;
+  }
+}
+.bg-04 .main-team-card .team-setup .team-items {
+  width: 100%;
+  display: block;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.07);
+  transition: 0.5s;
+  position: relative;
+}
+.bg-04 .main-team-card .team-setup .team-items:hover .team-user-social {
+  opacity: 1;
+  visibility: visible;
+  left: 0;
+  display: block;
+}
+.bg-04 .main-team-card .team-setup .team-items:hover .team-user::before {
+  width: 100%;
+  opacity: 1;
+  visibility: visible;
+  display: block;
+}
+.bg-04 .main-team-card .team-setup .team-items .team-name {
+  padding: 5px 0px;
+  position: relative;
+  display: block;
+  text-align: center;
+  z-index: 2;
+}
+.bg-04 .main-team-card .team-setup .team-items .team-name::before {
+  position: absolute;
+  content: "";
+  width: 20px;
+  height: 20px;
+  background: #fff;
+  top: -10px;
+  -webkit-clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+  clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+  left: 47%;
+  z-index: 1;
+}
+.bg-04 .main-team-card .team-setup .team-items .team-name h2 {
+  font-size: 18px;
+}
+.bg-04 .main-team-card .team-setup .team-items .team-name b {
+  font-size: 15px;
+  color: #848484;
+}
+.bg-04 .main-team-card .team-setup .team-items .team-user {
+  overflow: hidden;
+  position: relative;
+  transition: 0.5s;
+}
+.bg-04 .main-team-card .team-setup .team-items .team-user::before {
+  position: absolute;
+  content: "";
+  height: 100%;
+  left: 0;
+  top: 0;
+  width: 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.5s;
+  background: rgba(0, 0, 0, 0.7);
+}
+.bg-04 .main-team-card .team-setup .team-items .team-user-social {
+  position: absolute;
+  height: 45px;
+  background: rgba(255, 255, 255, 0.1);
+  width: 100%;
+  padding: 5px 0px;
+  top: 50%;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  left: -100%;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.5s;
+  display: none;
+}
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .bg-04 .main-team-card .team-setup .team-items .team-user-social {
+    top: 40%;
+  }
+}
+.bg-04 .main-team-card .team-setup .team-items .team-user-social ol li {
+  display: inline-block;
+  padding-right: 10px;
+  color: #fff;
+  transition: 0.6s;
+  height: 30px;
+  width: 30px;
+  background: #dc3545;
+  line-height: 30px;
+  text-align: center;
+  padding: 0px;
+  border-radius: 50px;
+  font-size: 16px;
+  margin-right: 5px;
+}
+.bg-04 .main-team-card .team-setup .team-items .team-user-social ol li:hover {
+  color: #dc3545;
+  transform: translateX(-5px);
+}
+
+.bg-05 {
+  position: relative;
+  padding: 3.125rem 0;
+  background: #fafafa;
+  overflow: hidden;
+}
+.bg-05 .blog-main-card {
+  flex-wrap: wrap;
+  width: 100%;
+  padding: 10px 15px;
+  margin: 20px 0px;
+}
+.bg-05 .blog-main-card .blog-sub {
+  width: 33.3%;
+  max-width: 33.3%;
+  flex: 1 1 33.3%;
+  margin: 0 0 20px 0;
+  padding: 0px 10px;
+  position: relative;
+}
+@media (max-width: 575.98px) {
+  .bg-05 .blog-main-card .blog-sub {
+    width: 100%;
+    max-width: 100%;
+    flex: 1 1 100%;
+  }
+}
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .bg-05 .blog-main-card .blog-sub {
+    width: 50%;
+    max-width: 50%;
+    flex: 1 1 50%;
+  }
+}
+.bg-05 .blog-main-card .blog-sub .blog-content {
+  position: relative;
+  display: block;
+  overflow: hidden;
+}
+.bg-05 .blog-main-card .blog-sub .blog-content-section {
+  padding: 20px 25px;
+  background: #fff;
+  border: solid 1px #eee8e8;
+  border-top: 0;
+  display: block;
+  width: 100%;
+}
+.bg-05 .blog-main-card .blog-sub .blog-content-section .blog-admin {
+  margin: 5px 0px;
+}
+.bg-05 .blog-main-card .blog-sub .blog-content-section .blog-admin ol li {
+  display: inline-block;
+  color: #dc3545;
+  font-size: 15px;
+  margin: 0 5px 0 0;
+}
+.bg-05 .blog-main-card .blog-sub .blog-content-section .blog-admin ol li i {
+  padding: 0 5px 0 0;
+}
+.bg-05 .blog-main-card .blog-sub .blog-content-section .blo-content-title h4 {
+  font-size: 20px;
+  font-weight: 600;
+  color: #222222;
+  padding: 3px 0px;
+}
+.bg-05 .blog-main-card .blog-sub .blog-content-section .blo-content-title p {
+  margin: 0px;
+  padding: 3px 0px;
+  line-height: 27px;
+  color: #373738;
+}
+
+.about-001 {
+  padding: 3.125rem 0;
+  position: relative;
+  overflow: hidden;
+  background: #fafafa;
+}
+.about-001 .text-part,
+.about-001 .image-part {
+  position: relative;
+  margin: 1.25rem 0;
+}
+.about-001 .text-part h2,
+.about-001 .image-part h2 {
+  font-weight: 600;
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  color: #222222;
+}
+.about-001 .text-part p,
+.about-001 .image-part p {
+  text-indent: 20px;
+  margin-bottom: 15px;
+  line-height: 27px;
+  font-weight: 500;
+  text-align: justify;
+  font-size: 0.9rem;
+}
+.about-001 .text-part .about-qcard,
+.about-001 .image-part .about-qcard {
+  padding: 50px 30px;
+  background-color: #fff;
+  box-shadow: 0 2px 3px 0 rgba(218, 218, 253, 0.35),
+    0 0px 3px 0 rgba(206, 206, 238, 0.35);
+  text-align: center;
+  margin-bottom: 30px;
+}
+.about-001 .text-part .about-qcard i,
+.about-001 .image-part .about-qcard i {
+  font-size: 3rem;
+  margin-bottom: 30px;
+  color: #dc3545;
+}
+.about-001 .text-part .about-qcard p,
+.about-001 .image-part .about-qcard p {
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+
+.heading {
+  margin: 20px 0px;
+  text-align: left;
+  position: relative;
+  display: block;
+}
+.heading h2 {
+  font-size: 25px;
+  color: #222222;
+  line-height: 50px;
+  font-weight: 700;
+  text-transform: capitalize;
+  position: relative;
+  display: inline-block;
+}
+
+/* ================================ Footer CSS =============================== */
+footer {
+  position: relative;
+  padding: 50px 0px 0px;
+  background: #e83e8c;
+}
+@media screen and (max-width: 767.98px) {
+  footer {
+    padding: 20px 0 0;
+  }
+}
+footer .copy-right {
+  padding: 20px 0px;
+  border-top: solid 1px #dfdfdf;
+  font-size: 14px;
+  color: black;
+  text-align: center;
+}
+footer .copy-right p a {
+  color: white;
+  padding-left: 10px;
+  font-weight: bold;
+}
+footer .footer-content {
+  margin: 20px 0px;
+  display: block;
+  width: 100%;
+  color: black;
+}
+footer .footer-content p {
+  font-size: 16px;
+  padding: 10px 0px;
+  line-height: 27px;
+  margin: 0px;
+}
+footer .footer-content ul li {
+  display: inline-block;
+  height: 30px;
+  width: 30px;
+  background: #84878a;
+  color: #fff;
+  line-height: 30px;
+  text-align: center;
+  border-radius: 50%;
+  margin: 5px 3px 0px 0px;
+}
+footer .footer-content ol li {
+  padding: 10px 0px;
+  position: relative;
+}
+footer .footer-content ol li a {
+  color: black;
+  font-size: 16px;
+}
+footer .footer-content ol li a i {
+  padding-right: 10px;
+  color: #ffff;
+}
+footer .footer-content h2 {
+  font-size: 20px;
+  position: relative;
+  padding: 5px 0px;
+  font-weight: 600;
+  color: #fff;
+}
+footer .footer-content .form-group {
+  position: relative;
+}
+footer .footer-content .form-group .form-control {
+  height: 40px;
+  padding-right: 40px;
+  text-overflow: ellipsis;
+}
+footer .footer-content .form-group i {
+  position: absolute;
+  height: 40px;
+  width: 40px;
+  line-height: 40px;
+  color: #fff;
+  background: #84878a;
+  text-align: center;
+  top: 0;
+  right: 0;
+}
+@media screen and (max-width: 767.98px) {
+  footer .footer-content ol li a i {
+    padding-right: 5px;
+    color: #fff;
+  }
+}
+
+.bg-0-b {
+  padding: 50px 0px;
+  position: relative;
+  background: #e8f0f5;
+  z-index: 2;
+}
+.bg-0-b .main-card-contact {
+  flex-wrap: wrap;
+  width: 100%;
+  margin: 20px 0px;
+  padding: 10px 15px;
+  position: relative;
+  z-index: 9;
+}
+.bg-0-b .main-card-contact .sup-card-contact {
+  width: 40%;
+  max-width: 40%;
+  flex: 1 1 40%;
+}
+@media screen and (max-width: 767.98px) {
+  .bg-0-b .main-card-contact .sup-card-contact {
+    width: 100%;
+    max-width: 100%;
+    flex: 1 1 100%;
+  }
+}
+.bg-0-b .main-card-contact .sup-card-contact .contact-title {
+  position: relative;
+}
+.bg-0-b .main-card-contact .sup-card-contact .contact-title h2 {
+  font-size: 20px;
+  margin: 0 0 10px 0;
+  color: #222;
+  padding-bottom: 5px;
+  position: relative;
+  display: inline-block;
+}
+.bg-0-b .main-card-contact .sup-card-contact .contact-title h2::before {
+  position: absolute;
+  content: "";
+  background: #dc3545;
+  width: 100%;
+  height: 3px;
+  bottom: 0;
+}
+.bg-0-b .main-card-contact .sup-card-contact .contact-title ol li {
+  display: block;
+  padding: 10px 0px;
+  color: #606060;
+  font-size: 16px;
+  font-weight: 600;
+}
+.bg-0-b .main-card-contact .sup-card-contact .contact-title ol li i {
+  color: #dc3545;
+  padding-right: 15px;
+}
+.bg-0-b .main-card-contact .sup-card-contact .head-content {
+  position: relative;
+  display: block;
+}
+.bg-0-b .main-card-contact .sup-card-contact .head-content h2 {
+  font-size: 20px;
+  margin: 0 0 10px 0;
+  color: #222;
+  padding-bottom: 5px;
+  position: relative;
+  display: inline-block;
+}
+.bg-0-b .main-card-contact .sup-card-contact .head-content h2::before {
+  position: absolute;
+  content: "";
+  background: #dc3545;
+  width: 100%;
+  height: 3px;
+  bottom: 0;
+}
+.bg-0-b .main-card-contact .sup-card-contact .head-content p {
+  font-size: 16px;
+  line-height: 27px;
+  display: block;
+  padding: 20px 0px;
+  margin: 0px;
+}
+.bg-0-b .main-card-contact .sup-card-contact-0a {
+  width: 60%;
+  max-width: 60%;
+  flex: 1 1 60%;
+}
+@media screen and (max-width: 767.98px) {
+  .bg-0-b .main-card-contact .sup-card-contact-0a {
+    width: 100%;
+    max-width: 100%;
+    flex: 1 1 100%;
+  }
+}
+.bg-0-b .main-card-contact .sup-card-contact-0a .dived {
+  width: 100%;
+  flex-wrap: wrap;
+}
+.bg-0-b .main-card-contact .sup-card-contact-0a .dived .ca-ool {
+  padding: 0px 10px;
+}
+.bg-0-b .main-card-contact .sup-card-contact-0a .dived .form-group {
+  width: 50%;
+  max-width: 50%;
+  flex: 1 1 50%;
+}
+.bg-0-b .main-card-contact .sup-card-contact-0a .dived .form-group .form-sup {
+  margin: 10px;
+  position: relative;
+}
+.bg-0-b
+  .main-card-contact
+  .sup-card-contact-0a
+  .dived
+  .form-group
+  .form-sup
+  .cal-01 {
+  position: relative;
+}
+.bg-0-b .main-card-contact .sup-card-contact-0a .dived .form-group .form-sup i {
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  height: 45px;
+  width: 45px;
+  background: #dc3545;
+  text-align: center;
+  line-height: 45px;
+  color: #fff;
+  border-top-right-radius: 0.25rem;
+  border-bottom-right-radius: 0.25rem;
+}
+.bg-0-b
+  .main-card-contact
+  .sup-card-contact-0a
+  .dived
+  .form-group
+  .form-sup
+  label {
+  font-size: 15px;
+  color: #6e6e6e;
+}
+.bg-0-b
+  .main-card-contact
+  .sup-card-contact-0a
+  .dived
+  .form-group
+  .form-sup
+  label
+  span {
+  position: relative;
+  top: 4px;
+  left: 5px;
+  color: #dc3545;
+}
+.bg-0-b
+  .main-card-contact
+  .sup-card-contact-0a
+  .dived
+  .form-group
+  .form-control {
+  padding: 10px 15px;
+  margin: 30px 0px;
+  height: 45px;
+  position: relative;
+}
+
+.abt-01 {
+  padding: 3.125rem 0;
+  background: #dc3545;
+  position: relative;
+  overflow: hidden;
+  z-index: 9;
+}
+.abt-01::before {
+  position: absolute;
+  content: "";
+  background: #fff;
+  height: 9.375rem;
+  width: 9.375rem;
+  top: 0%;
+  left: 48%;
+  z-index: 1;
+  opacity: 0.1;
+  transform: translate3d(-23%, 17%, 0) rotate(-54deg);
+}
+.abt-01 .heading-wrapper {
+  position: relative;
+  margin: 1.25rem 0;
+  display: block;
+  text-align: center;
+  z-index: 8;
+}
+.abt-01 .heading-wrapper h3 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 0.625rem;
+  text-transform: uppercase;
+}
+.abt-01 .heading-wrapper ol li {
+  display: inline-block;
+  font-size: 1rem;
+  color: #ddd;
+}
+.abt-01 .heading-wrapper ol li:nth-child(2) {
+  color: #fff;
+}
+.abt-01 .heading-wrapper ol li i {
+  margin: 0 0.625rem;
+  color: #ddd;
+}
+
+/*logo carausel*/
+
+.ourlg {
+  text-align: center;
+  padding: 3rem;
+  font-size: 3.5rem;
+  margin-bottom: 3rem;
+  /*text-decoration-line: underline;*/
+  font-family: "Times New Roman", Times, serif;
+}
+.slick-slide {
+  margin: 0px 10px;
+}
+.slick-slide img {
+  width: 100%;
+}
+
+/* Subnavbar Code*/
+
+.menu ul ul {
+  margin: 20px 0 0 0;
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  background: white;
+  top: 46px;
+  z-index: 1;
+  background: white;
+  border-radius: 3px;
+  transition: all 0.3s ease-in-out;
+}
+.menu li:hover > ul {
+  opacity: 1;
+  visibility: visible;
+  margin: 0;
+}
+
+/*Responsive sidebar code*/
+
+@media screen and (max-width: 767.98px) {
+  .menu ul ul {
+    opacity: 1;
+    visibility: visible;
+    background: white;
+    position: static;
+    max-height: 0px;
+    overflow: hidden;
+  }
+  .menu ul ul li {
+    margin: 7px 20px;
+  }
+  .menu ul ul li a {
+    font-size: none;
+    line-height: 30px;
+    border-radius: 5px !important;
+  }
+  .menu li:hover > ul {
+    max-height: 100vh;
+    opacity: 1;
+    visibility: visible;
+    margin: 0;
+  }
+}
+
+@media (max-width: 600px) {
+  .container {
+    min-width: 280px;
+  }
+
+  .user-input-box {
+    margin-bottom: 12px;
+    width: 100%;
+  }
+
+  .user-input-box:nth-child(2n) {
+    justify-content: space-between;
+  }
+
+  .gender-category {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .main-user-info {
+    max-height: 380px;
+    overflow: auto;
+  }
+
+  .main-user-info::-webkit-scrollbar {
+    width: 0;
+  }
+}
+
+/* Donate Button CSS */
+.donate-btn {
+  margin-top: 5px;
+  visibility: hidden;
+  margin-right: 80px;
+  border-radius: 5px;
+  border-color: #e83e8c;
+  display: inline-block;
+  background-color: #e83e8c;
+  font-size: 1rem;
+  color: #fff;
+  padding: 0.625rem;
+  border-radius: 0.3125rem;
+}
+@media screen and (max-width: 767.98px) {
+  .donate-btn {
+    visibility: visible;
+  }
+}
+
+/* CSS Random */
+/* Random CSS */
+.partnership-testimonial-wrapper.donate-page-block {
+  padding: 0;
+  margin-top: 6rem;
+  margin-bottom: 6rem;
+}
+.donate-page-block {
+  position: relative;
+  margin-left: 10%;
+  width: calc(80% - 33rem);
+}
+.partnership-testimonial-wrapper {
+  padding: 2rem 8% 4rem;
+}
+
+/* Our Team CSS */

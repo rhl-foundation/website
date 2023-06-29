@@ -1,0 +1,66 @@
+.payment-mode {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60%;
+  margin: 0 auto;
+}
+.filter-switch label {
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+.filter-switch-item input:checked + label {
+  color: inherit;
+  --bg-opacity: 1;
+  background-color: #fff;
+}
+.filter-switch-item input:not(:checked) + label {
+  --bg-opacity: 0;
+  box-shadow: none;
+}
+
+.inactive {
+  display: none;
+}
+
+.donation-form-box {
+  background-color: #f6f6f6;
+  border: 1px solid #e0e0e0;
+  width: 80%;
+  margin: 2rem auto;
+  border-radius: 1rem;
+  padding: 2rem 2rem;
+}
+
+.donation-form-box .radio-input {
+  display: none;
+  margin-right: 2rem;
+}
+
+.donation-form-box .radio-input:checked + label {
+  background-color: #e0e0e0;
+}
+
+.donation-form-box .radio-input + label {
+  background-color: #fff;
+  padding: 0.4rem 1rem;
+  margin: 1rem 4rem 0.7rem 0;
+  border: solid 1px #777777;
+  border-radius: 4rem;
+}
+
+.donation-form-box .radio-label:hover {
+  cursor: pointer;
+  background-color: #e0e0e0;
+  padding: 0.4rem 1rem;
+  border: solid 1px #777777;
+}
+
+.donation-form-box input[type="text"],
+.donation-form-box input[type="textarea"],
+.donation-form-box input[type="email"],
+.donation-form-box input[type="number"],
+.donation-form-box input[type="tel"] {
+  margin: 1rem 0;
+}

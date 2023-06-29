@@ -1,0 +1,57 @@
+.banner{
+    position: relative;
+    height:37.5rem;
+    overflow: hidden;
+    transition:all ease-in-out 0.5s;
+    background-image:url(../images/slider/1.jpg);
+    background-position:center;
+    background-size:cover;
+    background-attachment: fixed;
+    padding:3.125rem 0;
+
+    .wrapper{
+        position: relative;
+        display:inline-block;
+        width:100%;
+        text-align:center;
+        margin:1.25rem 0;
+        padding:6.25rem 0 2.5rem 0;
+
+        h1{
+            font-size:1.875rem;
+            color:$color-primary;
+            display:block;
+            margin:.625rem 0;
+            text-transform:uppercase;
+            font-weight:bold;
+            letter-spacing:.2px;
+        }
+
+        p{
+            display: block;
+            font-size:1.25rem;
+            margin:.625rem 0;
+            color:$color-primary;
+        }
+
+        ol{
+            li{
+                display:inline-block;
+                background-color:$icons-color;
+                font-size:1rem;
+                color:$color-primary;
+                padding:.625rem;
+                border-radius:.3125rem;
+                margin:.625rem 0;
+
+                &:nth-child(2){
+                    margin-left:1.25rem;
+                }
+
+                a{
+                    color:$color-primary;
+                }
+            }
+        }
+    }
+}
