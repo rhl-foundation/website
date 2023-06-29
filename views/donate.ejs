@@ -1,0 +1,678 @@
+<%- include("partials/header") -%> 
+
+<link rel="stylesheet" href="assets/css/donate.css">  
+
+<body>
+  <!-- ======================header started====================== -->
+  <script src="./jsfiles/navbar.js"></script>
+
+  <!-- Page Header Start -->
+  <div class="page-header">
+
+      <div class="container">
+
+          <div class="row">
+
+              <div class="col-12">
+                  <h2>Donate Now</h2>
+              </div>
+
+              <div class="col-12">
+                  <a href="/">Home</a>
+                  <a href="#">Donate</a>
+              </div>
+
+          </div>
+
+      </div>
+
+  </div>
+  <!-- Page Header End -->
+
+  <div class="container-fluid">
+
+    <p class="text-xl italic m-20 mt-0 card drop-shadow-xl p-3 text-2xl">All Indian contributions made to Real Happiness Of Life Foundation are eligible for tax exemption of 50% u/s 80G of the Income Tax Act, 1961.</p>
+  
+  </div>
+
+  <div class="payment-mode btn-group" role="group" aria-label="Basic radio toggle button group">
+
+    <ul id="filter1" class="filter-switch inline-flex items-center relative h-10 p-1 space-x-1 bg-gray-200 rounded-md font-semibold text-blue-600 my-4">
+
+      <li class="filter-switch-item flex relative h-8 bg-gray-300x">
+
+        <input value="monthly-donation-form" type="radio" name="filter1" id="filter1-0" class="sr-only" checked>
+        <label for="filter1-0" class="h-8 py-1 px-2 text-sm leading-6 text-gray-600 hover:text-gray-800  rounded shadow">
+        Monthly
+        </label>
+
+        <div aria-hidden="true" class="filter-active"></div>
+
+      </li>
+
+      <li class="filter-switch-item flex relative h-8 bg-gray-300x">
+
+        <input value="one-time-donation-form" type="radio" name="filter1" id="filter1-1" class="sr-only">
+        <label for="filter1-1" class="h-8 py-1 px-2 text-sm leading-6 text-gray-600 hover:text-gray-800  rounded shadow">
+          One Time
+        </label>
+
+      </li>
+
+    </ul>
+
+  </div>
+
+  <script>
+    $(document).ready(function(){
+      $("#one-time-donation-form").addClass("inactive");
+      $("input[name='filter1']").change(function(){
+        $("#monthly-donation-form").toggleClass("inactive");
+        $("#one-time-donation-form").toggleClass("inactive");
+      });
+    });
+  </script>
+
+  <div class="donation-form-box drop-shadow-2xl" id="one-time-donation-form">
+    <form id="oneTimeForm" action="/create/orderId" method="post">
+
+      <div class="row">
+      
+        <div class="col-lg-8">
+          <input name="money" class="radio-input" id="radio-money-1" type="radio" value="1000">
+          <label class="radio-label" for="radio-money-1">Rs. 1000</label>
+
+          <input name="money" class="radio-input" id="radio-money-2" type="radio" value="2000">
+          <label class="radio-label" for="radio-money-2">Rs. 2000</label>
+
+          <input name="money" class="radio-input" id="radio-money-3" type="radio" value="5000">
+          <label class="radio-label" for="radio-money-3">Rs. 5000</label>
+
+          <input name="money" class="radio-input" id="radio-money-4" type="radio" value="10000">
+          <label class="radio-label" for="radio-money-4">Rs. 10000</label>
+        </div>
+
+        <div class="col-lg-4">
+          <input name="money" class="d-none" class="mt-2 px-2 py-2 d-inline" id="radio-money-5" type="radio" value="custom">
+          <label for="radio-money-5">
+              <input type="number" name="custom" class="d-inline form-control" id="customAmount" placeholder="Enter Custom Amount" autocomplete="off">
+          </label>
+        </div>
+
+      </div>
+
+      <script>
+        $(document).ready(function(){
+          $("#customAmount").on("click", function(){
+            $("#radio-money-5").prop("checked", true);
+          });
+        });
+      </script>
+
+      <div class="row">
+
+        <div class="col-md-6 mb-6">
+          <div class="form-floating">
+            <input type="text" name="first_name" class="firstName form-control" id="floatingInput" placeholder="First Name" required>
+            <label for="floatingInput">First Name</label>
+          </div>
+        </div>
+
+        <div class="col-md-6 mb-6">
+          <div class="form-floating">
+            <input type="text" name="last_name" class="secondName form-control" id="floatingInput" placeholder="Second Name" required>
+            <label for="floatingInput">Last Name</label>
+          </div>
+        </div>
+        
+        <div class="col-md-6 mb-6">
+          <div class="form-floating">
+            <input type="tel" name="phone" class="phone form-control" id="floatingInput" placeholder="Phone" required>
+            <label for="floatingInput">Phone</label>
+          </div>
+        </div>
+
+        <div class="col-md-6 mb-6">
+          <div class="form-floating">
+            <input type="email" name="email" class="email form-control" id="floatingInput" placeholder="Email" required>
+            <label for="floatingInput">E-mail Address</label>
+          </div>
+        </div>
+
+        <div class="col-lg-12 mb-6">
+          <div class="form-check">
+            <input value="yes" class="form-check-input" type="checkbox" name="bearCharges" id="bearCharge" >
+            <label class="form-check-label" for="bearCharge">I hereby Declare to bear 3% payment gateway charges.</label>
+          </div>
+        </div>
+
+        <div class="col-lg-12 mb-6">
+          <div class="form-check">
+            <input value="terms" class="form-check-input" value="terms" id="tAndC" type="checkbox" name="termsAndConditions" required>
+            <label class="form-check-label" for="tAndC">I accept the Terms and Conditions and privacy policy.</label>
+          </div>
+        </div>
+
+
+      </div>
+       <div class="text-center">
+          <button id="donate-now" class="btn btn-secondary" type="submit">Donate Now</button>
+        </div>
+
+    </form>
+  </div>
+
+  <script>
+    $(document).ready(function(){
+      $("#donate-now").prop("disabled", true);
+      $("#tAndC").change(function(){
+        if ($(this).is(':checked')) {
+          $('#donate-now').prop('disabled', false);
+        } else {
+          $('#donate-now').prop('disabled', true);
+        }
+      });
+      $("#donate-now").on('click', async function(e) {
+        alert("hello");
+        var amount = $("#oneTimeForm input[name='money']:checked").val();
+        if (amount === "custom") {
+          amount = $("#customAmount").val();
+        }
+        $("#oneTimeForm").prepend('<input type="hidden" name="amount" value="' + amount + '">');
+
+        e.preventDefault();
+        bearCharge = $("#bearCharge").prop('checked');
+        var final_amount = amount;
+        if (bearCharge == true){
+          final_amount = final_amount * 1.03;
+        }
+        console.log(final_amount);
+        const response = await fetch("/create/orderId",
+        {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                amount: final_amount * 100,
+                name: $(".firstName").val() + " " + $(".secondName").val(),
+                email: $(".email").val(),
+                phone: $(".phone").val(),
+                bearCharges: $("#bearCharge").prop("checked"),
+            })
+        });
+        const resp = await response.json();
+        const data_go = JSON.stringify(resp);
+        const data = JSON.parse(data_go);
+        console.log(data);
+        const options = {
+            key: data.key_id,
+            amount: data.amount,
+            currency: "INR",
+            order_id: data.orderId,
+            name: "Real happiness of Life Foundation",
+            description: 'Digital Donation',
+            image: 'assets/images/logo.png',
+            notes: {
+                name: $(".firstNname").val() + " " + $(".lastName").val(),
+                email: $(".email").val(),
+                phone: $(".phone").val(),
+            },
+            handler: function(response) {
+                alert(response.razorpay_payment_id);
+            },
+            theme: {
+                color: '#e83e8c'
+            }
+        };  
+        const rzp1 = new Razorpay(options);
+        rzp1.open();
+        // rzp1.on('payment.success', async function(response) {
+        //     alert(response.razorpay_payment_id);
+        //     alert(response.razorpay_order_id);
+        //     alert(response.razorpay_signature);
+        //     const response = await fetch("/get/paymentDetails",
+        //     {
+        //         method: "POST",
+        //         headers: {
+        //             "Content-Type": "application/json"
+        //         },
+        //         body: JSON.stringify({
+        //             razorpay_payment_id: response.razorpay_payment_id,
+        //             razorpay_order_id: response.razorpay_order_id,
+        //             razorpay_signature: response.razorpay_signature,
+        //         })
+        //     });
+        // });
+        rzp1.on('payment.failed', function(response) {
+            alert(response.error.code);
+            alert(response.error.description);
+            alert(response.error.source);
+            alert(response.error.step);
+            alert(response.error.reason);
+            alert(response.error.metadata.order_id);
+            alert(response.error.metadata.payment_id);
+        });
+      });
+
+    });
+    
+  </script>
+
+  <script src="/docs/5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+  <script src = "https://checkout.razorpay.com/v1/checkout.js"></script>
+  <script>
+    
+    
+  </script>
+    
+  <div class="donation-form-box drop-shadow-2xl" id="monthly-donation-form">
+    <form id="monthlyForm" action="/create/subscriptionId" method="post">
+
+      <div class="row">
+      
+        <div class="col-lg-8">
+          <input name="money" class="radio-input" id="radio-1" type="radio" value="1000">
+          <label class="radio-label" for="radio-1">Rs. 1000</label>
+
+          <input name="money" class="radio-input" id="radio-2" type="radio" value="2000">
+          <label class="radio-label" for="radio-2">Rs. 2000</label>
+
+          <input name="money" class="radio-input" id="radio-3" type="radio" value="5000">
+          <label class="radio-label" for="radio-3">Rs. 5000</label>
+
+          <input name="money" class="radio-input" id="radio-4" type="radio" value="10000">
+          <label class="radio-label" for="radio-4">Rs. 10000</label>
+        </div>
+
+        <div class="col-lg-4">
+          <input name="money" class="d-none" class="mt-2 px-2 py-2 d-inline" id="radio-5" type="radio" value="custom">
+          <label for="radio-5">
+              <input type="number" name="custom" class="d-inline form-control" id="customMoney" placeholder="Enter Custom Amount" autocomplete="off">
+          </label>
+        </div>
+
+      </div>
+
+      <script>
+        $(document).ready(function(){
+          $("#customMoney").on("click", function(){
+            $("#radio-5").prop("checked", true);
+          });
+
+          $(".radio-label").click(function(){
+            $("this").attr("checked", true);
+          });
+        });
+      </script>
+
+      <div class="row">
+
+        <div class="col-md-6 mb-6">
+          <div class="form-floating">
+            <input type="text" name="first_name" class="fName form-control" id="floatingInput" placeholder="First Name" required>
+            <label for="floatingInput">First Name</label>
+          </div>
+        </div>
+
+        <div class="col-md-6 mb-6">
+          <div class="form-floating">
+            <input type="text" name="last_name" class="sName form-control" id="floatingInput" placeholder="Second Name" required>
+            <label for="floatingInput">Last Name</label>
+          </div>
+        </div>
+        
+        <div class="col-md-6 mb-6">
+          <div class="form-floating">
+            <input type="tel" name="phone" class="mobile form-control" id="floatingInput" placeholder="Phone" required>
+            <label for="floatingInput">Phone</label>
+          </div>
+        </div>
+
+        <div class="col-md-6 mb-6">
+          <div class="form-floating">
+            <input type="email" name="email" class="email-address form-control" id="floatingInput" placeholder="Email" required>
+            <label for="floatingInput">E-mail Address</label>
+          </div>
+        </div>
+
+        <div class="col-md-6 mb-6">
+          <div class="form-floating">
+            <input type="text" name="pan" class="pan form-control" id="floatingInput" placeholder="Enter PAN" required>
+            <label for="floatingInput">PAN</label>
+          </div>
+        </div>
+
+        <div class="col-md-6 mb-6">
+          <div class="form-floating">
+            <input type="textarea" name="address" class="address form-control" id="floatingInput" placeholder="Enter your Address" required>
+            <label for="floatingInput">Address</label>
+          </div>
+        </div>
+
+        <div class="col-md-6 mb-6">
+          <div class="form-floating">
+            <input type="text" name="city" class="city form-control" id="floatingInput" placeholder="City" required>
+            <label for="floatingInput">City</label>
+          </div>
+        </div>
+
+        <div class="col-md-6 mb-6">
+          <div class="form-floating">
+            <input type="number" name="zip" class="zip form-control" id="floatingInput" placeholder="Zip/Postal Code" required>
+            <label for="floatingInput">Pin Code</label>
+          </div>
+        </div>
+
+        <div class="col-lg-12 mb-6">
+          <div class="form-check">
+            <input value="yes" class="form-check-input" type="checkbox" name="bearCharges" id="bearCharges" >
+            <label class="form-check-label" for="bearCharges">I hereby Declare to bear 3% payment gateway charges.</label>
+          </div>
+        </div>
+
+        <div class="col-lg-12 mb-6">
+          <div class="form-check">
+            <input value="terms" class="form-check-input" value="terms" id="termsAndConditions" type="checkbox" name="termsAndConditions" required>
+            <label class="form-check-label" for="termsAndConditions">I accept the Terms and Conditions and privacy policy.</label>
+          </div>
+        </div>
+
+        <div class="text-center">
+          <button id="donate-now-btn" class="btn btn-secondary" type="submit">Donate Now</button>
+        </div>
+
+      </div>
+
+    </form>
+  </div>
+    
+  <script>
+    $("#donate-now-btn").prop("disabled", true);
+    $("#termsAndConditions").change(function(){
+      if ($(this).is(':checked')) {
+        $('#donate-now-btn').prop('disabled', false);
+      } else {
+        $('#donate-now-btn').prop('disabled', true);
+      }
+    });
+    $("#donate-now-btn").on('click', async function(e) {
+        radioAmount = $("input[name='money']:checked", "#monthlyForm").val();
+        if (radioAmount === "custom"){
+          $("#customMoney").prop('disabled', false);
+          amount = $("#customMoney").val();
+        } else {
+          amount = radioAmount;
+        }
+        console.log(amount);
+        $("#monthlyForm").append("<input type='hidden' value='"+amount+"' name='amount'>");
+        alert("hello");
+        e.preventDefault();
+        const response = await fetch("/create/subscriptionId",
+        {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                amount: amount * 100,
+                name: $(".fName").val() + " " + $(".sName").val(),
+                email: $(".email-address").val(),
+                phone: $(".mobile").val(),
+                bearCharges: $("#bearCharges").prop("checked"),
+                pan: $(".pan").val(),
+                address: $(".address").val(),
+                city: $(".city").val(),
+                zip: $(".zip").val(),
+            })
+        });
+        const resp = await response.json();
+        const data_go = JSON.stringify(resp);
+        const data = JSON.parse(data_go);
+        console.log(data);
+        const options = {
+            key: data.key_id,
+            amount: data.amount,
+            currency: "INR",
+            subscription_id: data.subscription_id,
+            name: "Real happiness of Life Foundation",
+            description: 'Digital Donation',
+            image: 'assets/images/logo.png',
+            notes: {
+                name: $(".fName").val() + " " + $(".sName").val(),
+                email: $(".email-address").val(),
+                phone: $(".mobile").val(),
+            },
+            prefill:{
+              name: $(".fName").val() + " " + $(".sName").val(),
+              email: $(".email-address").val(),
+              contact: $(".mobile").val(),
+            },
+            handler: function(response) {
+                alert(response.razorpay_payment_id);
+            },
+            theme: {
+                color: '#e83e8c'
+            }
+        };  
+        const rzp1 = new Razorpay(options);
+        rzp1.open();
+        rzp1.on('payment.failed', function(response) {
+            alert(response.error.code);
+            alert(response.error.description);
+            alert(response.error.source);
+            alert(response.error.step);
+            alert(response.error.reason);
+            alert(response.error.metadata.order_id);
+            alert(response.error.metadata.payment_id);
+        });
+    });
+</script>
+</section>
+<!-- Donate End -->
+</div>
+        <!-- Donate Start -->
+
+
+    <h2 class="text-center m-10">Bank Details</h2>
+
+    <h3 class="text-center mb-15">Domestic</h3>
+
+              <div class="row mt-4 p-4" >
+                     <div class="col-md-4">
+                        <div class="address_cards p-3">
+
+                                <p class="mt-1">
+                                  <img src="img/AXIS.jpg" class="img-fluid rounded" alt="">
+                                    Bank Name : <b>Axis Bank</b>,
+                                    <br>
+                                    Address : <b>Bhiwandi, Maharashtra</b>
+                                    <br>
+                                    Account Name :<b> Real Happiness Of Life Foundation</b>
+                                    <br>
+                                    A/c No : <b>921010042473478</b>
+                                    <br>
+                                    IFSC :<b> UTIB0003387</b>
+                                    <br>
+                                    MICR : <b> 400211174</b>
+                                </p>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="address_cards p-3">
+
+                                <p class="mt-1">
+                                  <h5>THROUGH CHEQUE</h5>
+                                  Cheques can be made in favour of <b>“Real Happiness Of Life Foundation"</b><br>
+
+                                  Please send the same at:
+
+                                <b>  H.No.4453 Sathe Nagar Near Manoj Kirana Store Narpoli Bhiwandi,Thane, Maharashtra -421305</b> <br>
+
+                                  PHONE: <b>9607753148</b> <br>
+                                  EMAIL: <b>Donation@rhlf.org</b> <br>
+                                </p>
+                            </a>
+                        </div>
+                    </div>
+
+
+
+                      <div class="col-md-4">
+                        <div class="address_cards p-3">
+
+                                <p class="mt-1">
+                        <b>QR Code</b>
+                      <img src="img/QRIMG.jpg" class="img-fluid rounded" alt="">
+
+
+
+                                </p>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="address_cards p-3">
+
+                                <p class="mt-1">
+                        <b>UPI ID</b>
+                      <p class="mt-1">
+                        <h3>9607753148@okbizaxis</h3>
+                        </p>
+
+
+
+                                </p>
+                            </a>
+                        </div>
+                    </div>
+
+
+                     <div class="col-md-12">
+                        <div class="address_cards p-3">
+                            <p class="mt-2">Real Happiness Of Child Foundation PAN Card No. : <b>AALCR3060M</b></p>
+                            <p>As per the Indian Income Tax Department’s rules, a donor is required to add their Full Name, Address and PAN number in case they wish to claim tax exemption.</p>
+                            <p>Donations to Real Happiness Of Life Foundation are eligible for 50% tax Exemption under Sec 80-G Income tax Act 1956. In case you have donated directly through UPI, kindly WhatsApp your details such as Name, Address and PAN for 80G receipt on +91-9607753148</p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+              </div>
+
+            </div>
+         
+        
+
+        <!-- Footer Start -->
+
+        <!-- =====================>>>>>Footer Started>>>>>======================== -->
+
+        <footer>
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-4 col-md-4 col-sm-6 col-6">
+                <div class="footer-content">
+                  <h2>OUR LOCATION</h2>
+                  <p>H.No.4453 Sathe Nagar Near Manoj Kirana Store Narpoli Bhiwandi Thane Maharashtra-421305</p><br>
+                  <p>PAN NO. AALCR3060M</p><br>
+            <p>Registration No.U85300MH2021NPL368070</p>
+                  <ul>
+                    <li><a style="color: black" href="https://www.facebook.com/rhlfofficial/"><i class="fab fa-facebook-f"></a></i></li>
+                    <li><a style="color: black" href="https://twitter.com/rhlfofficial"><i class="fab fa-twitter"></a></i></li>
+                    <li><a style="color: black" href="https://youtube.com/channel/UCPGUOZUxESUOLNaTjeElSWQ"><i class="fab fa-youtube"></a></i></li>
+                    <li><a href="https://www.linkedin.com/company/rhlfofficial/"><i style="color: black" class="fab fa-linkedin"></a></i></li>
+                    <li><a style="color: black" href="https://www.instagram.com/rhlfofficial/"><i class="fab fa-instagram"></a></i></li>
+                  </ul>
+                </div>
+              </div>
+            <div class="col-lg-4 col-md-4 col-sm-6 col-6">
+                <div class="footer-content">
+                  <h2>Quick Links</h2>
+                  <ol>
+                    <li><a href="#"><i class="fal fa-angle-double-right"></i>Privacy Policy</a></li>
+                    <li><a href="#"><i class="fal fa-angle-double-right"></i>Term and Condition</a></li>
+                    <li><a href="#"><i class="fal fa-angle-double-right"></i>Refund Policy</a></li>
+                    <li><a href="#"><i class="fal fa-angle-double-right"></i>Child Protection Policy</a></li>
+                    <li><a href="#"><i class="fal fa-angle-double-right"></i>POSH Policy</a></li>
+                  </ol>
+                </div>
+              </div>
+             <!--- <div class="col-lg-3 col-md-3 col-sm-6 col-6">
+                <div class="footer-content">
+                  <h2>Services</h2>
+                  <ol>
+                    <li><a href="#"><i class="fal fa-angle-double-right"></i>Home</a></li>
+                    <li><a href="#"><i class="fal fa-angle-double-right"></i>About Us</a></li>
+                    <li><a href="#"><i class="fal fa-angle-double-right"></i>Services</a></li>
+                    <li><a href="#"><i class="fal fa-angle-double-right"></i>Blog</a></li>
+                    <li><a href="#"><i class="fal fa-angle-double-right"></i>Contact Us</a></li>
+                  </ol>
+                </div>
+              </div>---->
+              <div class="col-lg-4 col-md-4 col-sm-6 col-6">
+                <div class="footer-content">
+                  <h2>Subscribe for NEWSLETTER</h2>
+                    <p>Stay Informed about Currently Running Campaigns, Events, Opportunities with Real Happiness Of Life Foundation</p>
+                  <div class="form-group">
+                    <input class="form-control" role="" name="email" type="email" placeholder="Enter Your Email">
+                    <i class="fal fa-paper-plane"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="copy-right">
+            <div class="container">
+              <div class="copy-right-card">
+                <p>2023 @ All Rights Reserved Designed and developed by<a
+                  href="https://www.rhlf.org">RHLF</a></p>
+              </div>
+            </div>
+          </div>
+        </footer>
+        <!-- Footer End -->
+
+        <!-- Back to top button -->
+        <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+
+        <!-- Pre Loader -->
+        <div id="loader" class="show">
+            <div class="loader"></div>
+        </div>
+</body>
+        <!-- JavaScript Libraries -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js" integrity="sha384-fbbOQedDUMZZ5KreZpsbe1LCZPVmfTnH7ois6mU1QK+m14rQ1l2bGBq41eYeM/fS" crossorigin="anonymous"></script>
+<script src="lib/easing/easing.min.js"></script>
+<script src="lib/owlcarousel/owl.carousel.min.js"></script>
+<script src="lib/waypoints/waypoints.min.js"></script>
+<script src="lib/counterup/counterup.min.js"></script>
+<script src="lib/parallax/parallax.min.js"></script>
+
+
+<!-- Contact Javascript File -->
+<script src="mail/jqBootstrapValidation.min.js"></script>
+<script src="mail/contact.js"></script>
+
+<!-- Template Javascript -->
+<script src="donatejs/main.js"></script>
+
+<script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+<script src="assets/js/script.js"></script>
+
+<!--jQuery JS-->
+<script
+  src="https://code.jquery.com/jquery-3.6.3.min.js"
+  integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU="
+  crossorigin="anonymous"></script>
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+</head>
+<body>
+            <form action="/monthly" method="post">
+            <div>
+                <h3>Donation Amount</h3>
+                  <input type="hidden" name="typeOfDonation" value="monthly">
+                  <div class="row">
+                      <div class="form-group">
+                          
+                          <div class="radio-select col-lg-2">
+                              <input value="100" type="radio" id="amount-1" name="sel-amount">
+                              <label for="amount-1">₹100</label>
+                          </div>
+                          
+                          <div class="radio-select col-lg-2">
+                              <input value="1000" type="radio" id="amount-2" name="sel-amount">
+                              <label for="amount-2">₹1000</label>
+                          </div>
+                          
+                          <div class="radio-select col-lg-2">
+                              <input value="2000" type="radio" id="amount-3" name="sel-amount">
+                              <label for="amount-3">₹2000</label>
+                          </div>
+
+                          <div class="radio-select col-lg-2">
+                              <input value="10000" type="radio" id="amount-4" name="sel-amount">
+                              <label for="amount-4">₹10,000</label>
+                          </div>
+                          
+                          <div class="radio-select col-lg-4">
+                            <input type="radio" name="sel-amount" value="custom" id="customAmountRadioM">
+                            <label for="customAmountRadioM"> <input type="text" name="custom" id="customAmountInputM" value=""> </label>
+                          </div>
+                          <script>
+
+                            const customAmountRadioM = document.getElementById('customAmountRadioM');
+                            const customAmountInputM = document.getElementById('customAmountInputM');
+                            customAmountRadioM.addEventListener('change', function() {
+                              customAmountInputM.disabled = !this.checked;
+                              if (this.checked) {
+                                customAmountInputM.focus();
+                              }
+                            });
+
+                          </script>
+                          
+                      </div>
+                      
+                  </div>
+              </div>
+              
+              <hr>
+              
+              <!--Form Portlet-->
+              <div id="donator-details">
+                  <h3>Donor Details</h3>
+                  
+                  <div class="row">
+                      
+                      <div class="form-group col-lg-6 col-md-6 col-xs-12">
+                          <div class="field-label">First Name </div>
+                          <input type="text" placeholder="Enter First Name" value="" id="first" name="name">
+                      </div>
+                      
+                      <div class="form-group col-lg-6 col-md-6 col-xs-12">
+                          <div class="field-label">Last Name </div>
+                          <input type="text" placeholder="Enter Last Name" value="" id="last" name="name">
+                      </div>
+                      
+                      <div class="form-group col-lg-6 col-md-6 col-xs-12">
+                          <div class="field-label">Pan Number </div>
+                          <input type="text" placeholder="Enter PAN" value="" id="pan" name="name">
+                      </div>
+                      
+                      <div class="form-group col-lg-6 col-md-6 col-xs-12">
+                          <div class="field-label">Email </div>
+                          <input type="email" placeholder="Enter Email" value="" id="eml" name="name">
+                      </div>
+                      
+                      <div class="form-group col-lg-6 col-md-6 col-xs-12">
+                          <div class="field-label">Phone </div>
+                          <input type="tel" placeholder="Enter Phone" value="" id="phone" name="name">
+                      </div>
+                      
+                      <div class="form-group col-lg-6 col-md-6 col-xs-12">
+                          <div class="field-label">Address </div>
+                          <input type="text" placeholder="Address" value="" id="addr" name="name">
+                      </div>
+                      
+                      <div class="form-group col-lg-6 col-md-6 col-xs-12">
+                        <div class="field-label">Enter City </div>
+                        <input type="text" placeholder="Enter City Name" value="" id="city" name="name">
+                      </div>
+                      
+                      <div class="form-group col-lg-6 col-md-6 col-xs-12">
+                          <div class="field-label">Zip / Postal Code </div>
+                          <input type="number" placeholder="Zip Code" value="" id="zip" name="name">
+                      </div>
+              
+                      <hr>
+                      
+                      <div class="text-right form-group col-lg-12 col-md-12 col-xs-12">
+                      <button id="donate-now-btn" class="btn btn-secondary" type="submit" >Donate Now</button>
+                      <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+                      </div>  
+                  </div>
+              </div>
+              <hr>
+          </form>
+</body>
+</html>
