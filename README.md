@@ -1,6 +1,6 @@
 # Real-Happiness-Of-Life-Foundation-Website
 Step 1: Fork the copy, and clone it using GitHub Desktop/ or you can use your usual way to get the code files on your local machine. <br />
-Step 2: Install Node js on your local machine, you can directly google it. <br />
+Step 2: Install Node js on your local machine, you can directly get it through google. <br />
 Step 3: Go to your command shell, and change the current working directory to this main directory where all the files are present. <br />
 Step 4: Run this command 'npm i'. Wait until all the dependencies are installed. <br />
 Step 5: Run the command 'nodemon app.js' <br />
