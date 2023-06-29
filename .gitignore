@@ -2,7 +2,6 @@ node_modules
 .sass-cache
 fonts
 webfonts
-images
 js
 css
 scss
