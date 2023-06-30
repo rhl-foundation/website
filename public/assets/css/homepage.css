@@ -1,0 +1,67 @@
+.menubar{
+    
+    text-indent: 20px;
+}
+.menubarfix{
+    border-bottom: rgb(248, 98, 148) 5px solid;
+
+}
+.donate{
+    background-color: rgb(248, 98, 148);
+    width: 110px;
+    height: 30px;
+    text-align: center;
+    padding: 2px;
+    border-radius: 10px 4px;
+    color: white;
+    cursor: pointer;
+}
+.donate:hover{
+    width: 130px;
+    height: 35px;
+}
+.readmore{
+    text-decoration: none;
+    width: 150px;
+    height: 50px;
+    background-color: rgb(248, 98, 148);
+    color: white;
+    border-radius: 15px ;
+    cursor: pointer;
+}
+.readmore:hover{
+    background-color: blue;
+    color: white;
+    
+}
+.icons{
+   background-color: rgb(248, 98, 148);
+   color: white;
+ border-radius: 50%;
+ width: 120px;
+ height: 120px;
+ 
+}
+.icons:hover{
+    border: 5px solid rgb(243, 76, 131);
+    transition: -0.5s;
+    width: 120px;
+    height: 120px;
+    padding: 0px;
+    transform: scale(-2s);
+}
+.ourpart{
+    height: 200px;
+    width: 200px;
+}
+.link{
+    text-decoration: none;
+
+}
+.link:hover{
+    text-decoration: underline;
+    
+}
+.social-link:hover{
+    color: black;
+}
