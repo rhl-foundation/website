@@ -133,7 +133,11 @@ app.post("/create/orderId", (req, res) => {
         console.log(err);
       } else {
         console.log(order);
-        res.send({ orderId: order.id, amount: order.amount });
+        res.send({
+          orderId: order.id,
+          amount: order.amount,
+          keyId: process.env.RAZORPAY_KEY_ID,
+        });
       }
     }
   );
@@ -215,7 +219,7 @@ app.post("/create/subscriptionId", (req, res) => {
                 },
                 function (err, order) {
                   res.send({
-                    key_id: process.env.RAZORPAY_KEY_ID,
+                    keyId: process.env.RAZORPAY_KEY_ID,
                     subscription_id: subscription.id,
                     order_id: order.id,
                     amount: order.amount,

@@ -42,7 +42,7 @@ $(document).ready(function () {
     const data = JSON.parse(data_go);
     console.log(data);
     const options = {
-      key: "rzp_test_rtjt3Si2Z4JE7f",
+      key: data.keyId,
       amount: data.amount,
       currency: "INR",
       order_id: data.orderId,
@@ -178,7 +178,7 @@ $("#donate-now-btn").on("click", async function (e) {
   const data = JSON.parse(data_go);
   console.log(data);
   const options = {
-    key: "rzp_test_rtjt3Si2Z4JE7f",
+    key: data.keyId,
     amount: data.amount,
     currency: "INR",
     subscription_id: data.subscription_id,
