@@ -13,7 +13,6 @@
     padding: 10px;
     width: 35px;
     height: 35px;
-   
     text-align: center;
     text-decoration: none;
     border-radius: 50%;
@@ -28,7 +27,7 @@
   .fa-facebook {
     color: #3B5998;
     background: white;
-    font-size: 40px;
+   
   }
   .fa-twitter:hover{
     background: #55ACEE;
