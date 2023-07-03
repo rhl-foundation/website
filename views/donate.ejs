@@ -67,8 +67,14 @@
     $(document).ready(function(){
       $("#one-time-donation-form").addClass("inactive");
       $("input[name='filter1']").change(function(){
-        $("#monthly-donation-form").toggleClass("inactive");
-        $("#one-time-donation-form").toggleClass("inactive");
+        if($(this).val() == "monthly-donation-form"){
+          $("#monthly-donation-form").removeClass("inactive");
+          $("#one-time-donation-form").addClass("inactive");
+        }
+        else if($(this).val() == "one-time-donation-form"){
+          $("#monthly-donation-form").addClass("inactive");
+          $("#one-time-donation-form").removeClass("inactive");
+        }
       });
     });
   </script>
@@ -139,6 +145,34 @@
           </div>
         </div>
 
+        <div class="col-md-6 mb-6">
+          <div class="form-floating">
+            <input type="text" name="pan" class="pan-no form-control" id="floatingInput" placeholder="Enter PAN" required>
+            <label for="floatingInput">PAN</label>
+          </div>
+        </div>
+
+        <div class="col-md-6 mb-6">
+          <div class="form-floating">
+            <input type="textarea" name="address" class="resi-address form-control" id="floatingInput" placeholder="Enter your Address" required>
+            <label for="floatingInput">Address</label>
+          </div>
+        </div>
+
+        <div class="col-md-6 mb-6">
+          <div class="form-floating">
+            <input type="text" name="city" class="resi-city form-control" id="floatingInput" placeholder="City" required>
+            <label for="floatingInput">City</label>
+          </div>
+        </div>
+
+        <div class="col-md-6 mb-6">
+          <div class="form-floating">
+            <input type="number" name="zip" class="pincode form-control" id="floatingInput" placeholder="Pin Code" required>
+            <label for="floatingInput">Pin Code</label>
+          </div>
+        </div>
+
         <div class="col-lg-12 mb-6">
           <div class="form-check">
             <input value="yes" class="form-check-input" type="checkbox" name="bearCharges" id="bearCharge" >
@@ -162,102 +196,7 @@
     </form>
   </div>
 
-  <script>
-    $(document).ready(function(){
-      $("#donate-now").prop("disabled", true);
-      $("#tAndC").change(function(){
-        if ($(this).is(':checked')) {
-          $('#donate-now').prop('disabled', false);
-        } else {
-          $('#donate-now').prop('disabled', true);
-        }
-      });
-      $("#donate-now").on('click', async function(e) {
-        alert("hello");
-        var amount = $("#oneTimeForm input[name='money']:checked").val();
-        if (amount === "custom") {
-          amount = $("#customAmount").val();
-        }
-        $("#oneTimeForm").prepend('<input type="hidden" name="amount" value="' + amount + '">');
-
-        e.preventDefault();
-        bearCharge = $("#bearCharge").prop('checked');
-        var final_amount = amount;
-        if (bearCharge == true){
-          final_amount = final_amount * 1.03;
-        }
-        console.log(final_amount);
-        const response = await fetch("/create/orderId",
-        {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify({
-                amount: final_amount * 100,
-                name: $(".firstName").val() + " " + $(".secondName").val(),
-                email: $(".email").val(),
-                phone: $(".phone").val(),
-                bearCharges: $("#bearCharge").prop("checked"),
-            })
-        });
-        const resp = await response.json();
-        const data_go = JSON.stringify(resp);
-        const data = JSON.parse(data_go);
-        console.log(data);
-        const options = {
-            key: data.key_id,
-            amount: data.amount,
-            currency: "INR",
-            order_id: data.orderId,
-            name: "Real happiness of Life Foundation",
-            description: 'Digital Donation',
-            image: 'assets/images/logo.png',
-            notes: {
-                name: $(".firstNname").val() + " " + $(".lastName").val(),
-                email: $(".email").val(),
-                phone: $(".phone").val(),
-            },
-            handler: function(response) {
-                alert(response.razorpay_payment_id);
-            },
-            theme: {
-                color: '#e83e8c'
-            }
-        };  
-        const rzp1 = new Razorpay(options);
-        rzp1.open();
-        // rzp1.on('payment.success', async function(response) {
-        //     alert(response.razorpay_payment_id);
-        //     alert(response.razorpay_order_id);
-        //     alert(response.razorpay_signature);
-        //     const response = await fetch("/get/paymentDetails",
-        //     {
-        //         method: "POST",
-        //         headers: {
-        //             "Content-Type": "application/json"
-        //         },
-        //         body: JSON.stringify({
-        //             razorpay_payment_id: response.razorpay_payment_id,
-        //             razorpay_order_id: response.razorpay_order_id,
-        //             razorpay_signature: response.razorpay_signature,
-        //         })
-        //     });
-        // });
-        rzp1.on('payment.failed', function(response) {
-            alert(response.error.code);
-            alert(response.error.description);
-            alert(response.error.source);
-            alert(response.error.step);
-            alert(response.error.reason);
-            alert(response.error.metadata.order_id);
-            alert(response.error.metadata.payment_id);
-        });
-      });
-
-    });
-    
-  </script>
+  
 
   <script src="/docs/5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
 
@@ -388,88 +327,6 @@
 
     </form>
   </div>
-    
-  <script>
-    $("#donate-now-btn").prop("disabled", true);
-    $("#termsAndConditions").change(function(){
-      if ($(this).is(':checked')) {
-        $('#donate-now-btn').prop('disabled', false);
-      } else {
-        $('#donate-now-btn').prop('disabled', true);
-      }
-    });
-    $("#donate-now-btn").on('click', async function(e) {
-        radioAmount = $("input[name='money']:checked", "#monthlyForm").val();
-        if (radioAmount === "custom"){
-          $("#customMoney").prop('disabled', false);
-          amount = $("#customMoney").val();
-        } else {
-          amount = radioAmount;
-        }
-        console.log(amount);
-        $("#monthlyForm").append("<input type='hidden' value='"+amount+"' name='amount'>");
-        alert("hello");
-        e.preventDefault();
-        const response = await fetch("/create/subscriptionId",
-        {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify({
-                amount: amount * 100,
-                name: $(".fName").val() + " " + $(".sName").val(),
-                email: $(".email-address").val(),
-                phone: $(".mobile").val(),
-                bearCharges: $("#bearCharges").prop("checked"),
-                pan: $(".pan").val(),
-                address: $(".address").val(),
-                city: $(".city").val(),
-                zip: $(".zip").val(),
-            })
-        });
-        const resp = await response.json();
-        const data_go = JSON.stringify(resp);
-        const data = JSON.parse(data_go);
-        console.log(data);
-        const options = {
-            key: data.key_id,
-            amount: data.amount,
-            currency: "INR",
-            subscription_id: data.subscription_id,
-            name: "Real happiness of Life Foundation",
-            description: 'Digital Donation',
-            image: 'assets/images/logo.png',
-            notes: {
-                name: $(".fName").val() + " " + $(".sName").val(),
-                email: $(".email-address").val(),
-                phone: $(".mobile").val(),
-            },
-            prefill:{
-              name: $(".fName").val() + " " + $(".sName").val(),
-              email: $(".email-address").val(),
-              contact: $(".mobile").val(),
-            },
-            handler: function(response) {
-                alert(response.razorpay_payment_id);
-            },
-            theme: {
-                color: '#e83e8c'
-            }
-        };  
-        const rzp1 = new Razorpay(options);
-        rzp1.open();
-        rzp1.on('payment.failed', function(response) {
-            alert(response.error.code);
-            alert(response.error.description);
-            alert(response.error.source);
-            alert(response.error.step);
-            alert(response.error.reason);
-            alert(response.error.metadata.order_id);
-            alert(response.error.metadata.payment_id);
-        });
-    });
-</script>
 </section>
 <!-- Donate End -->
 </div>
@@ -665,6 +522,7 @@
 
 <!-- Template Javascript -->
 <script src="donatejs/main.js"></script>
+<script src="jsfiles/donation.js"></script>
 
 <script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>

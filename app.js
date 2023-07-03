@@ -6,6 +6,7 @@ const path = require("path");
 const request = require("request");
 const fs = require("fs");
 const razorpay = require("razorpay");
+const crypto = require("crypto");
 
 const instance = new razorpay({
   key_id: process.env.RAZORPAY_KEY_ID,
@@ -140,10 +141,10 @@ app.post("/create/orderId", (req, res) => {
 
 app.post("/get/paymentDetails", (req, res) => {
   console.log(req.body);
-  generated_signature = hmac_sha256(
-    req.body.razorpay_order_id + "|" + req.body.razorpay_payment_id,
-    process.env.RAZORPAY_KEY_SECRET
-  );
+
+  const hmac = crypto.createHmac("sha256", process.env.RAZORPAY_KEY_SECRET);
+  hmac.update(req.body.razorpay_order_id + "|" + req.body.razorpay_payment_id);
+  const generated_signature = hmac.digest("hex");
 
   if (generated_signature == req.body.razorpay_signature) {
     res.render("paymentStatus", {
