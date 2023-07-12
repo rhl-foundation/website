@@ -35,12 +35,33 @@ app.get("/terms", (req, res) => {
   res.render("terms");
 });
 
-app.get("/payment", (req, res) => {
-  res.render("payment", {
-    key_id: process.env.RAZORPAY_KEY_ID,
-    subscription_id: null,
-    order_id: null,
-  });
+app.get("/emergency", (req, res) => {
+  async function getValues(spreadsheetId, range) {
+    const { GoogleAuth } = require("google-auth-library");
+    const { google } = require("googleapis");
+
+    const auth = new GoogleAuth({
+      scopes: "https://www.googleapis.com/auth/spreadsheets",
+    });
+
+    const service = google.sheets({ version: "v4", auth });
+    try {
+      const result = await service.spreadsheets.values.get({
+        spreadsheetId,
+        range,
+      });
+      const resp = result.data.values;
+      res.render("emergency", { data: resp });
+      console.log(resp);
+      return result;
+    } catch (err) {
+      // TODO (developer) - Handle exception
+      throw err;
+    }
+  }
+  const response = getValues(process.env.SHEET_ID, "A2:H8");
+
+  console.log(response);
 });
 
 app.get("/rahul", (req, res) => {
@@ -199,10 +220,10 @@ app.post("/create/subscriptionId", (req, res) => {
             plan_id: plan.id,
             customer_notify: 1,
             total_count: 5,
-            // notify_info: {
-            //   notify_email: req.body.email,
-            //   notify_phone: req.body.phone,
-            // },
+            notify_info: {
+              notify_email: req.body.email,
+              notify_phone: req.body.phone,
+            },
           },
           function (err, subscription) {
             if (err) {

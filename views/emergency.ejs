@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Pay</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+  </head>
+  <body>
+    <% let links %> <% count = 1 %> <% data.forEach(patient => { %>
+    <div class="patient<%= count %>">
+      <h1><%= patient[2] %></h1>
+      <h2>Age: <%= patient[3] %></h2>
+      <p>Disease: <%= patient[4] %></p>
+    </div>
+    <script>
+      links = "<%= patient[7] %>";
+      links = links.split(",");
+      links.forEach((link) => {
+        $(".patient<%= count %>").append(
+          "<a href='" + link + "'>Document</a> <br>"
+        );
+      });
+    </script>
+    <% count += 1 %> <% }); %>
+    <script>
+      let last_links =
+        "https://drive.google.com/open?id=10rE7ryIsQuNBACQYaFKxA7DYB9Vjmit_, https://drive.google.com/open?id=1RA7nsEJJGV5eaYCGzmSBQUDU3c8DhT6s";
+      links = links.split(",");
+      links.forEach((link) => {
+        $(".patient").append("<a href='" + link + "'>Document</a>");
+      });
+    </script>
+  </body>
+</html>
