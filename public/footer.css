@@ -1,52 +1,62 @@
-h3 {
+header a {
+  text-decoration: none;
+}
+
+header .menu {
+  font-family: "Roboto";
+  font-weight: 300;
+}
+
+footer h3 {
   color: #000;
   font-family: "Montserrat";
   font-weight: 700;
 }
 
 footer {
-  background-color: #ff2171;
+  background-color: #e83e8c;
+  padding: 2%;
 }
 
-form {
+footer form {
   width: 100%;
   margin: 0 auto;
   padding: 0 40px 0 0;
-  background-color: #ff2171;
+  background-color: #e83e8c;
   border-radius: 5px;
 }
 
-p,
-a {
+footer p,
+footer a {
   color: #f5f5f5;
   font-family: "Roboto";
-  font-weight: 700;
+  font-weight: 300;
 }
 
-input {
+footer input {
   font-family: "Roboto";
   font-weight: 400;
   width: 100%;
   height: 55px !important;
 }
 
-label {
+footer label {
   font-family: "Roboto";
   font-weight: 300;
   width: 100%;
 }
 
-.link {
+footer .link {
   color: #f5f5f5;
   text-decoration: none;
 }
 
-.link:hover {
+footer .link:hover {
   color: #f5f5f5;
   text-shadow: #fff 2px 0 10px;
 }
 
-.fa {
+footer .fa {
   padding: 10px;
   width: 35px;
   height: 35px;

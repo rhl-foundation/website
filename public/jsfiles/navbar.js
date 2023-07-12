@@ -25,7 +25,7 @@ template.innerHTML = `
                     <li><a href="/legal">OUR LEGAL</a></li>
                   </ul></li>
                   <li><a href="/programmes">PROGRAMMES</a>
-                    <ul>
+                    <ul class="dropdown">
                       <li><a href="/Program1">Emergency Medical Support</a></li>
                       <li><a href="/Program3">Grace Food Bank</a></li>
                       <li><a href="/Program9">Mission Smile Program</a></li>
