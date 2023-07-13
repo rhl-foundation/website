@@ -6,28 +6,29 @@
     ],
     "name": "Grace Food Bank",
     "description": "Countless Lives Depend Grace Food Bank. Countless lives depend on Grace Food Bank. Donate to support their cause",
-    "link": "/program3"
+    "link": "/Program1"
   },
-  { "images":[
+  {
+    "images": [
       "assets/images/causes/smile1.jpeg",
       "assets/images/causes/smile2.jpeg",
       "assets/images/causes/smile3.jpeg"
-  ],
+    ],
     "name": "Mission Smile Program",
     "description": "SAVE LIVES, GIVE SMILES. Your Support Can Save A Child Today A Single, Solvable Problem: Cleft Lip and Palate Many children around the world are living with untreated clefts. ",
-    "link": "/program3"
+    "link": "/Program2"
   },
   {
-    "images":[
+    "images": [
       "assets/images/causes/clubfoot1.png",
       "assets/images/causes/clubfoot2.png"
     ],
     "name": "Clubfoot Elimination Program",
     "description": "Every single day Clubfoot robs children of their childhood. A problem that has such an effective and affordable solution does not get addressed because of the ignorance and stigma",
-    "link": "/program3"
+    "link": "/Program3"
   },
   {
-    "images":[
+    "images": [
       "assets/images/causes/old1.jpeg",
       "assets/images/causes/old2.jpeg",
       "assets/images/causes/old3.jpeg",
@@ -36,42 +37,42 @@
     ],
     "name": "Home For Homeless Program",
     "description": "Home For Homeless in Bhiwandi to Care to the homeless as well as those suffering from mental health issues in and around Mumbai. Every being deserves a peaceful life.",
-    "link": "/program3"
+    "link": "/Program4"
   },
   {
-    "images":[
+    "images": [
       "assets/images/causes/edu1.jpeg",
       "assets/images/causes/edu2.jpeg"
     ],
     "name": "Mission Education Program",
     "description": "ducation changes everything Education is the driver for sustainable change and So They Can believe that empowering communities through a quality education.",
-    "link": "/program3"
+    "link": "/Program5"
   },
   {
-    "images":[
-      "assets/images/causes/maternal1.png",
+    "images": [
+      "assets/images/causes/maternal1.jpeg",
       "assets/images/causes/maternal2.png"
     ],
     "name": "Maternal & Child Health Program",
     "description": "A continuum of care RMNCH+A (Reproductive, Maternal, Newborn, Child and Adolescent Health) means working with women and children from birth to adulthood ",
-    "link": "/program3"
+    "link": "/Program6"
   },
   {
-    "images":[
+    "images": [
       "assets/images/causes/women1.png",
       "assets/images/causes/women2.png"
     ],
     "name": "Women Empowerment Program",
     "description": "Helping women find their voice is deeply empowering and has a ripple effect on families and society.Real Happiness Of Life",
-    "link": "/program3"
+    "link": "/Program7"
   },
   {
-    "images":[
-      "assets/images/causes/animal1.png",
+    "images": [
+      "assets/images/causes/animal1.jpeg",
       "assets/images/causes/animal2.png"
     ],
     "name": "Animal Welfare Program",
     "description": "Help us look after our permanent family members by sponsoring their daily requirements.This includes food, medication, treatments, and trained caretakers.",
-    "link": "/program3"
+    "link": "/Program8"
   }
 ]

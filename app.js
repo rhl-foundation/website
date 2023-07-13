@@ -20,8 +20,10 @@ app.set("view engine", "ejs");
 
 app.use(express.static("public"));
 
+const programs_json = require("./api/databases/programs.json");
+const programs = JSON.parse(JSON.stringify(programs_json));
 app.get("/", (req, res) => {
-  res.render("home");
+  res.render("home", { programs: programs });
 });
 
 app.get("/donate", (req, res) => {
@@ -70,12 +72,12 @@ app.get("/rahul", (req, res) => {
 
 app.get("/:page", (req, res) => {
   const pageName = req.params.page;
-  fs.access(__dirname + "/" + pageName + ".html", fs.F_OK, (err) => {
+  fs.access(__dirname + "/views/" + pageName + ".ejs", fs.F_OK, (err) => {
     if (err) {
       res.sendFile(__dirname + "/404.html");
       return;
     } else {
-      res.sendFile(__dirname + "/" + pageName + ".html");
+      res.render(pageName + ".ejs");
     }
   });
 });
