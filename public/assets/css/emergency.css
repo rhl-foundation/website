@@ -45,12 +45,7 @@
     background: #bb0000;
     color: white;
   }
-  .socialmediaborder{
-    height: 80px;
-    width: 300px;
-    box-shadow: gray 2px 2px 2px 2px;
   
-  }
   .social-icons{
     margin-top: 20px;    
     box-shadow: gray 2px 2px 1px 1px;
@@ -59,4 +54,5 @@
     font-size: 22px;
     margin-top: 10px;
     font-weight: bold;
+    color: rgb(243, 76, 131);
   }
