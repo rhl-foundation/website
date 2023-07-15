@@ -7,8 +7,59 @@ $(document).ready(function () {
       $("#donate-now").prop("disabled", true);
     }
   });
+
   $("#donate-now").on("click", async function (e) {
-    alert("hello");
+    e.preventDefault();
+    // check if all the fields are filled
+    if (
+      $(".firstName").val() == "" ||
+      $(".secondName").val() == "" ||
+      $(".email").val() == "" ||
+      $(".phone").val() == "" ||
+      $(".pan-no").val() == "" ||
+      $(".resi-address").val() == "" ||
+      $(".resi-city").val() == "" ||
+      $(".pincode").val() == ""
+    ) {
+      alert("Please fill all the fields");
+      return;
+    }
+    // check if the email is valid
+    var email = $(".email").val();
+    var atposition = email.indexOf("@");
+    var dotposition = email.lastIndexOf(".");
+    if (
+      atposition < 1 ||
+      dotposition < atposition + 2 ||
+      dotposition + 2 >= email.length
+    ) {
+      alert("Please enter a valid e-mail address");
+      return;
+    }
+    // check if the phone number is valid
+    var phone = $(".phone").val();
+    if (phone.length != 10) {
+      alert("Please enter a valid phone number");
+      return;
+    }
+    // check if the pincode is valid
+    var pincode = $(".pincode").val();
+    if (pincode.length != 6) {
+      alert("Please enter a valid pincode");
+      return;
+    }
+    // check if the pan number is valid
+    var pan = $(".pan-no").val();
+    if (pan.length != 10) {
+      alert("Please enter a valid pan number");
+      return;
+    }
+    // check if the amount is selected
+    if ($("input[name='money']:checked", "#oneTimeForm").val() == undefined) {
+      alert("Please select an amount");
+      return;
+    }
+
     var amount = $("#oneTimeForm input[name='money']:checked").val();
     if (amount === "custom") {
       amount = $("#customAmount").val();
@@ -143,6 +194,53 @@ $("#termsAndConditions").change(function () {
   }
 });
 $("#donate-now-btn").on("click", async function (e) {
+  e.preventDefault();
+  // check if all the fields are filled
+  if (
+    $(".fName").val() == "" ||
+    $(".sName").val() == "" ||
+    $(".email-address").val() == "" ||
+    $(".mobile").val() == "" ||
+    $(".pan").val() == "" ||
+    $(".address").val() == "" ||
+    $(".city").val() == "" ||
+    $(".zip").val() == ""
+  ) {
+    alert("Please fill all the fields");
+    return;
+  }
+  // check if the email is valid
+  var email = $(".email-address").val();
+  var atposition = email.indexOf("@");
+  var dotposition = email.lastIndexOf(".");
+  if (
+    atposition < 1 ||
+    dotposition < atposition + 2 ||
+    dotposition + 2 >= email.length
+  ) {
+    alert("Please enter a valid e-mail address");
+    return;
+  }
+  // check if the phone number is valid
+  var phone = $(".mobile").val();
+  if (phone.length != 10) {
+    alert("Please enter a valid phone number");
+    return;
+  }
+  // check if the pincode is valid
+  var pincode = $(".zip").val();
+  if (pincode.length != 6) {
+    alert("Please enter a valid pincode");
+    return;
+  }
+  // check if the pan number is valid
+  var pan = $(".pan").val();
+  if (pan.length != 10) {
+    alert("Please enter a valid pan number");
+    return;
+  }
+  // check if the amount is selected
+
   radioAmount = $("input[name='money']:checked", "#monthlyForm").val();
   if (radioAmount === "custom") {
     $("#customMoney").prop("disabled", false);
@@ -150,11 +248,15 @@ $("#donate-now-btn").on("click", async function (e) {
   } else {
     amount = radioAmount;
   }
+
+  if (amount === undefined || amount === "") {
+    alert("Please select or type an amount");
+    return;
+  }
   console.log(amount);
   $("#monthlyForm").append(
     "<input type='hidden' value='" + amount + "' name='amount'>"
   );
-  alert("hello");
   e.preventDefault();
   const response = await fetch("/create/subscriptionId", {
     method: "POST",
@@ -181,6 +283,7 @@ $("#donate-now-btn").on("click", async function (e) {
     key: data.keyId,
     amount: data.amount,
     currency: "INR",
+    recurring: true,
     subscription_id: data.subscription_id,
     name: "Real happiness of Life Foundation",
     description: "Digital Donation",
@@ -230,6 +333,12 @@ $("#donate-now-btn").on("click", async function (e) {
           </div>
         </div>
         `);
+    },
+    modal: {
+      ondismiss: function () {
+        window.location.href = "/donate";
+      },
+      confirm_close: true,
     },
     theme: {
       color: "#e83e8c",

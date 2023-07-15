@@ -39,7 +39,8 @@
 }
 
 .donation-form-box .radio-input:checked + label {
-  background-color: #e0e0e0;
+  background-color: #777777;
+  color: #fff;
 }
 
 .donation-form-box .radio-input + label {
