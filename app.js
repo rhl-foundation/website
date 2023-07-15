@@ -8,6 +8,7 @@ const fs = require("fs");
 const razorpay = require("razorpay");
 const crypto = require("crypto");
 const mailchimp = require("@mailchimp/mailchimp_marketing");
+const port = process.env.PORT || 3000;
 
 const instance = new razorpay({
   key_id: process.env.RAZORPAY_KEY_ID,
@@ -306,5 +307,5 @@ app.post("/subscribe/newsletter", (req, res) => {
 const key_id = process.env.RAZORPAY_KEY_ID;
 
 app.listen(3000, () => {
-  console.log("Successfully started listening on port 3000");
+  console.log("Successfully started listening on port " + port);
 });
