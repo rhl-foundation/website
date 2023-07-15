@@ -7,10 +7,17 @@ const request = require("request");
 const fs = require("fs");
 const razorpay = require("razorpay");
 const crypto = require("crypto");
+const mailchimp = require("@mailchimp/mailchimp_marketing");
 
 const instance = new razorpay({
   key_id: process.env.RAZORPAY_KEY_ID,
   key_secret: process.env.RAZORPAY_KEY_SECRET,
+});
+
+const listId = process.env.MAILCHIMP_LIST_ID;
+mailchimp.setConfig({
+  apiKey: process.env.MAILCHIMP_API_KEY,
+  server: "us21",
 });
 
 app = express();
@@ -21,6 +28,7 @@ app.set("view engine", "ejs");
 app.use(express.static("public"));
 
 const programs_json = require("./api/databases/programs.json");
+const e = require("express");
 const programs = JSON.parse(JSON.stringify(programs_json));
 app.get("/", (req, res) => {
   res.render("home", { programs: programs });
@@ -255,6 +263,44 @@ app.post("/create/subscriptionId", (req, res) => {
       }
     }
   );
+});
+
+app.post("/subscribe/newsletter", (req, res) => {
+  const currentPath = __dirname;
+  const eml = req.body.email;
+  const fName = req.body.firstName;
+  const lName = req.body.lastName;
+
+  const subscribingUser = {
+    firstName: fName,
+    lastName: lName,
+    email: eml,
+  };
+  async function run() {
+    const response = await mailchimp.lists.addListMember(listId, {
+      email_address: subscribingUser.email,
+      status: "subscribed",
+      merge_fields: {
+        FNAME: subscribingUser.firstName,
+        LNAME: subscribingUser.lastName,
+      },
+    });
+
+    console.log(
+      `Successfully added contact as an audience member. The contact's id is ${response.id}.`
+    );
+    res.send(
+      "<script>alert('Subscribed Successfully!'); window.location.href = '/';</script>"
+    );
+  }
+  run().catch((e) => {
+    if (e.status === 400) {
+      res.send(
+        "<script>alert('Already Subscribed!'); window.location.href = '/';</script>"
+      );
+    }
+  });
+  console.log(req.body);
 });
 
 const key_id = process.env.RAZORPAY_KEY_ID;
