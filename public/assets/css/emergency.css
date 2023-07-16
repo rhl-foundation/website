@@ -1,10 +1,15 @@
+h1{
+  text-decoration: underline;
+}
+.name-of-baby{
+  font-size: 28px;
+  font-weight: bold;
+  color: rgb(243, 76, 131);
+}
 .fontname{
     font-family: Arial, Helvetica, sans-serif;
 }
-#donate-button{
-    color: white;
-    
-}
+
 .emergency-image{
     border-radius: 20px;
 }
@@ -48,7 +53,13 @@
   
   .social-icons{
     margin-top: 20px;    
-    box-shadow: gray 2px 2px 1px 1px;
+    padding: 8px;
+    width: 20%;
+    border-radius: 15px;
+    background-color:rgb(243, 76, 131) ;
+  }
+  .social-icon{
+
   }
   .name{
     font-size: 22px;
@@ -56,3 +67,8 @@
     font-weight: bold;
     color: rgb(243, 76, 131);
   }
+  
+  #donate-button{
+    color: white;
+    
+}
