@@ -5,7 +5,7 @@ template.innerHTML = `
       <div class="container">
         <div class="row">
           <div class="nav-items">
-          
+        
             <div class="logo">
               <a href="/"><img src="assets/images/logo.png"></a>
             </div>

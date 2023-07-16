@@ -31,6 +31,7 @@ app.use(express.static("public"));
 const programs_json = require("./api/databases/programs.json");
 const e = require("express");
 const programs = JSON.parse(JSON.stringify(programs_json));
+
 app.get("/", (req, res) => {
   res.render("home", { programs: programs });
 });
