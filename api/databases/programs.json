@@ -50,7 +50,7 @@
     ],
     "icon": "fal fa-smile",
     "name": "Mission Education Program",
-    "description": "ducation changes everything Education is the driver for sustainable change and So They Can believe that empowering communities through a quality education.",
+    "description": "Education changes everything Education is the driver for sustainable change and So They Can believe that empowering communities through a quality education.",
     "link": "/Program11"
   },
   {
@@ -74,15 +74,6 @@
     "link": "/Program6"
   },
 
-  {
-    "images": [
-      "assets/images/causes/health1.jpeg",
-      "assets/images/causes/health2.jpeg"
-    ],
-    "name": "Health and Nutrition Program",
-    "description": "Health and Nutrition Tackling Public empowering systems and promoting community ownership of Needy nutrition",
-    "link": "/Program7"
-  },
   {
     "images": [
       "assets/images/causes/women1.png",
