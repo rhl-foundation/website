@@ -29,11 +29,16 @@ app.set("view engine", "ejs");
 app.use(express.static("public"));
 
 const programs_json = require("./api/databases/programs.json");
-const e = require("express");
 const programs = JSON.parse(JSON.stringify(programs_json));
 
 app.get("/", (req, res) => {
   res.render("home", { programs: programs });
+});
+
+app.get("/program/:id", (req, res) => {
+  const id = req.params.id;
+  const program = programs[id - 1];
+  res.render("program", { program: program });
 });
 
 app.get("/donate", (req, res) => {
@@ -41,10 +46,6 @@ app.get("/donate", (req, res) => {
     key_id: process.env.RAZORPAY_KEY_ID,
     subscription: { id: null },
   });
-});
-
-app.get("/terms", (req, res) => {
-  res.render("terms");
 });
 
 app.get("/emergency", (req, res) => {
@@ -74,10 +75,6 @@ app.get("/emergency", (req, res) => {
   const response = getValues(process.env.SHEET_ID, "A2:H8");
 
   console.log(response);
-});
-
-app.get("/rahul", (req, res) => {
-  res.render("paymentStatus");
 });
 
 app.get("/:page", (req, res) => {

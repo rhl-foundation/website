@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="assets/css/style.css" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.js" integrity="sha512-KvlmAB+wx0zLQRe7hCFzBwyaU/AvbwPoJgxfBZ6g+ZF9MBMY4YAo3+BycXH2Rc+fDPbZ0fJsi3AfOTmQYZEn9A==" crossorigin="anonymous" referrerpoli22cy="no-referrer"></script>
     <link href="https://cdn.tailwindcss.com/your-tailwind-css-version.min.css" rel="stylesheet">
+
     <script src="https://cdn.tailwindcss.com"></script>
     
 </head>
@@ -178,150 +179,19 @@
 
   
   
-  <section class="bg-03">
-    <div class="container">
+  <!-- ======================Bg-04 started====================== -->
+  <section class="bg-04">
+    <div class="container heading">
+      <h2>OUR INITIATIVES</h2>
+    </div>
+      <div class="container">
       <div class="row">
-        <div class="col-12">
-          <div class="heading">
-            <h2>OUR INITIATIVE</h2>
+        <% programs.forEach(program => { %>
+          <div class="text-center col-12 col-lg-4 col-md-6">
+            <h4> <%= program.name %> </h4>
+            <p> <%= program.description %> </p>
           </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-          <div class="wrapper">
-            <div class="content">
-              <ol>
-                <li>
-                  <i class="fal fa-house-flood fa-2x" style="color:  #FF1493;"></i>
-                  <h3>GRACE FOOD BANK</h3>
-                  <p>Countless Lives Depend Grace Food Bank.
-
-                    Countless lives depend on Grace Food Bank. Donate to support their cause</p>
-                </li>
-              </ol>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-          <div class="wrapper">
-            <div class="content">
-              <ol>
-                <li>
-                  <i class="fal fa-smile fa-2x" style="color:  #FF1493;"></i>
-                  <h3>MISSION SMILE PROGRAM</h3>
-                  <p>SAVE LIVES, GIVE SMILES.
-                    Your Support Can Save A Child Today
-                    
-                    A Single, Solvable Problem: Cleft Lip and Palate
-                    Many children around the world are living with untreated clefts. Most have difficulties eating, breathing, hearing, and speaking.</p>
-                </li>
-              </ol>
-            </div>
-          </div>
-        </div>
-       
-        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-          <div class="wrapper">
-            <div class="content">
-              <ol>
-                <li>
-                  <i class="fal fa-hands-heart fa-2x" style="color:  #FF1493;"></i>
-                  <h3>CLUBFOOT FREE PROGRAM</h3>
-                  <p>Every single day Clubfoot robs children of their childhood. A problem that has such an effective and affordable solution does not get addressed because of the ignorance and stigma around it.
-                    Every hour you contribute by joining our efforts helps us ensure that this doesn’t happen and children with clubfoot get the treatment they deserve.</p>
-                </li>
-              </ol>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-          <div class="wrapper">
-            <div class="content">
-              <ol>
-                <li>
-                  <i class="fal fa-home fa-2x" style="color:  #FF1493;"></i>
-                  <h3>HOME FOR HOMELESS PROGRAM</h3>
-                  <p>Home For Homeless in Bhiwandi to Care to the homeless as well as those suffering from mental health issues in and around Mumbai. Every being deserves a peaceful life, however, this is often not the case. We see some people living on the sidewalk, some under vehicle bridges, some at railway stations, some having amputated parts of the body,</p>
-                </li>
-              </ol>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-          <div class="wrapper">
-            <div class="content">
-              <ol>
-                <li>
-                  <i class="fal fa-graduation-cap fa-2x" style="color:  #FF1493;"></i>
-                  <h3>MISSION EDUCATION PROGRAM</h3>
-                  <p>Education changes everything
-                    Education is the driver for sustainable change and So They Can believe that empowering communities through a quality education is the key to breaking the poverty cycle.</p>
-                </li>
-              </ol>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-          <div class="wrapper">
-            <div class="content">
-              <ol>
-                <li>
-                  <i class="fal fa-child fa-2x" style="color:  #FF1493;"></i>
-                  <h3>MATERNAL & CHILD HEALTH PROGRAM</h3>
-                  <p>A continuum of care RMNCH+A (Reproductive, Maternal, Newborn, Child and Adolescent Health) means working with women and children from birth to adulthood in order to break the intergenerational cycle of poor health.</p>
-                </li>
-              </ol>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-          <div class="wrapper">
-            <div class="content">
-              <ol>
-                <li>
-                  <i class="fal fa-hand-holding-water fa-2x" style="color:  #FF1493;"></i>
-                  <h3>HEALTH & NUTRITION PROGRAM</h3>
-                  <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla hic deserunt facere et animi
-                    temporibus, libero,</p>
-                </li>
-              </ol>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-          <div class="wrapper">
-            <div class="content">
-              <ol>
-                <li>
-                  <i class="fal fa-heartbeat fa-2x" style="color:  #FF1493;"></i>
-                  <h3>CHILDREN REHALIBITATION PROGRAM</h3>
-                  <p>In general, majority of street children in India are boys with little or no education, and they sleep in the open with no access to toilets. Most of the children who live on the streets or railway stations are addicted to solvents and other drugs.</p>
-                </li>
-              </ol>
-            </div>
-          </div>
-        </div>
-
-         <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-          <div class="wrapper">
-            <div class="content">
-              <ol>
-                <li>
-                  <i class="fal fa-bone fa-2x" style="color:  #FF1493;"></i>
-                  <h3>ANIMAL WELFARE PROGRAM</h3>
-                  <p>Every animal deserves a peaceful life, as much as we do. Docile creatures like dogs, cows, donkeys, cats, birds, etc. are meant to roam freely with the assurance of complete safety.</p>
-                </li>
-              </ol>
-            </div>
-          </div>
-        </div>
+        <% }) %>
       </div>
     </div>
   </section>
