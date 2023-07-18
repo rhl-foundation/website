@@ -1,14 +1,14 @@
 [
-    {
-        "icon": "fa-sharp fa-solid fa-house-water fa-2x",
-        "name": "Grace Food Bank",
-        "description": "Countless Lives Depend Grace Food Bank. Countless lives depend on Grace Food Bank. Donate to support their cause"
-    },
-    {
-        "icon": "fal  fa-graduation-cap fa-2x",
+  {
+    "icon": "fa-sharp fa-solid fa-house-water fa-2x",
+    "name": "Grace Food Bank",
+    "description": "Countless Lives Depend Grace Food Bank. Countless lives depend on Grace Food Bank. Donate to support their cause"
+  },
+  {
+    "icon": "fal  fa-graduation-cap fa-2x",
     "name": "Mission Education Program",
     "description": "Education changes everything Education is the driver for sustainable change and So They Can believe that empowering communities through a quality education."
-    },
+},
     
     {
         "icon": "fal fa-home fa-2x",
