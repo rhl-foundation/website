@@ -1,46 +1,48 @@
 [
     {
-        "icon": "fa-sharp fa-solid fa-house-wate",
+        "icon": "fa-sharp fa-solid fa-house-water fa-2x",
         "name": "Grace Food Bank",
         "description": "Countless Lives Depend Grace Food Bank. Countless lives depend on Grace Food Bank. Donate to support their cause"
     },
     {
-    "icon": "fal fa-graduation-cap",
-    "name": "Mission Smile Program",
-    "description": "SAVE LIVES, GIVE SMILES. Your Support Can Save A Child Today A Single, Solvable Problem: Cleft Lip and Palate Many children around the world are living with untreated clefts. "
+        "icon": "fal  fa-graduation-cap fa-2x",
+    "name": "Mission Education Program",
+    "description": "Education changes everything Education is the driver for sustainable change and So They Can believe that empowering communities through a quality education."
     },
+    
     {
-    "icon": "fal fa-hands-heart",
-    "name": "Clubfoot Elimination Program",
-    "description": "Every single day Clubfoot robs children of their childhood. A problem that has such an effective and affordable solution does not get addressed because of the ignorance and stigma"
-    },
-    {
-        "icon": "fal fa-home",
+        "icon": "fal fa-home fa-2x",
         "name": "Home For Homeless Program",
         "description": "Home For Homeless in Bhiwandi to Care to the homeless as well as those suffering from mental health issues in and around Mumbai. Every being deserves a peaceful life."
     },
     {
-        "icon": "fal fa-smile",
-    "name": "Mission Education Program",
-    "description": "Education changes everything Education is the driver for sustainable change and So They Can believe that empowering communities through a quality education."
-    },
+        "icon": "fal fa-smile fa-2x",
+        "name": "Mission Smile Program",
+        "description": "SAVE LIVES, GIVE SMILES. Your Support Can Save A Child Today A Single, Solvable Problem: Cleft Lip and Palate Many children around the world are living with untreated clefts. "
+        },
+  
     {
-        "icon": "fal fa-child",
+        "icon": "fal fa-hands-heart fa-2x",
+        "name": "Clubfoot Elimination Program",
+        "description": "Every single day Clubfoot robs children of their childhood. A problem that has such an effective and affordable solution does not get addressed because of the ignorance and stigma"
+        },
+    {
+        "icon": "fal fa-child fa-2x",
     "name": "Maternal & Child Health Program",
     "description": "A continuum of care RMNCH+A (Reproductive, Maternal, Newborn, Child and Adolescent Health) means working with women and children from birth to adulthood "
     },
     {
-        "icon": "fal fa-hand-holding-water",
+        "icon": "fal fa-hand-holding-water fa-2x",
         "name": "Health & Nutrition Program",
-        "description": "Health and Nutrition Tackling Public empowering systems and promoting community ownership of Needy nutrition"
+        "description": "Health and Nutrition Tackling Public empowering systems and promoting community ownership of Needy nutrition."
     },
     {
-        "icon": "fal fa-heartbeat",
-        "name": "Women Empowerment Program",
-        "description": "Helping women find their voice is deeply empowering and has a ripple effect on families and society.Real Happiness Of Life"
+        "icon": "fal fa-heartbeat fa-2x",
+        "name": "Children Rehabilibation Program",
+        "description": "In general, majority of street children in India are boys with little or no education, and they sleep in the open with no access to toilets."
     },
     {
-        "icon": "fal fa-bone",
+        "icon": "fal fa-bone fa-2x",
         "name": "Animal Welfare Program",
         "description": "Help us look after our permanent family members by sponsoring their daily requirements.This includes food, medication, treatments, and trained caretakers."
     }
