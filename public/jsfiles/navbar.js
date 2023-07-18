@@ -19,7 +19,7 @@ template.innerHTML = `
                 <ul>
                   <li><a href="/">HOME</a></li>
                   <li>
-                    <a href="/who">ABOUT US</a>
+                    <a>ABOUT US</a>
                     <ul>
                       <li><a href="/who">WHO ARE WE</a></li>
                       <li><a href="/team">OUR TEAM</a></li>
@@ -27,7 +27,7 @@ template.innerHTML = `
                     </ul>
                   </li>
                   <li>
-                    <a href="/programmes">PROGRAMMES</a>
+                    <a>PROGRAMMES</a>
                     <ul class="dropdown">
                       <li><a href="/Program1">Emergency Medical Support</a></li>
                       <li><a href="/Program3">Grace Food Bank</a></li>
@@ -42,7 +42,8 @@ template.innerHTML = `
                       <li><a href="/Program2">Animal Welfare Program</a></li>
                     </ul>
                   </li>
-                  <li><a href="#">GET INVOLVED</a>
+                  <li>
+                    <a>GET INVOLVED</a>
                     <UL>
                       <li><a href="/volunteerism">VOLUNTEERISM</a></li>
                       <li><a href="/carrier">CARRIER</a></li>
@@ -50,7 +51,7 @@ template.innerHTML = `
                     </UL>
                   </li>
                   <li>
-                    <a href="#">MEDIA</a>
+                    <a>MEDIA</a>
                     <UL>
                       <li><a href="/blog">BLOG</a></li>
                       <li><a href="/gallery">PHOTO/VIDEO</a></li>

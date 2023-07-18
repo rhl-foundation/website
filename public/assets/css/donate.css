@@ -66,14 +66,18 @@
   margin: 1rem 0;
 }
 
-@media screen and (max-width:700px) and (min-width:300px) {
-  .card{
+@media screen and (max-width: 700px) and (min-width: 300px) {
+  html,
+  body {
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+  .card {
     width: 100%;
-    margin-left: 5px;
+    margin-left: auto;
   }
-  .donation-form-box{
+  .donation-form-box {
     width: 95%;
-    margin: 20px;
+    margin: auto;
   }
-  
 }

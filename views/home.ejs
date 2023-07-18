@@ -19,7 +19,7 @@
 
 <body>
   <!-- ======================header started====================== -->
-  <script src="./jsfiles/navbar.js"></script>
+  <%- include("partials/navbar") %>
   <!-- ======================header started====================== -->
   
 
@@ -58,11 +58,6 @@
         
         </div>
         </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
 
     <!-- ======================Bg-02 started====================== -->
 
@@ -101,7 +96,6 @@
               <div class="bs">
                 <h3>Save The Life Umme Habiba Khan</h3>
                 <p>Baby Umme Habiba Khan is a 9 Years Old Girl Child suffering from Acute Leukemia.</p>
-                  </p>
                   <ol>
                     <li><i class="fal fa-signal"></i>Goal: Rs.9,50,000/-</li>
                   </ol>
@@ -196,52 +190,13 @@
   </section>
 
   <div class="container" style="margin-bottom: 50px;">
-    <h4 class="ourlg">Our Partners</h4>
+    <h4 class="display-4 ourlg">Our Partners</h4>
     <section class="customer-logos slider">
-      <div class="slide">
-        <img src="assets/images/team/1.jpeg" style="height: 150px; width: 200px;">
-      </div>
-      <div class="slide">
-        <img src="assets/images/team/2.jpeg" style="height: 150px; width: 200px;">
-      </div>
-      
-      <div class="slide">
-        <img src="assets/images/team/3.jpeg" style="height: 150px; width: 200px;">
-      </div>
-      
-      
-      <div class="slide">
-        <img src="assets/images/team/5.jpeg" style="height: 150px; width: 200px;">
-      </div>
-      <div class="slide">
-        <img src="assets/images/team/6.jpeg" style="height: 150px; width: 200px;">
-      </div>
-      <div class="slide">
-        <img src="assets/images/team/7.jpeg" style="height: 150px; width: 200px;">
-      </div>
-      <div class="slide">
-        <img src="assets/images/team/8.jpeg" style="height: 150px; width: 200px;">
-      </div>
-      
-      <div class="slide">
-        <img src="assets/images/team/9.jpeg" style="height: 150px; width: 200px;">
-      </div>
-      <div class="slide">
-        <img src="assets/images/team/10.jpeg" style="height: 150px; width: 200px;">
-      </div>
-      
-      <div class="slide">
-        <img src="assets/images/team/11.jpeg" style="height: 150px; width: 200px;">
-      </div>
-      <div class="slide">
-        <img src="assets/images/team/12.jpeg" style="height: 150px; width: 200px;">
-      </div>
-      <div class="slide">
-        <img src="assets/images/team/13.jpeg" style="height: 150px; width: 200px;">
-      </div>
-      <div class="slide">
-        <img src="assets/images/team/14.jpeg" style="height: 150px; width: 200px;">
-      </div>
+      <% for( let index = 1; index < 16; index++ ) { %>
+        <div class="slide">
+          <img src="assets/images/team/<%= index %>.jpeg" style="height: 150px; width: 200px;">
+        </div>
+      <% } %>
     </section>
   </div>
 
