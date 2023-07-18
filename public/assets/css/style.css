@@ -3,7 +3,7 @@
 body {
   margin: 0px;
   padding: 0px;
-  font-family: "PT Sans", sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 * {
@@ -195,12 +195,13 @@ header .nav-items .menu-items .menu.active {
 }
 header .nav-items .menu-items .menu ul li {
   display: inline-block;
-  padding: 10px;
+  padding: 30px 10px 10px 10px;
 }
 header .nav-items .menu-items .menu ul li ul li {
   display: block;
   float: none;
   text-align: left;
+  padding: 10px 5px;
 }
 @media screen and (max-width: 767.98px) {
   header .nav-items .menu-items .menu ul li {
@@ -1006,12 +1007,13 @@ header .nav-items .menu-items .menu ul li a:hover {
 /* Subnavbar Code*/
 
 .menu ul ul {
+  padding: 0 10px;
   margin: 20px 0 0 0;
   opacity: 0;
   visibility: hidden;
   position: absolute;
   background: white;
-  top: 46px;
+  top: 60px;
   z-index: 1;
   background: white;
   border-radius: 3px;
