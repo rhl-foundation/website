@@ -31,14 +31,25 @@ app.use(express.static("public"));
 const programs_json = require("./api/databases/programs.json");
 const programs = JSON.parse(JSON.stringify(programs_json));
 
+const initiatives_json = require("./api/databases/initiatives.json");
+const initiatives = JSON.parse(JSON.stringify(initiatives_json));
+
+const program_files_json = require("./api/databases/program-files.json");
+const program_files = JSON.parse(JSON.stringify(program_files_json));
+
 app.get("/", (req, res) => {
-  res.render("home", { programs: programs });
+  res.render("home", { programs: programs, initiatives: initiatives });
 });
 
 app.get("/program/:id", (req, res) => {
   const id = req.params.id;
-  const program = programs[id - 1];
-  res.render("program", { program: program });
+  if (id > 11 || id < 0) {
+    res.sendFile(__dirname + "/404.html");
+    return;
+  }
+  const programFile = program_files[id - 1];
+
+  res.render("programs/program", { program: programFile });
 });
 
 app.get("/donate", (req, res) => {

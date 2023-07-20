@@ -179,11 +179,12 @@
     </div>
       <div class="container">
       <div class="row">
-        <% programs.forEach(program => { %>
-          <div class="text-center col-12 col-lg-4 col-md-6">
-            <h4> <%= program.name %> </h4>
-            <p> <%= program.description %> </p>
-          </div>
+        <% initiatives.forEach(initiative => { %>
+          <div class="initiative text-center col-12 col-lg-4 col-md-6">
+              <i class="<%= initiative.icon %>"></i>
+              <h4> <%= initiative.name %> </h4>
+              <p> <%= initiative.description %> </p>
+        </div>
         <% }) %>
       </div>
     </div>
