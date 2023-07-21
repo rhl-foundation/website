@@ -1,12 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <title>Pay</title>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
-  </head>
+<%- include("partials/header") %>
   <body>
+    <%- include("partials/navbar") %>
     <% let links %> <% count = 1 %> <% data.forEach(patient => { %>
     <div class="patient<%= count %>">
       <h1><%= patient[2] %></h1>
