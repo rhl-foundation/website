@@ -73,8 +73,8 @@
     overflow-x: hidden;
   }
   .card {
-    width: 100%;
-    margin-left: auto;
+    width: 95%;
+    margin: auto !important;
   }
   .donation-form-box {
     width: 95%;
