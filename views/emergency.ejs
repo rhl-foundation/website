@@ -1,7 +1,9 @@
 <%- include("partials/header") %>
-  <body>
-    <%- include("partials/navbar") %>
-    <% let links %> <% count = 1 %> <% data.forEach(patient => { %>
+<body>
+  <%- include("partials/navbar") %> 
+  <% let links %>
+  <% count = 1 %> 
+  <% data.forEach(patient => { %>
     <div class="patient<%= count %>">
       <h1><%= patient[2] %></h1>
       <h2>Age: <%= patient[3] %></h2>
@@ -16,14 +18,8 @@
         );
       });
     </script>
-    <% count += 1 %> <% }); %>
-    <script>
-      let last_links =
-        "https://drive.google.com/open?id=10rE7ryIsQuNBACQYaFKxA7DYB9Vjmit_, https://drive.google.com/open?id=1RA7nsEJJGV5eaYCGzmSBQUDU3c8DhT6s";
-      links = links.split(",");
-      links.forEach((link) => {
-        $(".patient").append("<a href='" + link + "'>Document</a>");
-      });
-    </script>
-  </body>
-</html>
+    <% count += 1 %> 
+  <% }); %>
+  
+</body>
+<%- include("partials/footer") %>

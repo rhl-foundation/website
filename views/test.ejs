@@ -1,0 +1,42 @@
+<%- include("partials/header") %>
+<style>
+  .form {
+    margin: auto;
+    width: 47%;
+    padding: 10px;
+  }
+  iframe {
+    width: 100%;
+  }
+</style>
+<body>
+  <%- include("partials/navbar") %>
+  <!-- <div class="container">
+    <div class="row">
+      <div class="form">
+        <iframe
+          src="https://docs.google.com/forms/d/e/1FAIpQLSfoNM7kr6rBg90aWLayZxyKSSq8EglL3Kk9plFUMXn2AoW5-A/viewform?embedded=true"
+          width="640"
+          height="1800"
+          frameborder="0"
+          marginheight="0"
+          marginwidth="0"
+          >Loading…</iframe
+        >
+      </div>
+    </div>
+  </div>
+  <a
+    href="whatsapp://send?text=GFG Example for whatsapp sharing"
+    data-action="share/whatsapp/share"
+    target="_blank"
+  >
+    Share to whatsapp
+  </a> -->
+  <form action="/uploadFile" method="post" enctype="multipart/form-data">
+    <input type="file" name="myFile" />
+    <input type="file" name="yourFile" />
+    <button type="submit">Upload Files</button>
+  </form>
+  <%- include("partials/footer") %>
+</body>
