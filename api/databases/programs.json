@@ -7,7 +7,7 @@
     "icon": "fa-sharp fa-solid fa-house-wate",
     "name": "Grace Food Bank",
     "description": "Countless Lives Depend Grace Food Bank. Countless lives depend on Grace Food Bank. Donate to support their cause",
-    "link": "/Program3"
+    "link": "/programs/1"
   },
   {
     "images": [
@@ -18,7 +18,7 @@
     "icon": "fal fa-graduation-cap",
     "name": "Mission Smile Program",
     "description": "SAVE LIVES, GIVE SMILES. Your Support Can Save A Child Today A Single, Solvable Problem: Cleft Lip and Palate Many children around the world are living with untreated clefts. ",
-    "link": "/Program9"
+    "link": "/programs/2"
   },
   {
     "images": [
@@ -28,7 +28,7 @@
     "icon": "fal fa-hands-heart",
     "name": "Clubfoot Elimination Program",
     "description": "Every single day Clubfoot robs children of their childhood. A problem that has such an effective and affordable solution does not get addressed because of the ignorance and stigma",
-    "link": "/Program7"
+    "link": "/programs/3"
   },
   {
     "images": [
@@ -41,7 +41,7 @@
     "icon": "fal fa-home",
     "name": "Home For Homeless Program",
     "description": "Home For Homeless in Bhiwandi to Care to the homeless as well as those suffering from mental health issues in and around Mumbai. Every being deserves a peaceful life.",
-    "link": "/Program4"
+    "link": "/programs/4"
   },
   {
     "images": [
@@ -51,7 +51,7 @@
     "icon": "fal fa-smile",
     "name": "Mission Education Program",
     "description": "Education changes everything Education is the driver for sustainable change and So They Can believe that empowering communities through a quality education.",
-    "link": "/Program11"
+    "link": "/programs/5"
   },
   {
     "images": [
@@ -61,19 +61,8 @@
     "icon": "fal fa-child",
     "name": "Maternal & Child Health Program",
     "description": "A continuum of care RMNCH+A (Reproductive, Maternal, Newborn, Child and Adolescent Health) means working with women and children from birth to adulthood ",
-    "link": "/Program8"
+    "link": "/programs/6"
   },
-  {
-    "images": [
-      "assets/images/causes/health1.jpeg",
-      "assets/images/causes/health2.jpeg"
-    ],
-    "icon": "fal fa-hand-holding-water",
-    "name": "Health & Nutrition Program",
-    "description": "Health and Nutrition Tackling Public empowering systems and promoting community ownership of Needy nutrition",
-    "link": "/Program6"
-  },
-
   {
     "images": [
       "assets/images/causes/women1.png",
@@ -82,7 +71,7 @@
     "icon": "fal fa-heartbeat",
     "name": "Women Empowerment Program",
     "description": "Helping women find their voice is deeply empowering and has a ripple effect on families and society.Real Happiness Of Life",
-    "link": "/Women"
+    "link": "/programs/7"
   },
   {
     "images": [
@@ -92,6 +81,6 @@
     "icon": "fal fa-bone",
     "name": "Animal Welfare Program",
     "description": "Help us look after our permanent family members by sponsoring their daily requirements.This includes food, medication, treatments, and trained caretakers.",
-    "link": "/Program2"
+    "link": "/programs/8"
   }
 ]
