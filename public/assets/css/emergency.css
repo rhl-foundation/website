@@ -73,17 +73,24 @@ h1 {
   color: white;
 }
 
-.documents {
-  border: solid 2px;
-}
+
 
 .doc {
   margin: 2%;
   max-width: 80%;
   display: block;
   margin: auto;
+  margin-bottom: 2%;
+  
+}
+.doc1, .doc2{
+  height: 500px;
+  width: 50%;
 }
 
+.emergency-image{
+  border-radius: 0px;
+}
 @media screen and (max-width: 700px) and (min-width: 300px) {
   .social-icons {
     width: 80%;
