@@ -1,6 +1,5 @@
 const express = require("express");
 const nodemailer = require("nodemailer");
-const bodyParser = require("body-parser");
 require("dotenv").config();
 const path = require("path");
 const request = require("request");
@@ -9,6 +8,16 @@ const razorpay = require("razorpay");
 const crypto = require("crypto");
 const mailchimp = require("@mailchimp/mailchimp_marketing");
 const port = process.env.PORT || 3000;
+const multer = require("multer");
+const storage = multer.diskStorage({
+  destination: function (req, file, cb) {
+    return cb(null, "./public/assets/files");
+  },
+  filename: function (req, file, cb) {
+    return cb(null, +Date.now() + "_" + file.originalname);
+  },
+});
+const upload = multer({ storage: storage });
 
 const instance = new razorpay({
   key_id: process.env.RAZORPAY_KEY_ID,
@@ -22,8 +31,8 @@ mailchimp.setConfig({
 });
 
 app = express();
-app.use(bodyParser.urlencoded({ extended: true }));
-app.use(bodyParser.json());
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
 app.set("view engine", "ejs");
 
 app.use(express.static(path.join(__dirname, "public")));
@@ -161,6 +170,16 @@ app.post("/contact", async (req, res) => {
     );
   }
 });
+
+app.post(
+  "/uploadFile",
+  upload.fields([{ name: "myFile" }, { name: "yourFile" }]),
+  (req, res) => {
+    console.log(req.body);
+    console.log(req.files);
+    return res.redirect("/test");
+  }
+);
 
 app.post("/create/orderId", (req, res) => {
   console.log(req.body);
