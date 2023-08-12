@@ -23,10 +23,12 @@
   {
     "images": [
       "assets/images/causes/clubfoot1.png",
-      "assets/images/causes/clubfoot2.png"
+      "assets/images/causes/clubfoot2.png",
+      "assets/images/causes/disable1.jpeg",
+      "assets/images/causes/disable2.jpeg"
     ],
     "icon": "fal fa-hands-heart",
-    "name": "Clubfoot Elimination Program",
+    "name": "Disability Elimination Program",
     "description": "Every single day Clubfoot robs children of their childhood. A problem that has such an effective and affordable solution does not get addressed because of the ignorance and stigma",
     "link": "/programs/3"
   },
