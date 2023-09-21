@@ -1,0 +1,29 @@
+main {
+  padding: 2%;
+}
+
+#pages {
+  padding: 2%;
+}
+
+.page {
+  padding: 20px;
+  background-color: #dddada;
+  border-radius: 20px;
+}
+
+.page a {
+  text-decoration: none;
+  color: #000000;
+  font-size: large;
+}
+
+.page a:hover {
+  color: #7b7b7b;
+}
+#separator {
+  width: 50%;
+  border-top: 5px dotted !important;
+  margin: auto;
+  background-color: white;
+}

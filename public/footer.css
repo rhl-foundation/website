@@ -92,3 +92,13 @@ footer .fa {
   background: #bb0000;
   color: white;
 }
+
+.fa-whatsapp:hover {
+  background: #25d366;
+  color: white;
+}
+
+.fa-instagram:hover {
+  background: #d62976;
+  color: white;
+}

@@ -1,0 +1,22 @@
+[
+  {
+    "name": "Registration Certificate",
+    "link": "assets/PDFs/legal/RegistrationCertificate.pdf"
+  },
+  {
+    "name": "12A Certificate",
+    "link": "assets/PDFs/legal/12A-Certificate.pdf"
+  },
+  {
+    "name": "80G Certificate",
+    "link": "assets/PDFs/legal/80G-Certificate.pdf"
+  },
+  {
+    "name": "PAN Card",
+    "link": "assets/PDFs/legal/pancard.jpeg"
+  },
+  {
+    "name": "CSR 01",
+    "link": "assets/PDFs/legal/CSR-01.pdf"
+  }
+]

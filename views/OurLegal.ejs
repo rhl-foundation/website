@@ -1,0 +1,23 @@
+<%- include("partials/header") %>
+<link rel="stylesheet" href="./assets/css/legal.css" />
+<body>
+  <%- include("partials/navbar") %>
+  <main>
+    <h1 class="text-center m-10 text-5xl text-[#ff1493]">Our Legal</h1>
+    <hr id="separator" />
+    <div id="pages">
+      <div class="container-fluid">
+        <div class="row">
+          <% pages.forEach(page => { %>
+          <div class="text-center p-4 col-12 col-md-6 col-lg-4">
+            <div class="page">
+              <a href="<%= page.link %>"><%= page.name %></a>
+            </div>
+          </div>
+          <% }) %>
+        </div>
+      </div>
+    </div>
+  </main>
+  <%- include("partials/footer") %>
+</body>

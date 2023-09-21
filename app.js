@@ -47,6 +47,9 @@ const initiatives = JSON.parse(JSON.stringify(initiatives_json));
 const programFiles_json = require("./api/databases/program-files.json");
 const programFiles = JSON.parse(JSON.stringify(programFiles_json));
 
+const legal_json = require("./api/databases/legal.json");
+const legalFiles = JSON.parse(JSON.stringify(legal_json));
+
 app.get("/programs/:programId", (req, res) => {
   const programFile = programFiles[req.params.programId];
 
@@ -67,6 +70,10 @@ app.get("/programs/:programId", (req, res) => {
 
 app.get("/", (req, res) => {
   res.render("home", { programs: programs, initiatives: initiatives });
+});
+
+app.get("/legal", (req, res) => {
+  res.render("OurLegal", { pages: legalFiles });
 });
 
 app.get("/donate", (req, res) => {
