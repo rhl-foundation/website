@@ -343,6 +343,21 @@ header .nav-items .menu-items .menu ul li a:hover {
 .ban .wrapper ol li a {
   color: #fff;
 }
+.donation-container{
+  width: 100%;
+  height: 1em;
+  border: 2px solid black;
+  border-radius: 10px;
+}
+.filler{
+  width: 20%;
+  height: 100%;
+  background-color: #e83e8c;
+  border-radius: 10px;
+}
+
+
+
 
 /* ================================ Section CSS =============================== */
 .bg-01 {

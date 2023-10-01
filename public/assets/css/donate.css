@@ -81,3 +81,17 @@
     margin: auto;
   }
 }
+
+@media (max-width: 375px){
+  .fnt-size-small{
+    font-size: 0.8em;
+  }
+}
+
+@media (max-width: 417px){
+  .donation-form-box .radio-input + label{
+    margin: 0px;
+    margin-right: 13px;
+    margin-bottom: 10px;
+  }
+}
