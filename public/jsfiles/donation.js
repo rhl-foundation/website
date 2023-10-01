@@ -97,7 +97,7 @@ $(document).ready(function () {
       amount: data.amount,
       currency: "INR",
       order_id: data.orderId,
-      name: "Real happiness of Life Foundation",
+      name: "Real Happiness of Life Foundation",
       description: "Digital Donation",
       image: "assets/images/logo.png",
       notes: {
@@ -285,7 +285,7 @@ $("#donate-now-btn").on("click", async function (e) {
     currency: "INR",
     recurring: true,
     subscription_id: data.subscription_id,
-    name: "Real happiness of Life Foundation",
+    name: "Real Happiness of Life Foundation",
     description: "Digital Donation",
     image: "assets/images/logo.png",
     notes: {
