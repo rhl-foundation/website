@@ -17986,3 +17986,188 @@ ul.anchor-tabs li a {
 }
 
 /* Random 2 */
+
+/*** 
+====================================================================
+    Volunteerism
+====================================================================
+ ***/
+
+.volunteerism {
+  /* border: 1px solid red; */
+  display: grid;
+  place-content: center;
+}
+.contact-a1 {
+  /* border: 1px solid red; */
+  width: 100%;
+}
+.contact-a1 h2 {
+  padding: 10px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.contact-a1 h2::after {
+  content: " ";
+  border: 2px solid black;
+  margin-top: 10px;
+  width: 20%;
+  height: 2px;
+  display: flex;
+  justify-content: center;
+}
+.form_items {
+  /* border: 1px solid blue; */
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 40px 30px;
+  background-color: #fafafa;
+}
+.nameInput {
+  width: 660px;
+  height: 38px;
+  border: 1px solid #ced4da;
+  /* height: 30px; */
+  padding: 6px 12px;
+  border-radius: 5px;
+  font-size: small;
+  font-family: "Source Sans Pro" sans-serif;
+  /* color: grey; */
+}
+.addressText {
+  width: 660px;
+  border: 1px solid #ced4da;
+  padding: 6px 12px;
+  border-radius: 5px;
+  font-size: small;
+  font-family: "Source Sans Pro" sans-serif;
+}
+
+.selectOptions {
+  width: 660px;
+  height: 40px;
+  border: 1px solid #ced4da;
+  /* height: 30px; */
+  padding: 6px 12px;
+  border-radius: 5px;
+  font-size: small;
+  font-family: "Source Sans Pro" sans-serif;
+}
+.selectDiv {
+  display: flex;
+  flex-direction: column;
+}
+
+.selectDiv label {
+  font-size: medium;
+}
+
+.btn button {
+  border-radius: none;
+  padding: 10px;
+  width: 150px;
+}
+
+.check {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.check span {
+  display: flex;
+  align-items: baseline;
+  /* border: 1px solid red; */
+  gap: 10px;
+}
+
+/*** 
+====================================================================
+    Carreers section
+====================================================================
+ ***/
+.form_items_career {
+  /* border: 1px solid blue; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 40px 30px;
+  background-color: #fafafa;
+}
+.career {
+  /* border: 1px solid red; */
+  display: flex;
+  flex-direction: column;
+  /* gap:5px; */
+}
+.career label {
+  font-size: medium;
+  /* font-weight: bold; */
+}
+.nameInput_career {
+  width: 360px;
+  height: 38px;
+  border: 1px solid #ced4da;
+  /* height: 30px; */
+  padding: 6px 12px;
+  border-radius: 5px;
+  font-size: small;
+  font-family: "Source Sans Pro" sans-serif;
+  /* color: grey; */
+}
+
+.btn_career button {
+  /* border: 1px solid red; */
+  width: 100px;
+}
+
+/*** 
+====================================================================
+    Our Partners
+====================================================================
+ ***/
+
+.partners {
+  /* border: 1px solid red; */
+  width: 100%;
+  gap: 30px;
+  padding: 20px 10%;
+  display: grid;
+  place-items: center;
+  grid-template-columns: repeat(3, 1fr);
+}
+.partner_one {
+  /* border: 1px solid red; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  width: 350px;
+  height: 40vh;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+}
+.partner_one div {
+   display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /* border: 1px solid red; */
+  border-bottom: 1px solid #555555;
+  padding: 20px;
+  width: 80%;
+  /* height: 20vh;/ */
+}
+.partner_one div img {
+  height: 20vh;  
+}
+.partner_one p {
+  font-weight: bold;  
+  /* border: 1px solid red; */
+  text-align: center;
+}

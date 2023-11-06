@@ -1,0 +1,153 @@
+<%- include("partials/header") %>
+
+<body>
+  <%- include("partials/navbar") %>
+  <!-- content -->
+  <div class="sup-card-contact-0a volunteerism">
+    <div class="contact-a1">
+      <h2>VOLUNTEER REGISTERATION</h2>
+
+      <form method="post" action="/contact">
+        <div class="dived d-flex">
+          <div class="form-group">
+            <div class="form-sup form_items">
+              <div class="cal-01 check">
+                <span>
+                  <label for="male">Male</label>
+                  <input type="checkbox" name="male" id="male" required />
+                </span>
+                <span>
+                  <label for="female">Female</label>
+                  <input type="checkbox" name="female" id="female" required />
+                </span>
+              </div>
+              <div class="cal-01">
+                <input
+                  type="text"
+                  name="name"
+                  id=""
+                  class="nameInput"
+                  placeholder="Enter Your full Name"
+                  required
+                />
+              </div>
+              <div class="cal-01">
+                <input
+                  type="email"
+                  name="email"
+                  id=""
+                  class="nameInput"
+                  placeholder="Enter Your Email Id"
+                  required
+                />
+              </div>
+              <div class="cal-01">
+                <input
+                  name="phone"
+                  id=""
+                  type="tel"
+                  class="nameInput"
+                  placeholder="Enter Your Mobile No"
+                  required
+                />
+              </div>
+              <div class="cal-01">
+                <input
+                  type="text"
+                  name="city"
+                  id=""
+                  class="nameInput"
+                  placeholder="Enter Your City"
+                  required
+                />
+              </div>
+              <div class="cal-01">
+                <textarea
+                  name="address"
+                  id="address"
+                  cols="30"
+                  style="resize: none"
+                  rows="2"
+                  placeholder="Enter Your Address"
+                  class="addressText"
+                ></textarea>
+              </div>
+              <div class="cal-01">
+                <input
+                  type="text"
+                  name="proffesion"
+                  id=""
+                  class="nameInput"
+                  placeholder="Enter Your Proffesion"
+                  required
+                />
+              </div>
+              <div class="cal-01">
+                <input
+                  type="text"
+                  name="skill"
+                  id=""
+                  class="nameInput"
+                  placeholder="Enter Your Skill set"
+                  required
+                />
+              </div>
+              <div class="selectDiv">
+                <label for="institution">Select your institution</label>
+                <select
+                  class="selectOptions"
+                  name="institution"
+                  id="institution"
+                >
+                  <option value="Aaasha E cell IIT Bombay">Aaasha E cell IIT Bombay</option>
+                  <option value="Chetna College">Chetna College</option>
+                  <option value="Thankur College">Thankur College</option>
+                  <option value="Others">Others</option>
+                </select>
+              </div>
+              <div class="selectDiv">
+                <label for="institution">Your prefered project</label>
+                <select class="selectOptions" name="project" id="project">
+                  <!-- <option value="">Choose an option</option> -->
+                  <option value="Orphanage support">Orphanage Support</option>
+                  <option value="Education support">Education support</option>
+                  <option value="Medical support">Medical support</option>
+                </select>
+              </div>
+              <div class="selectDiv">
+                <label for="institution">Your prefered Day</label>
+                <select class="selectOptions" name="day" id="day">
+                  <option value="Sunday">Sunday</option>
+                  <option value="Monday">Monday</option>
+                  <option value="Tuesday">Tuesday</option>
+                  <option value="Wednesday">Wednesday</option>
+                  <option value="Thursday">Thursday</option>
+                  <option value="Friday">Friday</option>
+                  <option value="Saturday">Saturday</option>
+                </select>
+              </div>
+              <div class="cal-01">
+                <input
+                  type="text"
+                  name="timing"
+                  id=""
+                  class="nameInput"
+                  placeholder="Prefered Timming"
+                  required
+                />
+              </div>
+              <div class="ca-ool btn">
+                <button class="mt-2 btn btn-secondary" type="submit">
+                  Submit
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- =====================>>>>>Footer Started>>>>>======================== -->
+  <%- include("partials/footer") %>
+</body>
