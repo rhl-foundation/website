@@ -87,6 +87,16 @@
                 <div class="donation-container">
                   <div class="filler"></div>
                 </div>
+                <div class="donation-buttons">
+                  <div class="donations-btns time">
+                    <p><i class="fa-regular fa-clock"></i> 30 days left</p>
+                    <p><i class="fa-solid fa-user"></i> 1 Backers</p>
+                  </div>
+                  <div class="donations-btns">
+                    <button class="donatebtns share"><i class="fa-brands fa-whatsapp"></i> <b>Share</b></button>
+                    <button class="donatebtns don">Donate Now</button>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -118,6 +128,16 @@
                 <div class="donation-container">
                   <div class="filler"></div>
                 </div>
+                <div class="donation-buttons">
+                  <div class="donations-btns time">
+                    <p><i class="fa-regular fa-clock"></i> 30 days left</p>
+                    <p><i class="fa-solid fa-user"></i> 1 Backers</p>
+                  </div>
+                  <div class="donations-btns">
+                    <button class="donatebtns share"><i class="fa-brands fa-whatsapp"></i> <b>Share</b></button>
+                    <button class="donatebtns don">Donate Now</button>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -133,12 +153,71 @@
 
      <section class="bg-03">
       <div class="container">
-        <div class="row">
+        <!-- <div class="row">
           <div class="col-12">
             <div class="heading">
               <h2>OUR PROGRAMMES</h2>
             </div>
           </div>
+        </div> -->
+        <div class="Newcategories">
+          <h6>Our Campaigns</h6>
+          <h3>Causes you can support</h3>
+          <form class="search">
+            <input type="search" name="" id="searchbar" placeholder="Search By Campaign">
+            <button class="search-btn"><i class="fa-solid fa-magnifying-glass"></i></button>
+          </form>
+          <div class="categories">
+            <div class="boxes education">
+              <p><i class="fa-solid fa-lightbulb"></i></p>
+              <p>Urgent</p>
+            </div>
+            <div class="boxes education">
+              <p><i class="fa-solid fa-paw"></i></p>
+              <p>Animals</p>
+            </div>
+            <div class="boxes education">
+              <p><i class="fa-solid fa-baby"></i></p>
+              <p>Children</p>
+            </div>
+            <div class="boxes education">
+              <p><i class="fa-solid fa-person"></i></p>
+              <p>Elderly</p>
+            </div>
+            <div class="boxes education">
+              <p><i class="fa-solid fa-hands-praying"></i></p>
+              <p>Faith</p>
+            </div>
+            <div class="boxes education">
+              <p><i class="fa-solid fa-wheelchair"></i></p>
+              <p>Disability</p>
+            </div>
+            <div class="boxes education">
+              <p><i class="fa-solid fa-utensils"></i></p>
+              <p>Hunger</p>
+            </div>
+            <div class="boxes education">
+              <p><i class="fa-solid fa-graduation-cap"></i></p>
+              <p>Education</p>
+            </div>
+            <div class="boxes education">
+              <p><i class="fa-solid fa-person-dress"></i></p>
+              <p>Women</p>
+            </div>
+            <div class="boxes education">
+              <p><i class="fa-solid fa-briefcase-medical"></i></p>
+              <p>Medical</p>
+            </div>
+            <div class="boxes education">
+              <p><i class="fa-solid fa-house-crack"></i></p>
+              <p>Distress relief</p>
+            </div>
+            <div class="boxes education">
+              <p><i class="fa-solid fa-ellipsis fa-xl"></i></p>
+              <p>Others</p>
+            </div>
+          </div>
+      
         </div>
         <div class="row"> 
           <% programs.forEach(program => { %>
@@ -204,7 +283,25 @@
       <% } %>
     </section>
   </div>
-
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const categories = document.querySelectorAll('.boxes');
+      let previousbox=categories[0]
+      let ptag=document.querySelector('.boxes p').children[0]
+      ptag.classList.toggle('boxpactive')
+      previousbox.classList.toggle('boxactive')
+      for(let i of categories){
+        i.addEventListener('click',(e)=>{
+          previousbox.classList.toggle('boxactive')
+          ptag.classList.toggle('boxpactive')
+          e.currentTarget.classList.toggle('boxactive')
+          ptag=e.currentTarget.querySelector('p').children[0]
+          ptag.classList.toggle('boxpactive')
+          previousbox=e.currentTarget
+        })
+      }
+    });
+  </script>
   <!--Random Html-->
 
   
@@ -212,6 +309,7 @@
   <!-- =====================>>>>>Footer Started>>>>>======================== -->
 
  <%- include("partials/footer") %>
+
 </body>
 
 
