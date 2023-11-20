@@ -330,7 +330,7 @@ header .nav-items .menu-items .menu ul li a:hover {
 }
 .ban .wrapper ol li {
   display: inline-block;
-  background-color: #dc3545;
+  background-color: #c73190;
   font-size: 1rem;
   color: #fff;
   padding: 0.625rem;
@@ -388,7 +388,7 @@ header .nav-items .menu-items .menu ul li a:hover {
 .bg-01 .wrapper .content ol li i {
   display: block;
   font-size: 2.5rem;
-  color: #dc3545;
+  color: #c73190;
 }
 .bg-01 .wrapper .content ol li h3 {
   font-size: 1.25rem;
@@ -442,7 +442,7 @@ header .nav-items .menu-items .menu ul li a:hover {
 }
 .bg-02 .wrapper .bs ol li i {
   margin: 0 0.625rem 0 0;
-  color: #dc3545;
+  color: #c73190;
 }
 
 .bg-02 .wrap figure {
@@ -471,7 +471,7 @@ header .nav-items .menu-items .menu ul li a:hover {
 }
 .bg-02 .wrap .bbs ol li i {
   margin: 0 0.625rem 0 0;
-  color: #dc3545;
+  color: #c73190;
 }
 
 .bg-03 {
@@ -636,7 +636,7 @@ header .nav-items .menu-items .menu ul li a:hover {
   transition: 0.6s;
   height: 30px;
   width: 30px;
-  background: #dc3545;
+  background: #c73190;
   line-height: 30px;
   text-align: center;
   padding: 0px;
@@ -790,14 +790,17 @@ header .nav-items .menu-items .menu ul li a:hover {
   position: relative;
   background: #e8f0f5;
   z-index: 0;
+  /* border: 10px solid red; */
 }
 .bg-0-b .main-card-contact {
   flex-wrap: wrap;
-  width: 100%;
   margin: 20px 0px;
+  width: 100%;
   padding: 10px 15px;
-  position: relative;
   z-index: 9;
+  position: relative;
+  /* gap: 20px; */
+  /* border: 1px solid red; */
 }
 .bg-0-b .main-card-contact .sup-card-contact {
   width: 40%;
@@ -811,8 +814,23 @@ header .nav-items .menu-items .menu ul li a:hover {
     flex: 1 1 100%;
   }
 }
+
+/* Adjustment made */
+
+.bg-0-b >div:first-child p{
+  /* border: 1px solid red; */
+  display: grid;
+  place-content: center;
+  font-weight: bolder;
+} 
+
+
+
+
+
 .bg-0-b .main-card-contact .sup-card-contact .contact-title {
   position: relative;
+  /* border: 1px solid red; */
 }
 .bg-0-b .main-card-contact .sup-card-contact .contact-title h2 {
   font-size: 20px;
@@ -822,10 +840,20 @@ header .nav-items .menu-items .menu ul li a:hover {
   position: relative;
   display: inline-block;
 }
+.bg-0-b .main-card-contact .sup-card-contact .contact-title ol {
+  /* font-size: 20px;
+  margin: 0 0 10px 0;
+  color: #222;
+  padding-bottom: 5px;
+  position: relative;
+  display: inline-block; */
+  /* border: 1px solid red; */
+  padding: 0 10px 0 0;
+}
 .bg-0-b .main-card-contact .sup-card-contact .contact-title h2::before {
   position: absolute;
   content: "";
-  background: #dc3545;
+  background: #c73190;
   width: 100%;
   height: 3px;
   bottom: 0;
@@ -838,7 +866,7 @@ header .nav-items .menu-items .menu ul li a:hover {
   font-weight: 600;
 }
 .bg-0-b .main-card-contact .sup-card-contact .contact-title ol li i {
-  color: #dc3545;
+  color: #c73190;
   padding-right: 15px;
 }
 .bg-0-b .main-card-contact .sup-card-contact .head-content {
@@ -856,7 +884,7 @@ header .nav-items .menu-items .menu ul li a:hover {
 .bg-0-b .main-card-contact .sup-card-contact .head-content h2::before {
   position: absolute;
   content: "";
-  background: #dc3545;
+  background: #c73190;
   width: 100%;
   height: 3px;
   bottom: 0;
@@ -869,9 +897,11 @@ header .nav-items .menu-items .menu ul li a:hover {
   margin: 0px;
 }
 .bg-0-b .main-card-contact .sup-card-contact-0a {
+  /* border: 1px solid red; */
   width: 60%;
   max-width: 60%;
   flex: 1 1 60%;
+  padding-left: 10px;
 }
 @media screen and (max-width: 767.98px) {
   .bg-0-b .main-card-contact .sup-card-contact-0a {
@@ -911,7 +941,7 @@ header .nav-items .menu-items .menu ul li a:hover {
   top: 0px;
   height: 45px;
   width: 45px;
-  background: #dc3545;
+  background: #c73190;
   text-align: center;
   line-height: 45px;
   color: #fff;
@@ -939,7 +969,7 @@ header .nav-items .menu-items .menu ul li a:hover {
   position: relative;
   top: 4px;
   left: 5px;
-  color: #dc3545;
+  color: #c73190;
 }
 .bg-0-b
   .main-card-contact
@@ -955,7 +985,7 @@ header .nav-items .menu-items .menu ul li a:hover {
 
 .abt-01 {
   padding: 3.125rem 0;
-  background: #dc3545;
+  background: #c73190;
   position: relative;
   overflow: hidden;
   z-index: 0;
