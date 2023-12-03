@@ -1,515 +1,865 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
     <title>Real Happiness Of Life Foundation</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css"/>
+    <!-- <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    /> -->
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css"
+    />
     <!-- <link rel="stylesheet" href="assets/css/bootstrap.min.css"> -->
     <link rel="icon" href="assets/images/logo.png" />
-    <link rel="stylesheet" href="assets/css/all.min.css">
-    <link rel="stylesheet" href="assets/css/home.css">
+    <link rel="stylesheet" href="assets/css/all.min.css" />
+    <link rel="stylesheet" href="assets/css/home.css" />
     <link rel="stylesheet" href="assets/css/style.css" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.js" integrity="sha512-KvlmAB+wx0zLQRe7hCFzBwyaU/AvbwPoJgxfBZ6g+ZF9MBMY4YAo3+BycXH2Rc+fDPbZ0fJsi3AfOTmQYZEn9A==" crossorigin="anonymous" referrerpoli22cy="no-referrer"></script>
-    <link href="https://cdn.tailwindcss.com/your-tailwind-css-version.min.css" rel="stylesheet">
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.js"
+      integrity="sha512-KvlmAB+wx0zLQRe7hCFzBwyaU/AvbwPoJgxfBZ6g+ZF9MBMY4YAo3+BycXH2Rc+fDPbZ0fJsi3AfOTmQYZEn9A=="
+      crossorigin="anonymous"
+      referrerpoli22cy="no-referrer"
+    ></script>
+    <link
+      href="https://cdn.tailwindcss.com/your-tailwind-css-version.min.css"
+      rel="stylesheet"
+    />
     <!-- jQuery library -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
- <!-- Font Awesome kit -->
- <script src="https://kit.fontawesome.com/53d850d292.js" crossorigin="anonymous"></script>
+    <!-- Font Awesome kit -->
+    <script
+      src="https://kit.fontawesome.com/53d850d292.js"
+      crossorigin="anonymous"
+    ></script>
     <script src="https://cdn.tailwindcss.com"></script>
-    
-</head>
+    <link rel="stylesheet" href="assets/css/donate.css" />
+  </head>
 
-<link rel="stylesheet" href="assets/css/donate.css">  
-
-<body>
-  <!-- ======================header started====================== -->
-  <%- include("partials/navbar") %>
-  <!-- Page Header Start -->
-  <div class="page-header">
-    <div class="container" style="margin-top: 30px;">
-    <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
-
-      <div class="carousel-inner">
-
-        <div class="carousel-item active">
-          <img class="d-block w-100" src="assets/images/slider/donate1.jpeg">
-          <div class="mask rgba-black-light"></div>
-            <div class="carousel-caption">
+  <body>
+    <!-- ======================header started====================== -->
+    <%- include("partials/navbar") %>
+    <!-- Page Header Start -->
+    <div class="page-header">
+      <div class="container" style="margin-top: 30px">
+        <div
+          id="carouselExampleSlidesOnly"
+          class="carousel slide"
+          data-ride="carousel"
+        >
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img
+                class="d-block w-100"
+                src="assets/images/slider/donate1.jpeg"
+              />
+              <div class="mask rgba-black-light"></div>
+              <div class="carousel-caption"></div>
             </div>
-        </div>
 
-        <div class="carousel-item">
-          <img class="d-block w-100" src="assets/images/slider/donate2.jpeg">
-          <div class="mask rgba-black-light"></div>
-            <div class="carousel-caption">
+            <div class="carousel-item">
+              <img
+                class="d-block w-100"
+                src="assets/images/slider/donate2.jpeg"
+              />
+              <div class="mask rgba-black-light"></div>
+              <div class="carousel-caption"></div>
             </div>
-        </div>
 
-        <div class="carousel-item">
-          <img class="d-block w-100" src="assets/images/slider/donate3.jpeg">
-          <div class="mask rgba-black-light"></div>
-            <div class="carousel-caption">
+            <div class="carousel-item">
+              <img
+                class="d-block w-100"
+                src="assets/images/slider/donate3.jpeg"
+              />
+              <div class="mask rgba-black-light"></div>
+              <div class="carousel-caption"></div>
             </div>
-        </div>
 
-        <div class="carousel-item">
-          <img class="d-block w-100" src="assets/images/slider/donate4.jpeg">
-          <div class="mask rgba-black-light"></div>
-            <div class="carousel-caption">
+            <div class="carousel-item">
+              <img
+                class="d-block w-100"
+                src="assets/images/slider/donate4.jpeg"
+              />
+              <div class="mask rgba-black-light"></div>
+              <div class="carousel-caption"></div>
             </div>
+          </div>
         </div>
-        </div>
-        
+      </div>
+
+      <h2 class="mt-12 mb-12 text-center text-5xl text-[#ff1493]">
+        Donate Now
+      </h2>
     </div>
+    <!-- Page Header End -->
+
+    <div class="container-fluid">
+      <p class="text-xl italic m-20 mt-0 card drop-shadow-xl p-3 text-2xl">
+        All Indian contributions made to Real Happiness Of Life Foundation are
+        eligible for tax exemption of 50% u/s 80G of the Income Tax Act, 1961.
+      </p>
     </div>
 
-      <h2 class="mt-12 mb-12 text-center text-5xl text-[#ff1493]">Donate Now</h2>
+    <div
+      class="text-center payment-mode"
+      role="group"
+      aria-label="Basic radio toggle button group"
+    >
+      <ul
+        id="filter1"
+        class="filter-switch inline-flex items-center relative h-10 p-1 space-x-1 bg-gray-200 rounded-md font-semibold text-blue-600 my-4"
+      >
+        <li class="filter-switch-item flex relative h-8 bg-gray-300x">
+          <input
+            value="one-time-donation-form"
+            type="radio"
+            name="filter1"
+            id="filter1-1"
+            class="sr-only"
+            checked
+          />
+          <label
+            for="filter1-0"
+            class="h-8 py-1 px-2 text-sm leading-6 text-gray-600 hover:text-gray-800 rounded shadow fnt-size-small"
+          >
+            <p class="fnt-size-small">One Time</p>
+          </label>
+        </li>
 
-  </div>
-  <!-- Page Header End -->
+        <li class="filter-switch-item flex relative h-8 bg-gray-300x">
+          <input
+            value="monthly-donation-form"
+            type="radio"
+            name="filter1"
+            id="filter1-0"
+            class="sr-only"
+          />
+          <label
+            for="filter1-0"
+            class="h-8 py-1 px-2 text-sm leading-6 text-gray-600 hover:text-gray-800 rounded shadow"
+          >
+            Monthly
+          </label>
 
-  <div class="container-fluid">
+          <div aria-hidden="true" class="filter-active"></div>
+        </li>
+      </ul>
+    </div>
 
-    <p class="text-xl italic m-20 mt-0 card drop-shadow-xl p-3 text-2xl">All Indian contributions made to Real Happiness Of Life Foundation are eligible for tax exemption of 50% u/s 80G of the Income Tax Act, 1961.</p>
-  
-  </div>
-
-  <div class="text-center payment-mode" role="group" aria-label="Basic radio toggle button group">
-
-    <ul id="filter1" class="filter-switch inline-flex items-center relative h-10 p-1 space-x-1 bg-gray-200 rounded-md font-semibold text-blue-600 my-4">
-
-      
-
-      <li class="filter-switch-item flex relative h-8 bg-gray-300x">
-
-        <input value="one-time-donation-form" type="radio" name="filter1" id="filter1-1" class="sr-only" checked>
-        <label for="filter1-0" class="h-8 py-1 px-2 text-sm leading-6 text-gray-600 hover:text-gray-800  rounded shadow fnt-size-small">
-          <p class="fnt-size-small"> One Time</p>
-        </label>
-
-      </li>
-
-      <li class="filter-switch-item flex relative h-8 bg-gray-300x">
-
-        <input value="monthly-donation-form" type="radio" name="filter1" id="filter1-0" class="sr-only">
-        <label for="filter1-0" class="h-8 py-1 px-2 text-sm leading-6 text-gray-600 hover:text-gray-800  rounded shadow">
-        Monthly
-        </label>
-
-        <div aria-hidden="true" class="filter-active"></div>
-
-      </li>
-
-    </ul>
-
-  </div>
-
-  <script>
-    $(document).ready(function(){
-      $("#monthly-donation-form").addClass("inactive");
-      $("input[name='filter1']").change(function(){
-        if($(this).val() == "monthly-donation-form"){
-          $("#monthly-donation-form").removeClass("inactive");
-          $("#one-time-donation-form").addClass("inactive");
-        }
-        else if($(this).val() == "one-time-donation-form"){
-          $("#one-time-donation-form").removeClass("inactive");
-          $("#monthly-donation-form").addClass("inactive");
-        }
+    <script>
+      $(document).ready(function () {
+        $("#monthly-donation-form").addClass("inactive");
+        $("input[name='filter1']").change(function () {
+          if ($(this).val() == "monthly-donation-form") {
+            $("#monthly-donation-form").removeClass("inactive");
+            $("#one-time-donation-form").addClass("inactive");
+          } else if ($(this).val() == "one-time-donation-form") {
+            $("#one-time-donation-form").removeClass("inactive");
+            $("#monthly-donation-form").addClass("inactive");
+          }
+        });
       });
-    });
-  </script>
+    </script>
 
-  <div class="donation-form-box drop-shadow-2xl" id="one-time-donation-form">
-    <form id="oneTimeForm" action="/create/orderId" method="post">
+    <div class="donation-form-box drop-shadow-2xl" id="one-time-donation-form">
+      <form id="oneTimeForm" action="/create/orderId" method="post">
+        <div class="row">
+          <div class="col-lg-8">
+            <input
+              name="money"
+              class="radio-input"
+              id="radio-money-1"
+              type="radio"
+              value="1000"
+            />
+            <label class="radio-label" for="radio-money-1">Rs. 1000</label>
 
-      <div class="row">
-      
-        <div class="col-lg-8">
-          <input name="money" class="radio-input" id="radio-money-1" type="radio" value="1000">
-          <label class="radio-label" for="radio-money-1">Rs. 1000</label>
+            <input
+              name="money"
+              class="radio-input"
+              id="radio-money-2"
+              type="radio"
+              value="2000"
+            />
+            <label class="radio-label" for="radio-money-2">Rs. 2000</label>
 
-          <input name="money" class="radio-input" id="radio-money-2" type="radio" value="2000">
-          <label class="radio-label" for="radio-money-2">Rs. 2000</label>
+            <input
+              name="money"
+              class="radio-input"
+              id="radio-money-3"
+              type="radio"
+              value="5000"
+            />
+            <label class="radio-label" for="radio-money-3">Rs. 5000</label>
 
-          <input name="money" class="radio-input" id="radio-money-3" type="radio" value="5000">
-          <label class="radio-label" for="radio-money-3">Rs. 5000</label>
+            <input
+              name="money"
+              class="radio-input"
+              id="radio-money-4"
+              type="radio"
+              value="10000"
+            />
+            <label class="radio-label" for="radio-money-4">Rs. 10000</label>
+          </div>
 
-          <input name="money" class="radio-input" id="radio-money-4" type="radio" value="10000">
-          <label class="radio-label" for="radio-money-4">Rs. 10000</label>
+          <div class="col-lg-4">
+            <input
+              name="money"
+              class="d-none"
+              class="mt-2 px-2 py-2 d-inline"
+              id="radio-money-5"
+              type="radio"
+              value="custom"
+            />
+            <label for="radio-money-5">
+              <input
+                type="number"
+                name="custom"
+                class="d-inline form-control"
+                id="customAmount"
+                placeholder="Enter Custom Amount"
+                autocomplete="off"
+              />
+            </label>
+          </div>
         </div>
 
-        <div class="col-lg-4">
-          <input name="money" class="d-none" class="mt-2 px-2 py-2 d-inline" id="radio-money-5" type="radio" value="custom">
-          <label for="radio-money-5">
-              <input type="number" name="custom" class="d-inline form-control" id="customAmount" placeholder="Enter Custom Amount" autocomplete="off">
-          </label>
-        </div>
-
-      </div>
-
-      <script>
-        $(document).ready(function(){
-          $("#customAmount").on("click", function(){
-            $("#radio-money-5").prop("checked", true);
+        <script>
+          $(document).ready(function () {
+            $("#customAmount").on("click", function () {
+              $("#radio-money-5").prop("checked", true);
+            });
           });
-        });
-      </script>
+        </script>
 
-      <div class="row">
+        <div class="row">
+          <div class="col-md-6 mb-6">
+            <div class="form-floating">
+              <input
+                type="text"
+                name="first_name"
+                class="firstName form-control"
+                id="floatingInput"
+                placeholder="First Name"
+                required
+              />
+              <label for="floatingInput">First Name</label>
+            </div>
+          </div>
 
-        <div class="col-md-6 mb-6">
-          <div class="form-floating">
-            <input type="text" name="first_name" class="firstName form-control" id="floatingInput" placeholder="First Name" required>
-            <label for="floatingInput">First Name</label>
+          <div class="col-md-6 mb-6">
+            <div class="form-floating">
+              <input
+                type="text"
+                name="last_name"
+                class="secondName form-control"
+                id="floatingInput"
+                placeholder="Second Name"
+                required
+              />
+              <label for="floatingInput">Last Name</label>
+            </div>
+          </div>
+
+          <div class="col-md-6 mb-6">
+            <div class="form-floating">
+              <input
+                type="tel"
+                name="phone"
+                class="phone form-control"
+                id="floatingInput"
+                placeholder="Phone"
+                required
+              />
+              <label for="floatingInput">Phone</label>
+            </div>
+          </div>
+
+          <div class="col-md-6 mb-6">
+            <div class="form-floating">
+              <input
+                type="email"
+                name="email"
+                class="email form-control"
+                id="floatingInput"
+                placeholder="Email"
+                required
+              />
+              <label for="floatingInput">E-mail Address</label>
+            </div>
+          </div>
+
+          <div class="col-md-6 mb-6">
+            <div class="form-floating">
+              <input
+                type="text"
+                name="pan"
+                class="pan-no form-control"
+                id="floatingInput"
+                placeholder="Enter PAN"
+                required
+              />
+              <label for="floatingInput">PAN</label>
+            </div>
+          </div>
+
+          <div class="col-md-6 mb-6">
+            <div class="form-floating">
+              <input
+                type="textarea"
+                name="address"
+                class="resi-address form-control"
+                id="floatingInput"
+                placeholder="Enter your Address"
+                required
+              />
+              <label for="floatingInput">Address</label>
+            </div>
+          </div>
+
+          <div class="col-md-6 mb-6">
+            <div class="form-floating">
+              <input
+                type="text"
+                name="city"
+                class="resi-city form-control"
+                id="floatingInput"
+                placeholder="City"
+                required
+              />
+              <label for="floatingInput">City</label>
+            </div>
+          </div>
+
+          <div class="col-md-6 mb-6">
+            <div class="form-floating">
+              <input
+                type="number"
+                name="zip"
+                class="pincode form-control"
+                id="floatingInput"
+                placeholder="Pin Code"
+                required
+              />
+              <label for="floatingInput">Pin Code</label>
+            </div>
+          </div>
+
+          <div class="col-lg-12 mb-6">
+            <div class="form-check">
+              <input
+                value="yes"
+                class="form-check-input"
+                type="checkbox"
+                name="bearCharges"
+                id="bearCharge"
+              />
+              <label class="form-check-label" for="bearCharge"
+                >I hereby Declare to bear 3% payment gateway charges.</label
+              >
+            </div>
+          </div>
+
+          <div class="col-lg-12 mb-6">
+            <div class="form-check">
+              <input
+                value="terms"
+                class="form-check-input"
+                value="terms"
+                id="tAndC"
+                type="checkbox"
+                name="termsAndConditions"
+                required
+              />
+              <label class="form-check-label" for="tAndC"
+                >I accept the Terms and Conditions and privacy policy.</label
+              >
+            </div>
           </div>
         </div>
-
-        <div class="col-md-6 mb-6">
-          <div class="form-floating">
-            <input type="text" name="last_name" class="secondName form-control" id="floatingInput" placeholder="Second Name" required>
-            <label for="floatingInput">Last Name</label>
-          </div>
-        </div>
-        
-        <div class="col-md-6 mb-6">
-          <div class="form-floating">
-            <input type="tel" name="phone" class="phone form-control" id="floatingInput" placeholder="Phone" required>
-            <label for="floatingInput">Phone</label>
-          </div>
-        </div>
-
-        <div class="col-md-6 mb-6">
-          <div class="form-floating">
-            <input type="email" name="email" class="email form-control" id="floatingInput" placeholder="Email" required>
-            <label for="floatingInput">E-mail Address</label>
-          </div>
-        </div>
-
-        <div class="col-md-6 mb-6">
-          <div class="form-floating">
-            <input type="text" name="pan" class="pan-no form-control" id="floatingInput" placeholder="Enter PAN" required>
-            <label for="floatingInput">PAN</label>
-          </div>
-        </div>
-
-        <div class="col-md-6 mb-6">
-          <div class="form-floating">
-            <input type="textarea" name="address" class="resi-address form-control" id="floatingInput" placeholder="Enter your Address" required>
-            <label for="floatingInput">Address</label>
-          </div>
-        </div>
-
-        <div class="col-md-6 mb-6">
-          <div class="form-floating">
-            <input type="text" name="city" class="resi-city form-control" id="floatingInput" placeholder="City" required>
-            <label for="floatingInput">City</label>
-          </div>
-        </div>
-
-        <div class="col-md-6 mb-6">
-          <div class="form-floating">
-            <input type="number" name="zip" class="pincode form-control" id="floatingInput" placeholder="Pin Code" required>
-            <label for="floatingInput">Pin Code</label>
-          </div>
-        </div>
-
-        <div class="col-lg-12 mb-6">
-          <div class="form-check">
-            <input value="yes" class="form-check-input" type="checkbox" name="bearCharges" id="bearCharge" >
-            <label class="form-check-label" for="bearCharge">I hereby Declare to bear 3% payment gateway charges.</label>
-          </div>
-        </div>
-
-        <div class="col-lg-12 mb-6">
-          <div class="form-check">
-            <input value="terms" class="form-check-input" value="terms" id="tAndC" type="checkbox" name="termsAndConditions" required>
-            <label class="form-check-label" for="tAndC">I accept the Terms and Conditions and privacy policy.</label>
-          </div>
-        </div>
-
-
-      </div>
-       <div class="text-center">
-          <button id="donate-now" class="btn btn-secondary" type="submit">Donate Now</button>
-        </div>
-
-    </form>
-  </div>
-
-  
-
-  <script src="/docs/5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
-
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
-  <script src = "https://checkout.razorpay.com/v1/checkout.js"></script>
-  <script>
-    
-    
-  </script>
-    
-  <div class="donation-form-box drop-shadow-2xl" id="monthly-donation-form">
-    <form id="monthlyForm" action="/create/subscriptionId" method="post">
-
-      <div class="row">
-      
-        <div class="col-lg-8">
-          <input name="money" class="radio-input" id="radio-1" type="radio" value="1000">
-          <label class="radio-label" for="radio-1">Rs. 1000</label>
-
-          <input name="money" class="radio-input" id="radio-2" type="radio" value="2000">
-          <label class="radio-label" for="radio-2">Rs. 2000</label>
-
-          <input name="money" class="radio-input" id="radio-3" type="radio" value="5000">
-          <label class="radio-label" for="radio-3">Rs. 5000</label>
-
-          <input name="money" class="radio-input" id="radio-4" type="radio" value="10000">
-          <label class="radio-label" for="radio-4">Rs. 10000</label>
-        </div>
-
-        <div class="col-lg-4">
-          <input name="money" class="d-none" class="mt-2 px-2 py-2 d-inline" id="radio-5" type="radio" value="custom">
-          <label for="radio-5">
-              <input type="number" name="custom" class="d-inline form-control" id="customMoney" placeholder="Enter Custom Amount" autocomplete="off">
-          </label>
-        </div>
-
-      </div>
-
-      <script>
-        $(document).ready(function(){
-          $("#customMoney").on("click", function(){
-            $("#radio-5").prop("checked", true);
-          });
-
-          $(".radio-label").click(function(){
-            $("this").attr("checked", true);
-          });
-        });
-      </script>
-
-      <div class="row">
-
-        <div class="col-md-6 mb-6">
-          <div class="form-floating">
-            <input type="text" name="first_name" class="fName form-control" id="floatingInput" placeholder="First Name" required>
-            <label for="floatingInput">First Name</label>
-          </div>
-        </div>
-
-        <div class="col-md-6 mb-6">
-          <div class="form-floating">
-            <input type="text" name="last_name" class="sName form-control" id="floatingInput" placeholder="Second Name" required>
-            <label for="floatingInput">Last Name</label>
-          </div>
-        </div>
-        
-        <div class="col-md-6 mb-6">
-          <div class="form-floating">
-            <input type="tel" name="phone" class="mobile form-control" id="floatingInput" placeholder="Phone" required>
-            <label for="floatingInput">Phone</label>
-          </div>
-        </div>
-
-        <div class="col-md-6 mb-6">
-          <div class="form-floating">
-            <input type="email" name="email" class="email-address form-control" id="floatingInput" placeholder="Email" required>
-            <label for="floatingInput">E-mail Address</label>
-          </div>
-        </div>
-
-        <div class="col-md-6 mb-6">
-          <div class="form-floating">
-            <input type="text" name="pan" class="pan form-control" id="floatingInput" placeholder="Enter PAN" required>
-            <label for="floatingInput">PAN</label>
-          </div>
-        </div>
-
-        <div class="col-md-6 mb-6">
-          <div class="form-floating">
-            <input type="textarea" name="address" class="address form-control" id="floatingInput" placeholder="Enter your Address" required>
-            <label for="floatingInput">Address</label>
-          </div>
-        </div>
-
-        <div class="col-md-6 mb-6">
-          <div class="form-floating">
-            <input type="text" name="city" class="city form-control" id="floatingInput" placeholder="City" required>
-            <label for="floatingInput">City</label>
-          </div>
-        </div>
-
-        <div class="col-md-6 mb-6">
-          <div class="form-floating">
-            <input type="number" name="zip" class="zip form-control" id="floatingInput" placeholder="Zip/Postal Code" required>
-            <label for="floatingInput">Pin Code</label>
-          </div>
-        </div>
-
-        <div class="col-lg-12 mb-6">
-          <div class="form-check">
-            <input value="yes" class="form-check-input" type="checkbox" name="bearCharges" id="bearCharges" >
-            <label class="form-check-label" for="bearCharges">I hereby Declare to bear 3% payment gateway charges.</label>
-          </div>
-        </div>
-
-        <div class="col-lg-12 mb-6">
-          <div class="form-check">
-            <input value="terms" class="form-check-input" value="terms" id="termsAndConditions" type="checkbox" name="termsAndConditions" required>
-            <label class="form-check-label" for="termsAndConditions">I accept the Terms and Conditions and privacy policy.</label>
-          </div>
-        </div>
-
         <div class="text-center">
-          <button id="donate-now-btn" class="btn btn-secondary" type="submit">Donate Now</button>
+          <button id="donate-now" class="btn btn-secondary" type="submit">
+            Donate Now
+          </button>
+        </div>
+      </form>
+    </div>
+
+    <script
+      src="/docs/5.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+    <script></script>
+
+    <div class="donation-form-box drop-shadow-2xl" id="monthly-donation-form">
+      <form id="monthlyForm" action="/create/subscriptionId" method="post">
+        <div class="row">
+          <div class="col-lg-8">
+            <input
+              name="money"
+              class="radio-input"
+              id="radio-1"
+              type="radio"
+              value="1000"
+            />
+            <label class="radio-label" for="radio-1">Rs. 1000</label>
+
+            <input
+              name="money"
+              class="radio-input"
+              id="radio-2"
+              type="radio"
+              value="2000"
+            />
+            <label class="radio-label" for="radio-2">Rs. 2000</label>
+
+            <input
+              name="money"
+              class="radio-input"
+              id="radio-3"
+              type="radio"
+              value="5000"
+            />
+            <label class="radio-label" for="radio-3">Rs. 5000</label>
+
+            <input
+              name="money"
+              class="radio-input"
+              id="radio-4"
+              type="radio"
+              value="10000"
+            />
+            <label class="radio-label" for="radio-4">Rs. 10000</label>
+          </div>
+
+          <div class="col-lg-4">
+            <input
+              name="money"
+              class="d-none"
+              class="mt-2 px-2 py-2 d-inline"
+              id="radio-5"
+              type="radio"
+              value="custom"
+            />
+            <label for="radio-5">
+              <input
+                type="number"
+                name="custom"
+                class="d-inline form-control"
+                id="customMoney"
+                placeholder="Enter Custom Amount"
+                autocomplete="off"
+              />
+            </label>
+          </div>
         </div>
 
-      </div>
+        <script>
+          $(document).ready(function () {
+            $("#customMoney").on("click", function () {
+              $("#radio-5").prop("checked", true);
+            });
 
-    </form>
-  </div>
-</section>
-<!-- Donate End -->
-</div>
-        <!-- Donate Start -->
+            $(".radio-label").click(function () {
+              $("this").attr("checked", true);
+            });
+          });
+        </script>
 
+        <div class="row">
+          <div class="col-md-6 mb-6">
+            <div class="form-floating">
+              <input
+                type="text"
+                name="first_name"
+                class="fName form-control"
+                id="floatingInput"
+                placeholder="First Name"
+                required
+              />
+              <label for="floatingInput">First Name</label>
+            </div>
+          </div>
+
+          <div class="col-md-6 mb-6">
+            <div class="form-floating">
+              <input
+                type="text"
+                name="last_name"
+                class="sName form-control"
+                id="floatingInput"
+                placeholder="Second Name"
+                required
+              />
+              <label for="floatingInput">Last Name</label>
+            </div>
+          </div>
+
+          <div class="col-md-6 mb-6">
+            <div class="form-floating">
+              <input
+                type="tel"
+                name="phone"
+                class="mobile form-control"
+                id="floatingInput"
+                placeholder="Phone"
+                required
+              />
+              <label for="floatingInput">Phone</label>
+            </div>
+          </div>
+
+          <div class="col-md-6 mb-6">
+            <div class="form-floating">
+              <input
+                type="email"
+                name="email"
+                class="email-address form-control"
+                id="floatingInput"
+                placeholder="Email"
+                required
+              />
+              <label for="floatingInput">E-mail Address</label>
+            </div>
+          </div>
+
+          <div class="col-md-6 mb-6">
+            <div class="form-floating">
+              <input
+                type="text"
+                name="pan"
+                class="pan form-control"
+                id="floatingInput"
+                placeholder="Enter PAN"
+                required
+              />
+              <label for="floatingInput">PAN</label>
+            </div>
+          </div>
+
+          <div class="col-md-6 mb-6">
+            <div class="form-floating">
+              <input
+                type="textarea"
+                name="address"
+                class="address form-control"
+                id="floatingInput"
+                placeholder="Enter your Address"
+                required
+              />
+              <label for="floatingInput">Address</label>
+            </div>
+          </div>
+
+          <div class="col-md-6 mb-6">
+            <div class="form-floating">
+              <input
+                type="text"
+                name="city"
+                class="city form-control"
+                id="floatingInput"
+                placeholder="City"
+                required
+              />
+              <label for="floatingInput">City</label>
+            </div>
+          </div>
+
+          <div class="col-md-6 mb-6">
+            <div class="form-floating">
+              <input
+                type="number"
+                name="zip"
+                class="zip form-control"
+                id="floatingInput"
+                placeholder="Zip/Postal Code"
+                required
+              />
+              <label for="floatingInput">Pin Code</label>
+            </div>
+          </div>
+
+          <div class="col-lg-12 mb-6">
+            <div class="form-check">
+              <input
+                value="yes"
+                class="form-check-input"
+                type="checkbox"
+                name="bearCharges"
+                id="bearCharges"
+              />
+              <label class="form-check-label" for="bearCharges"
+                >I hereby Declare to bear 3% payment gateway charges.</label
+              >
+            </div>
+          </div>
+
+          <div class="col-lg-12 mb-6">
+            <div class="form-check">
+              <input
+                value="terms"
+                class="form-check-input"
+                value="terms"
+                id="termsAndConditions"
+                type="checkbox"
+                name="termsAndConditions"
+                required
+              />
+              <label class="form-check-label" for="termsAndConditions"
+                >I accept the Terms and Conditions and privacy policy.</label
+              >
+            </div>
+          </div>
+
+          <div class="text-center">
+            <button id="donate-now-btn" class="btn btn-secondary" type="submit">
+              Donate Now
+            </button>
+          </div>
+        </div>
+      </form>
+    </div>
+    <!-- </section> -->
+    <!-- Donate End -->
+    <!-- </div> -->
+    <!-- Donate Start -->
 
     <h2 class="text-center m-10">Bank Details</h2>
 
     <h3 class="text-center mb-15">Domestic</h3>
 
-              <div class="row mt-4 p-4" >
-                     <div class="col-md-4">
-                        <div class="address_cards p-3">
-
-                                <p class="mt-1">
-                                  <img src="img/AXIS.jpg" class="img-fluid rounded" alt="">
-                                    Bank Name : <b>Axis Bank</b>,
-                                    <br>
-                                    Address : <b>Bhiwandi, Maharashtra</b>
-                                    <br>
-                                    Account Name :<b> Real Happiness Of Life Foundation</b>
-                                    <br>
-                                    A/c No : <b>921010042473478</b>
-                                    <br>
-                                    IFSC :<b> UTIB0003387</b>
-                                    <br>
-                                    MICR : <b> 400211174</b>
-                                </p>
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="col-md-4">
-                        <div class="address_cards p-3">
-
-                                <p class="mt-1">
-                                  <h5>THROUGH CHEQUE</h5>
-                                  Cheques can be made in favour of <b>“Real Happiness Of Life Foundation"</b><br>
-
-                                  Please send the same at:
-
-                                <b>  H.No.4453 Sathe Nagar Near Manoj Kirana Store Narpoli Bhiwandi,Thane, Maharashtra -421305</b> <br>
-
-                                  PHONE: <b>9607753148</b> <br>
-                                  EMAIL: <b>Donation@rhlf.org</b> <br>
-                                </p>
-                            </a>
-                        </div>
-                    </div>
-
-
-
-                      <div class="col-md-4">
-                        <div class="address_cards p-3">
-
-                                <p class="mt-1">
-                        <b>QR Code</b>
-                      <img src="img/QRIMG.jpg" class="img-fluid rounded" alt="">
-
-
-
-                                </p>
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="col-md-4">
-                        <div class="address_cards p-3">
-
-                                <p class="mt-1">
-                        <b>UPI ID</b>
-                      <p class="mt-1">
-                        <h3>9607753148@okbizaxis</h3>
-                        </p>
-
-
-
-                                </p>
-                            </a>
-                        </div>
-                    </div>
-
-
-                     <div class="col-md-12">
-                        <div class="address_cards p-3">
-                            <p class="mt-2">Real Happiness Of Child Foundation PAN Card No. : <b>AALCR3060M</b></p>
-                            <p>As per the Indian Income Tax Department’s rules, a donor is required to add their Full Name, Address and PAN number in case they wish to claim tax exemption.</p>
-                            <p>Donations to Real Happiness Of Life Foundation are eligible for 50% tax Exemption under Sec 80-G Income tax Act 1956. In case you have donated directly through UPI, kindly WhatsApp your details such as Name, Address and PAN for 80G receipt on +91-9607753148</p>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-              </div>
-
-            </div>
-         
-        
-
-        <!-- Footer Start -->
-
-        <!-- =====================>>>>>Footer Started>>>>>======================== -->
-
-        <%- include("partials/footer") %>
-        <!-- Footer End -->
-
-
-        <!-- Pre Loader -->
-        <div id="loader" class="show">
-            <div class="loader"></div>
+    <div class="row mt-4 p-4 domestic g-2">
+      <div class="col-md-2 item">
+        <div class="address_cards p-3">
+          <p class="mt-1">
+            <img src="img/AXIS.jpg" class="img-fluid rounded" alt="" />
+            Bank Name : <b>Axis Bank</b>,
+            <br />
+            Address : <b>Bhiwandi, Maharashtra</b>
+            <br />
+            Account Name :<b> Real Happiness Of Life Foundation</b>
+            <br />
+            A/c No : <b>921010042473478</b>
+            <br />
+            IFSC :<b> UTIB0003387</b>
+            <br />
+            MICR : <b> 400211174</b>
+          </p>
+          <!-- </a> -->
         </div>
-</body>
-        <!-- JavaScript Libraries -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js" integrity="sha384-fbbOQedDUMZZ5KreZpsbe1LCZPVmfTnH7ois6mU1QK+m14rQ1l2bGBq41eYeM/fS" crossorigin="anonymous"></script>
-<script src="lib/easing/easing.min.js"></script>
-<script src="lib/owlcarousel/owl.carousel.min.js"></script>
-<script src="lib/waypoints/waypoints.min.js"></script>
-<script src="lib/counterup/counterup.min.js"></script>
-<script src="lib/parallax/parallax.min.js"></script>
+      </div>
 
+      <div class="col-md-2 item">
+        <div class="address_cards p-3">
+          <p class="mt-1"></p>
+          <h5>THROUGH CHEQUE</h5>
+          Cheques can be made in favour of
+          <b>“Real Happiness Of Life Foundation"</b><br />
 
-<!-- Contact Javascript File -->
-<script src="mail/jqBootstrapValidation.min.js"></script>
-<script src="mail/contact.js"></script>
+          Please send the same at:
 
-<!-- Template Javascript -->
-<script src="donatejs/main.js"></script>
-<script src="jsfiles/donation.js"></script>
+          <b>
+            H.No.4453 Sathe Nagar Near Manoj Kirana Store Narpoli
+            Bhiwandi,Thane, Maharashtra -421305</b
+          >
+          <br />
 
-<script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
-<script src="assets/js/script.js"></script>
+          PHONE: <b>9607753148</b> <br />
+          EMAIL: <b>Donation@rhlf.org</b> <br />
+          <!-- </p> -->
+          <!-- </a> -->
+        </div>
+      </div>
 
-<!--jQuery JS-->
-<script
-  src="https://code.jquery.com/jquery-3.6.3.min.js"
-  integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU="
-  crossorigin="anonymous"></script>
+      <div class="col-md-2 item">
+        <div class="address_cards p-3">
+          <p class="mt-1">
+            <b>QR Code</b>
+            <img src="img/QRIMG.jpg" class="img-fluid rounded" alt="" />
+          </p>
+          <!-- </a> -->
+        </div>
+      </div>
+
+      <div class="col-md-10 item">
+        <div class="address_cards p-3">
+          <p class="mt-1">
+            <b>UPI ID</b>
+          </p>
+
+          <p class="mt-1"></p>
+          <h3>9607753148@okbizaxis</h3>
+        </div>
+      </div>
+    </div> 
+    <div class="_accordion">
+      <h3>FAQ</h3>
+      <div class="accordion accordion-flush" id="accordionFlushExample">
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#flush-collapseOne"
+              aria-expanded="false"
+              aria-controls="flush-collapseOne"
+            >
+              QUESTION #1
+            </button>
+          </h2>
+          <div
+            id="flush-collapseOne"
+            class="accordion-collapse collapse"
+            data-bs-parent="#accordionFlushExample"
+          >
+            <div class="accordion-body">
+              Placeholder content for this accordion, which is intended to
+              demonstrate the <code>.accordion-flush</code> class. This is the
+              first item's accordion body.
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#flush-collapseTwo"
+              aria-expanded="false"
+              aria-controls="flush-collapseTwo"
+            >
+              QUESTION #2
+            </button>
+          </h2>
+          <div
+            id="flush-collapseTwo"
+            class="accordion-collapse collapse"
+            data-bs-parent="#accordionFlushExample"
+          >
+            <div class="accordion-body">
+              Placeholder content for this accordion, which is intended to
+              demonstrate the <code>.accordion-flush</code> class. This is the
+              second item's accordion body. Let's imagine this being filled with
+              some actual content.
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#flush-collapseThree"
+              aria-expanded="false"
+              aria-controls="flush-collapseThree"
+            >
+              QUESTION #3
+            </button>
+          </h2>
+          <div
+            id="flush-collapseThree"
+            class="accordion-collapse collapse"
+            data-bs-parent="#accordionFlushExample"
+          >
+            <div class="accordion-body">
+              Placeholder content for this accordion, which is intended to
+              demonstrate the <code>.accordion-flush</code> class. This is the
+              third item's accordion body. Nothing more exciting happening here
+              in terms of content, but just filling up the space to make it
+              look, at least at first glance, a bit more representative of how
+              this would look in a real-world application.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- </div> -->
+
+    <!-- </div> -->
+
+    <!-- </div> -->
+
+    <!-- Footer Start -->
+
+    <!-- =====================>>>>>Footer Started>>>>>======================== -->
+
+    <%- include("partials/footer") %>
+    <!-- Footer End -->
+
+    <!-- Pre Loader -->
+    <div id="loader" class="show">
+      <div class="loader"></div>
+    </div>
+    <!-- <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script> -->
+  </body>
+  <!-- </body> -->
+  <!-- JavaScript Libraries -->
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+    crossorigin="anonymous"
+  ></script>
+  <script
+    src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+    crossorigin="anonymous"
+  ></script>
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"
+    integrity="sha384-fbbOQedDUMZZ5KreZpsbe1LCZPVmfTnH7ois6mU1QK+m14rQ1l2bGBq41eYeM/fS"
+    crossorigin="anonymous"
+  ></script>
+  <script src="lib/easing/easing.min.js"></script>
+  <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+  <script src="lib/waypoints/waypoints.min.js"></script>
+  <script src="lib/counterup/counterup.min.js"></script>
+  <script src="lib/parallax/parallax.min.js"></script>
+
+  <!-- Contact Javascript File -->
+  <script src="mail/jqBootstrapValidation.min.js"></script>
+  <script src="mail/contact.js"></script>
+
+  <!-- Template Javascript -->
+  <script src="donatejs/main.js"></script>
+  <script src="jsfiles/donation.js"></script>
+
+  <script
+    src="https://code.jquery.com/jquery-2.2.0.min.js"
+    type="text/javascript"
+  ></script>
+  <script
+    src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+    crossorigin="anonymous"
+  ></script>
+  <script src="assets/js/script.js"></script>
+
+  <!--jQuery JS-->
+  <script
+    src="https://code.jquery.com/jquery-3.6.3.min.js"
+    integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU="
+    crossorigin="anonymous"
+  ></script>
+  <!-- </html> -->
+  <!-- </div> -->
 </html>

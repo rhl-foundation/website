@@ -817,16 +817,12 @@ header .nav-items .menu-items .menu ul li a:hover {
 
 /* Adjustment made */
 
-.bg-0-b >div:first-child p{
+.bg-0-b > div:first-child p {
   /* border: 1px solid red; */
   display: grid;
   place-content: center;
   font-weight: bolder;
-} 
-
-
-
-
+}
 
 .bg-0-b .main-card-contact .sup-card-contact .contact-title {
   position: relative;
@@ -859,15 +855,39 @@ header .nav-items .menu-items .menu ul li a:hover {
   bottom: 0;
 }
 .bg-0-b .main-card-contact .sup-card-contact .contact-title ol li {
-  display: block;
-  padding: 10px 0px;
+  border: 1px solid #606060;
+  /* display: block; */
+  padding: 10px;
   color: #606060;
   font-size: 16px;
   font-weight: 600;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  width: 80%;
+  border-radius: 5px;
+  margin-top: 10px;
 }
+.bg-0-b .main-card-contact .sup-card-contact .contact-title ol li h5 {
+  border-bottom: 1px solid #606060;
+  width: 90%;
+  text-align: center;
+  padding: 10px;
+  font-weight: bold;
+  color: #222;
+  /* display: block; */
+}
+
+.bg-0-b .main-card-contact .sup-card-contact .contact-title ol li p {
+  text-align: center;
+}
+
 .bg-0-b .main-card-contact .sup-card-contact .contact-title ol li i {
+  font-size: 30px;
   color: #c73190;
-  padding-right: 15px;
+  /* padding-right: 15px; */
 }
 .bg-0-b .main-card-contact .sup-card-contact .head-content {
   position: relative;
@@ -897,7 +917,6 @@ header .nav-items .menu-items .menu ul li a:hover {
   margin: 0px;
 }
 .bg-0-b .main-card-contact .sup-card-contact-0a {
-  /* border: 1px solid red; */
   width: 60%;
   max-width: 60%;
   flex: 1 1 60%;
