@@ -41,8 +41,8 @@ app.use("/programs", express.static(path.join(__dirname, "public")));
 const programs_json = require("./api/databases/programs.json");
 const programs = JSON.parse(JSON.stringify(programs_json));
 
-const initiatives_json = require("./api/databases/initiatives.json");
-const initiatives = JSON.parse(JSON.stringify(initiatives_json));
+const solutions_json = require("./api/databases/solutions.json");
+const solutions = JSON.parse(JSON.stringify(solutions_json));
 
 const programFiles_json = require("./api/databases/program-files.json");
 const programFiles = JSON.parse(JSON.stringify(programFiles_json));
@@ -69,7 +69,7 @@ app.get("/programs/:programId", (req, res) => {
 });
 
 app.get("/", (req, res) => {
-  res.render("home", { programs: programs, initiatives: initiatives });
+  res.render("home", { programs: programs, solutions: solutions });
 });
 
 app.get("/legal", (req, res) => {
