@@ -177,22 +177,21 @@
   
   
   <!-- ======================Bg-04 started====================== -->
-  <section class="bg-04">
-    <div class="container heading">
-      <h2>OUR INITIATIVES</h2>
-    </div>
-      <div class="container">
-      <div class="row">
-        <% initiatives.forEach(initiative => { %>
-          <div class="initiative text-center col-12 col-lg-4 col-md-6">
-              <i class="<%= initiative.icon %>"></i>
-              <h4> <%= initiative.name %> </h4>
-              <p> <%= initiative.description %> </p>
+<section class="bg-04">
+  <div class="container heading">
+    <h2 class="solution-heading">OUR ASSURANCE</h2>
+  </div>
+  <div class="container">
+    <div class="row">
+      <% solutions.forEach(solution => { %>
+        <div class="initiative text-center col-12 col-lg-4 col-md-6">
+          <i class="<%= solution.icon %>" style="color: #f472b6; margin-bottom: 10px;"></i>
+          <p class="initiative-description"> <%= solution.description %> </p>
         </div>
-        <% }) %>
-      </div>
+      <% }) %>
     </div>
-  </section>
+  </div>
+</section>
 
   <div class="container" style="margin-bottom: 50px;">
     <h4 class="display-4 ourlg">Our Partners</h4>
