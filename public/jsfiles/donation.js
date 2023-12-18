@@ -92,6 +92,10 @@ $(document).ready(function () {
     const data_go = JSON.stringify(resp);
     const data = JSON.parse(data_go);
     console.log(data);
+    if (data.error) {
+      alert(data.error.description);
+      return;
+    }
     const options = {
       key: data.keyId,
       amount: data.amount,
