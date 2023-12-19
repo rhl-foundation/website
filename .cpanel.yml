@@ -1,5 +1,5 @@
 ---
 deploy:
   tasks:
-    - export DEPLOYPATH=/home/rhlforg/our-website/public_html
+    - export DEPLOYPATH=/home/rhlforg/public_html
     - /bin/cp -R * $DEPLOYPATH
