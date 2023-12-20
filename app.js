@@ -69,7 +69,7 @@ app.get("/programs/:programId", (req, res) => {
 });
 
 app.get("/", (req, res) => {
-  res.render("home", { programs: programs, initiatives: solutions });
+  res.render("home", { programs: programs, solutions: solutions });
 });
 
 app.get("/legal", (req, res) => {

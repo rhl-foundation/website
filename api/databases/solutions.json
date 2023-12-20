@@ -10,5 +10,9 @@
   {
     "icon": "fal fa-solid fa-user-shield fa-3x",
     "description": "Your Donation Transactions Are Completely Safe And Secure."
+  },
+  {
+    "icon": "fal fa-solid fa-magnifying-glass fa-3x",
+    "description": "We Ensure 100% Transparency With Your Contribution Photographic Proof With Sponsor's Name."
   }
 ]
