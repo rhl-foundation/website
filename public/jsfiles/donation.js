@@ -284,7 +284,7 @@ $("#donate-now-btn").on("click", async function (e) {
   const data = JSON.parse(data_go);
   console.log(data);
   const options = {
-    key: data.keyId,
+    key: "rzp_live_8yUERBNp3ZG8kC",
     amount: data.amount,
     currency: "INR",
     recurring: true,
