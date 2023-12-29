@@ -97,7 +97,7 @@ $(document).ready(function () {
       return;
     }
     const options = {
-      key: data.keyId,
+      key: "rzp_live_8yUERBNp3ZG8kC",
       amount: data.amount,
       currency: "INR",
       order_id: data.orderId,
