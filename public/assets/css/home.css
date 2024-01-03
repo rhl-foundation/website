@@ -242,3 +242,19 @@ a {
     flex-direction: column;
   }
 }
+.solution-heading {
+  color: #333;
+  font-size: 2em;
+  text-align: center;
+}
+
+.initiative-name {
+  color: #555;
+  font-size: 1.5em;
+  text-decoration: underline;
+}
+
+.initiative-description {
+  color: #777;
+  font-size: 1.2em;
+}

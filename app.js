@@ -4,7 +4,7 @@ require("dotenv").config();
 const path = require("path");
 const request = require("request");
 const fs = require("fs");
-const razorpay = require("razorpay");
+const Razorpay = require("razorpay");
 const crypto = require("crypto");
 const mailchimp = require("@mailchimp/mailchimp_marketing");
 const port = process.env.PORT || 3000;
@@ -19,7 +19,7 @@ const storage = multer.diskStorage({
 });
 const upload = multer({ storage: storage });
 
-const instance = new razorpay({
+const instance = new Razorpay({
   key_id: process.env.RAZORPAY_KEY_ID,
   key_secret: process.env.RAZORPAY_KEY_SECRET,
 });
@@ -41,8 +41,8 @@ app.use("/programs", express.static(path.join(__dirname, "public")));
 const programs_json = require("./api/databases/programs.json");
 const programs = JSON.parse(JSON.stringify(programs_json));
 
-const initiatives_json = require("./api/databases/initiatives.json");
-const initiatives = JSON.parse(JSON.stringify(initiatives_json));
+const solutions_json = require("./api/databases/solutions.json");
+const solutions = JSON.parse(JSON.stringify(solutions_json));
 
 const programFiles_json = require("./api/databases/program-files.json");
 const programFiles = JSON.parse(JSON.stringify(programFiles_json));
@@ -69,7 +69,7 @@ app.get("/programs/:programId", (req, res) => {
 });
 
 app.get("/", (req, res) => {
-  res.render("home", { programs: programs, initiatives: initiatives });
+  res.render("home", { programs: programs, initiatives: solutions });
 });
 
 app.get("/legal", (req, res) => {
@@ -188,7 +188,7 @@ app.post(
   }
 );
 
-app.post("/create/orderId", (req, res) => {
+app.post("/create/orderId", async (req, res) => {
   console.log(req.body);
   var amount = req.body.money;
   if (amount === "custom") {
@@ -196,26 +196,22 @@ app.post("/create/orderId", (req, res) => {
   } else {
     final_amount = req.body.money;
   }
-  instance.orders.create(
-    {
-      amount: req.body.amount, // amount in the smallest currency unit
-      currency: "INR",
-      receipt: "order_rcptid_11",
-    },
-    function (err, order) {
-      console.log(req.body);
-      if (err) {
-        console.log(err);
-      } else {
-        console.log(order);
-        res.send({
-          orderId: order.id,
-          amount: order.amount,
-          keyId: process.env.RAZORPAY_KEY_ID,
-        });
-      }
-    }
-  );
+  const options = {
+    amount: req.body.amount, // amount in the smallest currency unit
+    currency: "INR",
+    receipt: "order_rcptid_11",
+  };
+  try {
+    const order = await instance.orders.create(options);
+    res.json({
+      orderId: order.id,
+      amount: order.amount,
+      keyId: process.env.RAZORPAY_KEY_ID,
+    });
+  } catch (err) {
+    console.log(err);
+    res.status(400).send("Payment failed.");
+  }
 });
 
 app.post("/get/paymentDetails", (req, res) => {

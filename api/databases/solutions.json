@@ -1,20 +1,18 @@
 [
   {
     "icon": " fal fa-solid fa-handshake fa-3x",
-    "name": "Grace Food Bank",
     "description": "All Our Efforts Are Made Possible Only Because Of Your Effort."
   },
   {
     "icon": "fal fa-solid fa-sack-dollar fa-3x",
-    "name": "Mission Education Program",
     "description": "All Donations Are Tax Deductible Under Section 80G Of Income Tax Act."
   },
-
   {
     "icon": "fal fa-solid fa-user-shield fa-3x",
-    "name": "Home For Homeless Program",
     "description": "Your Donation Transactions Are Completely Safe And Secure."
+  },
+  {
+    "icon": "fal fa-solid fa-magnifying-glass fa-3x",
+    "description": "We Ensure 100% Transparency With Your Contribution Photographic Proof With Sponsor's Name."
   }
 ]
-
-
