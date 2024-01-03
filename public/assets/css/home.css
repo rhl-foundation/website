@@ -93,7 +93,20 @@ a {
   font-size: 20px;
   font-weight: 500;
 }
-*/ 
+*/
+.Featuredcampaigns{
+  overflow-x: scroll !important;
+  padding: 4px;
+} 
+.Featuredcampaigns::-webkit-scrollbar {
+  width: 10px !important;
+  height: 4px;
+}
+.Featuredcampaigns::-webkit-scrollbar-thumb{
+  /* background-color: rgb(210, 205, 205); */
+  background-color: #e83e8c;
+  width: 10px;
+} 
 .categories{
   width: 100%;
   display: grid;
@@ -116,10 +129,10 @@ a {
 }
 .boxactive{
   background-color: #eafaff;
-  color:#ff7400;
+  color:#da2879;
 }
 .boxpactive{
-  color:#ff7400;
+  color:#da2879;
 }
 .boxes p:first-child{
   font-family: sans-serif;
@@ -136,13 +149,73 @@ a {
   width: 0px !important;
   height: 3px;
 }
-/*::-webkit-scrollbar-track{
-  background-color: black;
-}*/
-::-webkit-scrollbar-thumb{
+.categories::-webkit-scrollbar-thumb{
   background-color: rgb(210, 205, 205);
   width: 10px;
 } 
+.fcamps{
+  /* border: 10px solid black; */
+}
+.col-12 .heading{
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.col-12 .heading h2{
+  /* font-size: 1.3rem; */
+  font-size: clamp(0.8rem, 4vw, 1.33rem);
+  margin-bottom: 0px;
+}
+.col-12 .heading h2::before{
+  content: '';
+  padding: 3px;
+  margin-right: 10px;
+  background-color: #da2879;
+}
+.col-12 .heading p{
+  color:#da2879;
+  font-weight: 700;
+  margin-bottom: 0px;
+  font-size: clamp(0.5rem, 4vw, 0.8rem);
+}
+.wrapper{
+  margin-top: 0px !important;
+}
+.categoriestxt{
+  align-self: flex-start;
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 0px;
+}
+.categoriestxt::before{
+  content: '';
+  background-color: #da2879;
+  padding: 2px;
+  margin-right: 5px;
+}
+.Featuredcampaigns{
+  display: flex;
+  gap:2%;
+}
+.FeaturedCampaign .categoriestxt{
+  padding-top: 1rem;
+  padding-bottom: 2rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+.Featuredcampaigns .bs h3{
+  text-align: center;
+  font-size: 1.3rem;
+}
+.Featuredcampaigns .wrapper{
+  border-radius: 10px;
+  box-shadow: 0px 0px 5px #888888;
+}
+.Featuredcampaigns .wrapper figure img{
+  min-height: 100px; 
+  max-height: 300px;
+  width: 100%;
+}
 @media (max-width:768px) {
   .boxes p:nth-child(2){
     font-size: 0.5rem
@@ -156,5 +229,16 @@ a {
   
   .boxes p:first-child{
     font-size: 15px;
+  }
+  /* .col-12 .heading h2{
+    font-size: 0.8em;
+  }
+  .col-12 .heading p{
+    font-size: 0.8em;
+  } */
+}
+@media (max-width:430px) {
+  .Featuredcampaigns{
+    flex-direction: column;
   }
 }
