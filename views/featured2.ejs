@@ -183,18 +183,35 @@
         console.log(details)
         console.log(payement)
         let counter=0
-        arrows[0].addEventListener('click',(e)=>{
-            arrows[0].style.display='none'
-            arrows[1].style.display='inline-block'
-            details.style.display='grid'
-            payement.style.display='grid'
+        box.addEventListener('click',(e)=>{
+            console.log("clicked")
+            if (counter==0) {
+                arrows[1].style.display='none'
+                arrows[0].style.display='inline-block'
+                details.style.display='none'
+                payement.style.display='none'
+                counter++
+                
+            } else {
+                arrows[0].style.display='none'
+                arrows[1].style.display='inline-block'
+                details.style.display='grid'
+                payement.style.display='grid'
+                counter=0
+            }
         })
-        arrows[1].addEventListener('click',(e)=>{
-            arrows[1].style.display='none'
-            arrows[0].style.display='inline-block'
-            details.style.display='none'
-            payement.style.display='none'
-        })
+        // arrows[0].addEventListener('click',(e)=>{
+        //     arrows[0].style.display='none'
+        //     arrows[1].style.display='inline-block'
+        //     details.style.display='grid'
+        //     payement.style.display='grid'
+        // })
+        // arrows[1].addEventListener('click',(e)=>{
+        //     arrows[1].style.display='none'
+        //     arrows[0].style.display='inline-block'
+        //     details.style.display='none'
+        //     payement.style.display='none'
+        // })
     </script>
 </body>
 </html>
