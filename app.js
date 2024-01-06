@@ -124,6 +124,11 @@ app.get("/:page", (req, res) => {
   });
 });
 
+// partners page
+app.get("/get-involved/partner", (req, res) => {
+  res.render("partner");
+});
+
 async function mainMail(name, email, phone, subject, message) {
   const transporter = await nodemailer.createTransport({
     service: "gmail",
@@ -345,6 +350,6 @@ app.post("/subscribe/newsletter", (req, res) => {
 
 const key_id = process.env.RAZORPAY_KEY_ID;
 
-app.listen(3000, () => {
+app.listen(5000, () => {
   console.log("Successfully started listening on port " + port);
 });

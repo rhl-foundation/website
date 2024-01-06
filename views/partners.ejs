@@ -1,0 +1,280 @@
+<html>
+<%- include("partials/header") %>
+
+    <style>
+        .heading {
+            text-align: center;
+        }
+
+        .card-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 2em;
+            text-align: center;
+        }
+
+        .card {
+            width: 300px;
+            margin: 1em;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            overflow: hidden;
+            transition: transform 0.3s;
+            cursor: pointer;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+            background: linear-gradient(rgb(248, 98, 148), rgb(255, 92, 147));
+            color: #ffffff;
+        }
+
+        .card img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+        }
+
+        .card span {
+            padding: 1.5rem 0 1.5rem 0;
+            font-weight: 600;
+            font-size: 20px;
+            font-family: sans-serif;
+            color: #555555;
+        }
+
+        .card-content {
+            padding: 1em;
+        }
+
+        .card p {
+            margin: 0.5em 0;
+            color: #555;
+        }
+    </style>
+
+    <body>
+        <%- include("partials/navbar") %>
+
+            <div class="heading">
+                <h1>CORPORATE PARTNERS</h1>
+            </div>
+
+            <div class="card-container">
+                <!-- Partner 1 -->
+                <div class="card">
+                    <span style="color: #555555;">PATSOL</span>
+                    <div class="card-content">
+                        <img src="assets/images/patners/01Pastol.jpg" />
+                        <p>Director & CEO</p>
+                    </div>
+                </div>
+
+                <!-- Partner 2 -->
+                <div class="card">
+                    <span style="color: #555555;">HDFC ERGO</span>
+                    <div class="card-content">
+                        <img src="assets/images/patners/02HDFC.png" alt="Partner 2">
+                        <p>CELEBRATED FESTIVAL OF GIVING, Yr- 2016. WITH WISH TREE ACTIVITY, ACROSS LOCATIONS –
+                            MUMBAI, BENGALURU, KOLKATA, HYD AND DELHI. VERICAL- EDUCATION SUPPORT</p>
+                    </div>
+                </div>
+
+                <!-- Partner 3 -->
+                <div class="card">
+                    <span style="color: #555555;">RPG FOUNDATION (CEAT & RAYCHEM)</span>
+                    <div class="card-content">
+                        <img src="assets/images/patners/03RPG.png" alt="Partner 3">
+                        <p>PROJECT JEEVAN, SANTIATION, CONSTRUCTED 33 TOILETS IN MAHARASTHRA , LIFE SKILL TRAINING
+                            AND SKILL BUILDING.</p>
+                    </div>
+                </div>
+
+                <!-- Partner 4 -->
+                <div class="card">
+                    <span style="color: #555555;">NTPC</span>
+                    <div class="card-content">
+                        <img src="assets/images/patners/04NTPC.png" />
+
+                        <p>CELEBRATED DAAN UTSAV – 2014 & 16</p>
+                    </div>
+                </div>
+
+                <!-- Partner 5 -->
+                <div class="card">
+                    <span style="color: #555555;">TATA MOTORS</span>
+                    <div class="card-content">
+                        <img src="assets/images/patners/05TataMotor.png" alt="Partner 5">
+                        <p>CSR , EDUCATION SUPPORT PROGRAM FOR CHILDREN OF TATA MOTORS DRIVERS IN DIST- THANE.</p>
+                    </div>
+                </div>
+
+                <!-- Partner 6 -->
+                <div class="card">
+                    <span style="color: #555555;">HOUSE OF PATELS</span>
+                    <div class="card-content">
+                        <img src="assets/images/patners/06HOUSE OF PATELS.png" alt="Partner 6">
+                        <p>CALAMITY RELIEF- FREE TRANSPORT OF RELIEF MATERIALS DURING UTTRAKHAND FLOODS-2013</p>
+                    </div>
+                </div>
+
+                <!-- Partner 7 -->
+                <div class="card">
+                    <span style="color: #555555;">ORACLE</span>
+                    <div class="card-content">
+                        <img src="assets/images/patners/07ORACLE.png" />
+
+                        <p>2013- IN KIND STATIONERY DONATION, 2016 & 17 DONATED FOOD AT
+                            SASA- ORPHANAGE AT PUNE</p>
+                    </div>
+                </div>
+
+                <!-- Partner 8 -->
+                <div class="card">
+                    <span style="color: #555555;">BISLERI</span>
+                    <div class="card-content">
+                        <img src="assets/images/patners/08BISLERI.png" alt="Partner 8">
+                        <p>Bisleri partners with Child Help Foundation 2018 CSR Activity</p>
+                    </div>
+                </div>
+
+                <!-- Partner 9 -->
+                <div class="card">
+                    <span style="color: #555555;">JUST DIAL</span>
+
+                    <div class="card-content">
+                        <img src="assets/images/patners/09JUST DIAL.png" alt="Partner 9">
+                        <p>2015- CELEBRATED CHILDRENS DAY AT ORPHANAGES IN MUMBAI WISH TREE IN LOCATIONS –
+                            BENGALURU, MUMBAI, DELHI SUPPORTED 2 CHILDREN FOR EDUCATION. WOMENS DAY CELEBRATION AT
+                            NAIGAON Z.P SCHOOL-2017</p>
+                    </div>
+                </div>
+
+                <!-- Partner 10 -->
+                <div class="card">
+                    <span style="color: #555555;">MICROSOFT</span>
+                    <div class="card-content">
+                        <img src="assets/images/patners/10MICROSOFT.png" />
+
+                        <p>2016- SPONSORED FOOD AND ENTERTAINMENT BY PLAYSTORE WITH
+                            KARUNALAYA SHELTER HOME, BENGALURU</p>
+                    </div>
+                </div>
+
+                <!-- Partner 11 -->
+                <div class="card">
+                    <span style="color: #555555;">FORBES</span>
+                    <div class="card-content">
+                        <img src="assets/images/patners/11FORBES.png" alt="Partner 11">
+                        <p>2014- DISTRIBUED SCHOOL BAGS TO Z.P SCHOOLS IN MUMBAI</p>
+                    </div>
+                </div>
+
+                <!-- Partner 12 -->
+                <div class="card">
+                    <span style="color: #555555;">EVEREST</span>
+                    <div class="card-content">
+                        <img src="assets/images/patners/12EVEREST.png" alt="Partner 12">
+                        <p>2015- IN KIND DONATION - DELHI</p>
+                    </div>
+                </div>
+
+                <!-- Partner 13 -->
+                <div class="card">
+                    <span style="color: #555555;">COGENCIS</span>
+                    <div class="card-content">
+                        <img src="assets/images/patners/13COGENCIS.png" />
+                        <p>2014-18, CELEBRATES DAAN UTSAV</p>
+                    </div>
+                </div>
+
+                <!-- Partner 14 -->
+                <div class="card">
+                    <span style="color: #555555;">EY</span>
+                    <div class="card-content">
+                        <img src="assets/images/patners/14EY.png" alt="Partner 14">
+                        <p>2015-18, CELEBRATES DAAN UTSAV</p>
+                    </div>
+                </div>
+
+                <!-- Partner 15 -->
+                <div class="card">
+                    <span style="color: #555555;">JSW</span>
+                    <div class="card-content">
+                        <img src="assets/images/patners/15JSW.jpg" alt="Partner 15">
+                        <p>EMERGENCY MEDICAL SUPPORT- 2015</p>
+                    </div>
+                </div>
+
+                <!-- Partner 16 -->
+                <div class="card">
+                    <span style="color: #555555;">RELAXO</span>
+                    <div class="card-content">
+                        <img src="assets/images/patners/16RELAXO.png" />
+                        <p>2013- DONATED SLIPPERS TO SHELTER HOMES IN MUMBAI</p>
+                    </div>
+                </div>
+
+                <!-- Partner 17 -->
+                <div class="card">
+                    <span style="color: #555555;">L&T</span>
+                    <div class="card-content">
+                        <img src="assets/images/patners/17L&T.png" alt="Partner 17">
+                        <p>2015-18, CELEBRATED DAAN UTSAV</p>
+                    </div>
+                </div>
+
+                <!-- Partner 18 -->
+                <div class="card">
+                    <span style="color: #555555;">ZICA</span>
+                    <div class="card-content">
+                        <img src="assets/images/patners/18ZICA.png" alt="Partner 18">
+                        <p>2013 ONE DAY TRAINING (ACTING) AT ANMOL</p>
+                    </div>
+                </div>
+
+                <!-- Partner 19 -->
+                <div class="card">
+                    <span style="color: #555555;">VERTEX</span>
+                    <div class="card-content">
+                        <img src="assets/images/patners/19VERTEX.png" />
+                        <p>FUND RAISING ACTIVITY AT DELHI- 2016</p>
+                    </div>
+                </div>
+
+                <!-- Partner 20 -->
+                <div class="card">
+                    <span style="color: #555555;">BOOK MY SHOW</span>
+                    <div class="card-content">
+                        <img src="assets/images/patners/20BOOK MY SHOW.png" alt="Partner 20">
+                        <p>2015-18, ENTERTAINMENT SHOWS FOR SHELTER HOME CHILDREN</p>
+                    </div>
+                </div>
+
+                <!-- Partner 21 -->
+                <div class="card">
+                    <span style="color: #555555;">HITACHI ABB</span>
+                    <div class="card-content">
+                        <img src="assets/images/patners/21HITACHI ABB.jpg" alt="Partner 21">
+                        <p>2020 -2021 Emergency Medical Support to children whose parents weren't able to afford the
+                            cost of their child's treatment.</p>
+                    </div>
+                </div>
+            </div>
+
+    </body>
+
+</html>
+
+
+
+
+
+
+
+
+<%- include("partials/footer") %>
+    </body>
+
+    </html>
