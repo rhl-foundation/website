@@ -261,14 +261,8 @@ a{
 .collapseproduct i{
   font-size: 1.5em;
   background-color: white;
-  transition: transform 0.2s ease-in-out;
-  /* transform: rotate(180deg); */
 }
-#down{
-  transition: transform 2s ease-in-out;
-  transform: rotate(180deg);
-}
-.collapseproduct #up{
+.collapseproduct #down{
   display: none;
 }
 .collapsepayement{
@@ -296,6 +290,9 @@ a{
 .collapsepayement .amt:not(:last-child):hover{
   background-color: #da2879;
   color: white;
+}
+.amt .input{
+  width: 100%;
 }
 /* .collapsedetail{
   background-color: white;
@@ -354,6 +351,17 @@ a{
 .projectdetail{
   padding-top: 5em;
 }
+.fheadings{
+  font-weight: 600;
+  margin-bottom:1em ;
+}
+.fheadings::before{
+  content: '';
+  height: 100%;
+  background-color: #da2879;
+  padding: 2px;
+  margin-right: 5px;
+}
 .projectdetail h4{
   font-weight: 600;
   margin-bottom:1em ;
@@ -372,7 +380,7 @@ a{
   margin-bottom: 2em;
 }
 .mr{
-  margin-block: 2em;
+  margin-block: 3em;
 
 }
 .updates .updatebody{
@@ -395,6 +403,47 @@ a{
   color: #423b7d;
   background-color: rgba(223,220,250,.5) ;
 }
+
+/* FAQs section */
+.faqSection{
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  margin-bottom: 3em;
+}
+.faqs{
+  border: 1px solid black;
+  padding: 1.4em 1.2em;
+  border-radius: 0.5em;
+  cursor: pointer;
+  background-color: white;
+}
+.faqs:hover .faqsheading{
+  color: #da2879 !important;
+}
+.faqs .content{
+  margin-top: 1.3em;
+}
+.faqsheading{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 1.3em !important;
+}
+.faqsheading h4{
+  font-weight: 600;
+  font-size: 1em;
+  margin-bottom:0px !important;
+}
+.faqsheading i{
+  transition: transform 0.5s ease;
+}
+.faqs .content{
+  display: none;
+}
+
+
 
 @media (max-width:450px) {
   p{
