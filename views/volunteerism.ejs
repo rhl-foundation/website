@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <title>Real Happiness Of Life Foundation</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css" />
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/css/all.min.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/navbar.css" />
+</head>
+
+<body>
+    <!-- ======================header started====================== -->
+    <%- include("partials/navbar") %>
+        <!-- ======================Main started====================== -->
+
+        <section>
+            <center>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12 justify-content-center">
+                            <h2> VOLUNTEER REGISTRATION</h2>
+                        </div>
+                        <div class="col-md-2 " style="
+                        width: 140px;
+                        height: 4px;
+                        margin-top: 2px;
+                        background: #17105C;
+                        bottom: -10px;
+                        left: 0;
+                        right: 0;
+                        margin: auto;"></div>
+                    </div>
+                    <div class="col-md-8 mt-4">
+                        <div class="col-md-8 mt-4"
+                            style="background-color: #fafafa; border-radius: 5px; padding: 50px;">
+                            <form method="post">
+                                <input type="hidden" name="action_type" value="add_volunteers">
+                                <div class="form-group">
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="gender" id="male"
+                                            value="male">
+                                        <label class="form-check-label" for="male">Male</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="gender" id="female"
+                                            value="female">
+                                        <label class="form-check-label" for="female">Female</label>
+                                    </div>
+
+                                </div>
+
+
+                                <input name="volunteer_name" type="text" class="required form-control" value=""
+                                    placeholder="Enter your full name"><br>
+                                <input name="volunteer_email" type="text" class="required email form-control" value=""
+                                    placeholder="Enter your Email ID"><br>
+                                <input name="volunteer_mobile" type="text" class="required number form-control" value=""
+                                    placeholder="Enter your Mobile No."><br>
+
+                                <input name="volunteer_city" id="volunteer_city" type="text" class="form-control"
+                                    value="" placeholder="Enter your city" autocomplete="off"><br>
+                                <input name="volunteer_state" id="volunteer_state" type="text" class="form-control"
+                                    value="" placeholder="Enter your state" autocomplete="off"> <br>
+                                <textarea name="volunteer_address" class="required form-control" rows="2"
+                                    placeholder="Enter your Address"></textarea><br>
+                                <input name="volunteer_profession" type="text" maxlength="50"
+                                    class="required form-control" value="" placeholder="Enter your Profession"><br>
+                                <input name="volunteer_skillset" type="text" maxlength="255"
+                                    class="required form-control" value="" placeholder="Enter Skill Set"><br>
+                                <label for="areaofint" class="active">Select Your Institution </label>
+                                <select class="form-control form-control-sm" name="volunteer_interests">
+                                    <option>Aasha E Cell IIT Bombay</option>
+                                    <option>Chetna College</option>
+                                    <option>Thankur College</option>
+                                    <option>Others</option>
+                                </select>
+
+
+
+
+
+
+                                <br>
+                                <label for="projects" class="active">Your Preferred Projects</label>
+                                <select class="form-control form-control-sm" name="volunteer_pref_projects">
+                                    <option selected>Orphanage Support</option>
+                                    <option>Education Support</option>
+                                    <option>Medical Support</option>
+                                </select>
+                                <br>
+                                <label for="projects" class="active">Your Preferred Day</label>
+                                <select class="form-control form-control-sm" name="volunteer_pref_day">
+                                    <option selected>Sunday</option>
+                                    <option>Monday</option>
+                                    <option>Tuesday</option>
+                                    <option>wednesday</option>
+                                    <option>Thursday</option>
+                                    <option>Friday</option>
+                                    <option>Saturday</option>
+                                </select>
+                                <br>
+                                <input name="volunteer_pref_timing" type="text" maxlength="30" value=""
+                                    placeholder="Preferred Timing" class="form-control">
+
+
+                                <br>
+                                <div align="center">
+                                    <button class="btn btn-outline-secondary px-4  ">
+                                        Submit
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </center>
+            </div>
+
+
+
+        </section>
+
+        <!-- =====================>>>>>Footer Started>>>>>======================== -->
+
+        <%- include("partials/footer") %>
+</body>
+
+<script src="assets/js/jquery-3.2.1.min.js"></script>
+<script src="assets/js/popper.min.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>
+<script src="assets/js/script.js"></script>
+
+</html>
