@@ -21,9 +21,8 @@ a {
   padding-block: 5px;
 }
 .share{
-  width: 50%;
+  width: 46%;
   color: rgba(56,196,115,255);
-  border: 1px solid #70a68b;
   box-shadow: 0 0 10px #cafbe4;
   border-radius: 5px;
   font-weight: 500 !important;
@@ -304,23 +303,27 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f09433', end
 }
 @media (max-width:768px) {
   .boxes p:nth-child(2){
-    font-size: 0.5rem
+    font-size: 0.65rem
   }
   .Newcategories .search-btn{
     font-size: 1rem;
   }
   .categories{
-    grid-template-columns: repeat(12,minmax(60px,1fr));
+    grid-template-columns: repeat(12,minmax(70px,1fr));
   }
   
   .boxes p:first-child{
-    font-size: 15px;
+    /* font-size: 15px; */
+    font-size: 1.2em;
   }
 
 }
 @media (max-width:430px) {
   .Featuredcampaigns{
     flex-direction: column;
+  }
+  .Featuredcampaigns .bs h3{
+    font-size: 1.2em;
   }
 }
 .solution-heading {
