@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <title>Real Happiness Of Life Foundation</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css" />
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/css/all.min.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/navbar.css" />
+</head>
+
+<body>
+    <!-- ======================header started====================== -->
+    <%- include("partials/navbar") %>
+        <!-- ======================Main started====================== -->
+
+
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-center mt-4">
+                    <h2> CAREER SECTION</h2>
+                    <div class="col-md-2 " style="
+                        width: 140px;
+                        height: 4px;
+                        background: #c83290;
+                        margin: auto;"></div>
+                </div>
+
+                <div class="col-md-5   my-5 mx-auto">
+
+                    <form method="post" name="job_application">
+                        <label for="applicant_name">Full Name</label>
+                        <input type="text" name="applicant_name" class="form-control">
+                        <br>
+                        <label for="applicant_email">Email</label>
+                        <input type="email" name="applicant_email" class="form-control">
+                        <br>
+                        <label for="applicant_contact">Contact</label>
+                        <input type="number" name="applicant_contact" class="form-control">
+                        <br>
+                        <label for="applicant_preference">Applying For</label>
+                        <input type="text" name="applicant_preference" class="form-control">
+                        <br>
+                        <label for="applicant_cv">Upload your latest CV</label>
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text" id="inputGroupFileAddon01">Upload</span>
+                            </div>
+                            <div class="custom-file">
+                                <input type="file" class="custom-file-input" name="applicant_cv"
+                                    aria-describedby="inputGroupFileAddon01">
+                                <label class="custom-file-label" for="inputGroupFile01">Choose file</label>
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <br>
+                            <button type="submit" class="btn btn-outline-secondary">Apply Now</button>
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+
+        </div>
+
+        <!-- =====================>>>>>Footer Started>>>>>======================== -->
+
+        <%- include("partials/footer") %>
+</body>
+
+<script src="assets/js/jquery-3.2.1.min.js"></script>
+<script src="assets/js/popper.min.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>
+<script src="assets/js/script.js"></script>
+
+</html>
