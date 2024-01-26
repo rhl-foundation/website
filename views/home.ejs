@@ -93,8 +93,17 @@
                     <p><i class="fa-solid fa-user"></i> 1 Backers</p>
                   </div>
                   <div class="donations-btns">
-                    <button class="donatebtns share"><i class="fa-brands fa-whatsapp"></i> <b>Share</b></button>
-                    <button class="donatebtns don">Donate Now</button>
+                    <!-- <button class="donatebtns share">
+                      <i class="fa-solid fa-share-nodes" style="margin-right: 3px;"></i><b>Share</b>
+                    </button> -->
+                    <div class="donatebtns share">
+                      <span><i class="fas fa-share-alt" id="innerspan"></i> <i id="innerspan">Share!</i></span>
+                      <a href="https://www.instagram.com/"><i class="fab fa-facebook-f"></i></a>
+                      <a href="https://www.twitter.com"><i class="fab fa-twitter"></i></a>
+                      <a href="https://www.instagram.com"><i class="fab fa-instagram"></i></a>
+                      <a href="https://www.whatsapp.com"><i class="fa-brands fa-whatsapp"></i></a>
+                    </div>
+                    <button class="donatebtns don" onclick="window.location.href = '/donate';">Donate Now</button>
                   </div>
                 </div>
               </div>
@@ -134,8 +143,15 @@
                     <p><i class="fa-solid fa-user"></i> 1 Backers</p>
                   </div>
                   <div class="donations-btns">
-                    <button class="donatebtns share"><i class="fa-brands fa-whatsapp"></i> <b>Share</b></button>
-                    <button class="donatebtns don">Donate Now</button>
+                    <!-- <button class="donatebtns share"><i class="fa-brands fa-whatsapp"></i> <b>Share</b></button> -->
+                    <div class="donatebtns share">
+                      <span><i class="fas fa-share-alt" id="innerspan"></i> <i id="innerspan">Share!</i></span>
+                      <a href="https://www.instagram.com/"><i class="fab fa-facebook-f"></i></a>
+                      <a href="https://www.twitter.com"><i class="fab fa-twitter"></i></a>
+                      <a href="https://www.instagram.com"><i class="fab fa-instagram"></i></a>
+                      <a href="https://www.whatsapp.com"><i class="fa-brands fa-whatsapp"></i></a>
+                    </div>
+                    <button class="donatebtns don" onclick="window.location.href = '/donate';">Donate Now</button>
                   </div>
                 </div>
               </div>
@@ -153,6 +169,9 @@
 
      <section class="bg-03">
       <div class="container">
+        <div class="popup" id="customPopup">
+          <p id="popupContent">All Campaigns Releated to ${val} are Closed , Meanwhile You Can help These People</p>
+        </div>
         <div class="Newcategories">
           <h6>Our Campaigns</h6>
           <h3>Causes you can support</h3>
@@ -162,51 +181,51 @@
           </form>
           <p class="categoriestxt">Categories</p>
           <div class="categories">
-            <div class="boxes education">
+            <div class="boxes Urgent">
               <p><i class="fa-solid fa-land-mine-on"></i></p>
               <p>Urgent</p>
             </div>
-            <div class="boxes education">
+            <div class="boxes Education">
               <p><i class="fa-solid fa-graduation-cap"></i></p>
               <p>Education</p>
             </div>
-            <div class="boxes education">
+            <div class="boxes Children">
               <p><i class="fa-solid fa-baby"></i></p>
               <p>Children</p>
             </div>
-            <div class="boxes education">
+            <div class="boxes Elderly">
               <p><i class="fa-solid fa-person"></i></p>
               <p>Elderly</p>
             </div>
-            <div class="boxes education">
+            <div class="boxes Animals">
               <p><i class="fa-solid fa-paw"></i></p>
               <p>Animals</p>
             </div>
-            <div class="boxes education">
+            <div class="boxes Disability">
               <p><i class="fa-solid fa-wheelchair"></i></p>
               <p>Disability</p>
             </div>
-            <div class="boxes education">
+            <div class="boxes Hunger">
               <p><i class="fa-solid fa-utensils"></i></p>
               <p>Hunger</p>
             </div>
-            <div class="boxes education">
+            <div class="boxes Faith">
               <p><i class="fa-solid fa-hands-praying"></i></p>
               <p>Faith</p>
             </div>
-            <div class="boxes education">
+            <div class="boxes Women">
               <p><i class="fa-solid fa-person-dress"></i></p>
               <p>Women</p>
             </div>
-            <div class="boxes education">
+            <div class="boxes Medical">
               <p><i class="fa-solid fa-briefcase-medical"></i></p>
               <p>Medical</p>
             </div>
-            <div class="boxes education">
+            <div class="boxes Distress relief">
               <p><i class="fa-solid fa-house-crack"></i></p>
               <p>Distress relief</p>
             </div>
-            <div class="boxes education">
+            <div class="boxes Others">
               <p><i class="fa-solid fa-ellipsis fa-xl"></i></p>
               <p>Others</p>
             </div>
@@ -215,13 +234,44 @@
         <div class="FeaturedCampaign">
           <p class="categoriestxt">Featured Campaign</p>
           <div class="Featuredcampaigns">
-            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12" id="Urgent">
+              <div class="wrapper">
+                <figure>
+                  <a href="https://pages.razorpay.com/donationblanket"><img src="assets/images/causes/blanket.jpeg"></a>
+                </figure>
+                <div class="bs">
+                  <h3>Join hand with Grace of Glory Ministry Trust to Donate A Blankets</h3>
+                  <p>Help Real Happiness of Life Foundation in Providing Blankets for Poor People in this Cold Season</p>
+                  <p>₹650 Raised out of ₹45,00,000</p>
+                  <div class="donation-container">
+                    <div class="filler"></div>
+                  </div>
+                  <div class="donation-buttons">
+                    <div class="donations-btns time">
+                      <p><i class="fa-regular fa-clock"></i> 30 days left</p>
+                      <p><i class="fa-solid fa-user"></i> 1 Backers</p>
+                    </div>
+                    <div class="donations-btns">
+                      <div class="donatebtns share">
+                        <span><i class="fas fa-share-alt" id="innerspan"></i> <i id="innerspan">Share!</i></span>
+                        <a href="https://www.instagram.com/"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.twitter.com"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.instagram.com"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.whatsapp.com"><i class="fa-brands fa-whatsapp"></i></a>
+                      </div>
+                      <button class="donatebtns don" onclick="window.location.href = 'https://pages.razorpay.com/donationblanket';">Donate Now</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12" id="Children">
               <div class="wrapper">
                 <figure>
                   <a href="/featured3"><img src="assets/images/causes/malnutrition.jpg"></a>
                 </figure>
                 <div class="bs">
-                  <h3>Save The Live Malnutrition Children</h3>
+                  <h3>Join hand with Grace of Glory Ministry Trust to help children suffering from malnutrition</h3>
                   <p>Help Real Happiness of Life Foundation in Providing Aid and Hope for Children with Malnutrition</p>
                   <p>₹650 Raised out of ₹45,00,000</p>
                   <div class="donation-container">
@@ -233,14 +283,20 @@
                       <p><i class="fa-solid fa-user"></i> 1 Backers</p>
                     </div>
                     <div class="donations-btns">
-                      <button class="donatebtns share"><i class="fa-brands fa-whatsapp"></i> <b>Share</b></button>
-                      <button class="donatebtns don">Donate Now</button>
+                      <div class="donatebtns share">
+                        <span><i class="fas fa-share-alt" id="innerspan"></i> <i id="innerspan">Share!</i></span>
+                        <a href="https://www.instagram.com/"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.twitter.com"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.instagram.com"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.whatsapp.com"><i class="fa-brands fa-whatsapp"></i></a>
+                      </div>
+                      <button class="donatebtns don" onclick="window.location.href = '/featured3';">Donate Now</button>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12" id="Children">
               <div class="wrapper">
                 <figure>
                   <a href="/featured2"><img src="assets/images/causes/disablekid.jpg"></a>
@@ -258,20 +314,26 @@
                       <p><i class="fa-solid fa-user"></i> 1 Backers</p>
                     </div>
                     <div class="donations-btns">
-                      <button class="donatebtns share"><i class="fa-brands fa-whatsapp"></i> <b>Share</b></button>
-                      <button class="donatebtns don">Donate Now</button>
+                      <div class="donatebtns share">
+                        <span><i class="fas fa-share-alt" id="innerspan"></i> <i id="innerspan">Share!</i></span>
+                        <a href="https://www.instagram.com/"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.twitter.com"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.instagram.com"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.whatsapp.com"><i class="fa-brands fa-whatsapp"></i></a>
+                      </div>
+                      <button class="donatebtns don" onclick="window.location.href = '/featured2';">Donate Now</button>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 fcamps">
+            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 fcamps" id="Disability">
             <div class="wrapper">
               <figure>
-                <a href="/featured1"><img src="assets/images/causes/old4.jpeg"></a>
+                <a href="/featured4"><img src="assets/images/causes/old4.jpeg" id="shortimg"></a>
               </figure>
               <div class="bs">
-                <h3>Leprosy Affected Program</h3>
+                <h3>Help Real Happiness of Life Foundation Into a Save Lives of Injured & Leprosy Affected People</h3>
                 <p> Help Real Happiness of Life Foundation Into a Save Lives of Injured & Leprosy Affected People</p>
                 <p>₹650 Raised out of ₹45,00,000</p>
                 <div class="donation-container">
@@ -283,13 +345,50 @@
                     <p><i class="fa-solid fa-user"></i> 1 Backers</p>
                   </div>
                   <div class="donations-btns">
-                    <button class="donatebtns share"><i class="fa-brands fa-whatsapp"></i> <b>Share</b></button>
-                    <button class="donatebtns don">Donate Now</button>
+                    <div class="donatebtns share">
+                      <span><i class="fas fa-share-alt" id="innerspan"></i> <i id="innerspan">Share!</i></span>
+                      <a href="https://www.instagram.com/"><i class="fab fa-facebook-f"></i></a>
+                      <a href="https://www.twitter.com"><i class="fab fa-twitter"></i></a>
+                      <a href="https://www.instagram.com"><i class="fab fa-instagram"></i></a>
+                      <a href="https://www.whatsapp.com"><i class="fa-brands fa-whatsapp"></i></a>
+                    </div>
+                    <button class="donatebtns don" onclick="window.location.href = '/featured4';">Donate Now</button>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 fcamps" id="Children">
+            <div class="wrapper">
+              <figure>
+                <a href="/featured1"><img src="assets/images/causes/HivChildren.webp" id="shortimg"></a>
+              </figure>
+              <div class="bs">
+                <h3>Hope Unveiled: Empowering Lives, Inspiring Futures for Children with HIV</h3>
+                <p> Help Real Happiness of Life Foundation Into a Save Lives of HIV affected Children</p>
+                <p>₹650 Raised out of ₹45,00,000</p>
+                <div class="donation-container">
+                  <div class="filler"></div>
+                </div>
+                <div class="donation-buttons">
+                  <div class="donations-btns time">
+                    <p><i class="fa-regular fa-clock"></i> 30 days left</p>
+                    <p><i class="fa-solid fa-user"></i> 1 Backers</p>
+                  </div>
+                  <div class="donations-btns">
+                    <div class="donatebtns share">
+                      <span><i class="fas fa-share-alt" id="innerspan"></i> <i id="innerspan">Share!</i></span>
+                      <a href="https://www.instagram.com/"><i class="fab fa-facebook-f"></i></a>
+                      <a href="https://www.twitter.com"><i class="fab fa-twitter"></i></a>
+                      <a href="https://www.instagram.com"><i class="fab fa-instagram"></i></a>
+                      <a href="https://www.whatsapp.com"><i class="fa-brands fa-whatsapp"></i></a>
+                    </div>
+                    <button class="donatebtns don" onclick="window.location.href = '/featured1';">Donate Now</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            </div>
           </div>                      
         </div>
         <div class="row">
@@ -363,6 +462,7 @@
     </section>
   </div>
   <script>
+    
     document.addEventListener('DOMContentLoaded', () => {
       const categories = document.querySelectorAll('.boxes');
       let previousbox=categories[0]
@@ -380,6 +480,65 @@
         })
       }
     });
+    const category=document.querySelector('.categories')
+    const Featuredcampaigns = document.querySelectorAll('.Featuredcampaigns > div');
+    const featuredcampaign = document.querySelector('.Featuredcampaigns')
+    ar1=[]
+    console.log(featuredcampaign)
+    function showPopup(message) {
+      var popup = document.getElementById('customPopup');
+      var popupContent = document.getElementById('popupContent')
+      popupContent.textContent = message;
+      popup.style.top = '1px'
+      popup.style.display='block'
+      setTimeout(function() {
+        hidePopup();
+      }, 3000);
+    }
+    function hidePopup() {
+      var popup = document.getElementById('customPopup');
+
+      // Hide the popup by adjusting its top position
+      popup.style.top = '-100%';
+    }
+
+    // console.log(Featuredcampaigns)
+    let val;
+    let num=0
+    category.addEventListener('click',(e)=>{
+      if (e.target.classList.contains('boxes')) {
+        val=e.target.classList[1]
+      }else if(e.target.parentNode.classList.contains('boxes')){
+        val=e.target.parentNode.classList[1]
+      }
+      for (const campaign of Featuredcampaigns) {
+        if (campaign.id==val){
+          campaign.style.display='flex'
+          ar1.push(campaign)
+          console.log(ar1)
+        }
+        else if(campaign==Featuredcampaigns[Featuredcampaigns.length-1]){
+          console.log(ar1.length)
+          if(ar1.length===0){
+            console.log("noMatch")
+            console.log(campaign)
+            campaign.style.display='none'
+            for (const campaigns of Featuredcampaigns) {
+              campaigns.style.display='flex'
+              showPopup(`All Campaigns Related to ${val} Category are Closed. Meanwhile, You Can Help Donate to other Campaign.`);
+            }
+          }
+          else{
+            campaign.style.display='none'
+          }
+        }
+        else{
+          campaign.style.display='none'
+        }
+      }
+      ar1=[]
+      // console.log(ar1)
+    })
   </script>
   <!--Random Html-->
 
