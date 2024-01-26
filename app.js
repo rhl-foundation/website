@@ -124,6 +124,11 @@ app.get("/:page", (req, res) => {
   });
 });
 
+// Add partners page
+app.get("/partner", (req, res) => {
+  res.render("partner");
+});
+
 async function mainMail(name, email, phone, subject, message) {
   const transporter = await nodemailer.createTransport({
     service: "gmail",
