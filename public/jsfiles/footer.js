@@ -39,11 +39,11 @@ template.innerHTML =`
                             <div class="footer-widget footer-widget--links">
                                 <h2 class="footer-widget__title">Quick Links</h2><!-- /.footer-widget__title -->
                                 <ul class="list-unstyled footer-widget__links">
-                                    <li><a href="assets/pdf's/Privacy Policy.pdf">Privacy Policy</a></li>
-                                    <li><a href="assets/pdf's/T & C.pdf">Terms & Condition</a></li>
-                                    <li><a href="assets/pdf's/Refund Policy.pdf">Refund Policy</a></li>
-                                    <li><a href="assets/pdf's/Child Protection Policy.pdf">Child Protection Policy</a></li>
-                                    <li><a href="assets/pdf's/POSH at work place.pdf">POSH Policy</a></li>
+                                    <li><a href="website/public/assets/PDFs/Privacy Policy.html">Privacy Policy</a></li>
+                                    <li><a href="website/public/assets/PDFs/T & C.html">Terms & Condition</a></li>
+                                    <li><a href="website/public/assets/PDFs/Refund Policy.html">Refund Policy</a></li>
+                                    <li><a href="website/public/assets/PDFs/Child Protection Policy-converted.html">Child Protection Policy</a></li>
+                                    <li><a href="website/public/assets/PDFs/POSH at work place.html">POSH Policy</a></li>
                                 </ul><!-- /.list-unstyled footer-widget__links -->
                             </div><!-- /.footer-widget -->
                         </div><!-- /.col-md-3 -->
